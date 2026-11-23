@@ -1,0 +1,275 @@
+[
+  {
+    "id": "bluvel",
+    "name": "Bluvel",
+    "group": "podstawowe",
+    "image": "tkanina-bluvel",
+    "description": "Bluvel to gęsta i aksamitna tkanina obiciowa typu velvet. Materiał lekko połyskuje co dodaje mu szlachetności i elegancji. Tkanina posiada bardzo dobrą odporność na ścieranie oraz mechacenie. Materiał ten jest niezwykle miękki i aksamitny w dotyku. Bluvel jest aksamitem wzmocnionym podklejanym spodem. Ze względu na dłuższy włos tkanina się mieni podczas użytkowania",
+    "specs": {
+      "type": "velvet",
+      "composition": "100% PES",
+      "martindale": 40000,
+      "weight": null,
+      "width": null,
+      "pilling": null,
+      "lightfastness": null,
+      "flammability": null,
+      "cleaning": null,
+      "certificates": null
+    }
+  },
+  {
+    "id": "french-velvet",
+    "name": "French Velvet",
+    "group": "podstawowe",
+    "image": "tkanina-french-velvet",
+    "description": "Kolekcja tkanin French Velvet to bardzo przyjemna w dotyku velvetowa tkanina obiciowa, \"pisząca\" się pod wpływem dotyku, mieniąca się pod światłem. Bogata oferta kolorystyczna pozwala na wybranie materiału według własnych potrzeb. Tkanina sprawdzi się w połączeniach wielokolorowych. Odporna na ścieranie, łatwa w utrzymaniu. Kolekcja posiada certyfikat antybakteryjny",
+    "specs": {
+      "type": "velvet",
+      "composition": "100% PES",
+      "martindale": 115000,
+      "weight": null,
+      "width": null,
+      "pilling": null,
+      "lightfastness": null,
+      "flammability": null,
+      "cleaning": null,
+      "certificates": [
+        "antybakteryjna"
+      ]
+    }
+  },
+  {
+    "id": "element",
+    "name": "Element",
+    "group": "podstawowe",
+    "image": "tkanina-element",
+    "description": "Kolekcja Element jest tkaniną welurową, posiadają certyfikaty gwarantujące bezpieczeństwo podczas użytkowania tkanin przez dzieci i niemowlęta. Są przyjazne dla skóry człowieka, nie powodując podrażnień. Ponadto tkaniny te posiadają właściwości trudnozapalne i wodoodporne – WATER BLOCKED, zatrzymując rozlane płyny na powierzchni materiału. Tkaniny Element są odporne na mechacenie i płowienie, nienagannie prezentując się na meblach przez wiele lat",
+    "specs": {
+      "type": "welur",
+      "composition": null,
+      "martindale": 50000,
+      "weight": null,
+      "width": null,
+      "pilling": null,
+      "lightfastness": null,
+      "flammability": null,
+      "cleaning": null,
+      "certificates": [
+        "bezpieczna dla dzieci",
+        "trudnozapalna",
+        "Water Blocked"
+      ]
+    }
+  },
+  {
+    "id": "austin",
+    "name": "Austin",
+    "group": "podstawowe",
+    "image": "tkanina-austin",
+    "description": "Kolekcja Austin jest bardzo przyjemna w dotyku, imituje nico len. Bardzo odporna na ścieranie. Należy do tkanin typu plecionka. Kolekcję wyróżnia bogata, różnorodna kolorystyka, a także certyfikat Oeko-Tex. Jest Eco friendly i odporna na światło. Pomimo promieni słonecznych, tkanina na długo zachowuje swój pierwotny wygląd. Posiada także R.E.A.C.H. Standard",
+    "specs": {
+      "type": "plecionka",
+      "composition": null,
+      "martindale": 115000,
+      "weight": null,
+      "width": null,
+      "pilling": null,
+      "lightfastness": null,
+      "flammability": null,
+      "cleaning": null,
+      "certificates": [
+        "Oeko-Tex",
+        "REACH"
+      ]
+    }
+  },
+  {
+    "id": "salvador",
+    "name": "Salvador",
+    "group": "podstawowe",
+    "image": "tkanina-salvador",
+    "description": "Subtelna i miękka, gruba velvetowa tkanina, \"pisząca\" pod wpływem dotyku, delikatnie mieniąca się, trudnopalna o właściwościach antybakteryjnych, łatwo czyszcząca, ogranicza wchłanianie płynów. Dzięki technologii Pet Friendly , tkanina nie przyciąga sierści i łatwo się ją czyści. Tkanina ta jest również wytrzymała i odporna na uszkodzenia mechaniczne, takie jak zadrapania czy przetarcia. Tkanina obiciowa zachowuje swój estetyczny wygląd i wysoką jakość przez długi czas",
+    "specs": {
+      "type": "velvet",
+      "composition": "100% PES",
+      "martindale": 100000,
+      "weight": null,
+      "width": null,
+      "pilling": null,
+      "lightfastness": null,
+      "flammability": null,
+      "cleaning": null,
+      "certificates": [
+        "Pet Friendly",
+        "trudnopalna",
+        "antybakteryjna"
+      ]
+    }
+  },
+  {
+    "id": "urban",
+    "name": "Urban",
+    "group": "podstawowe",
+    "image": "tkanina-urban",
+    "description": "Urban to tkanina strukturalna o specyficznym splocie, która pokryta została specjalną powłoką Water Proof. Dzięki niej, ciecze zatrzymywane są na powierzchni tkaniny. Pozwala to na łatwiejsze utrzymanie tkaniny w czystości, oraz usuwanie ewentualnych zabrudzeń",
+    "specs": {
+      "type": "tkanina strukturalna",
+      "composition": "100% PES",
+      "martindale": 83000,
+      "weight": 450,
+      "width": null,
+      "pilling": null,
+      "lightfastness": null,
+      "flammability": null,
+      "cleaning": "Tylko łagodne środki do tapicerki. Nie bielić, nie prasować, nie suszyć mechanicznie, nie czyścić chemicznie.",
+      "certificates": [
+        "Water Proof"
+      ]
+    }
+  },
+  {
+    "id": "massimo",
+    "name": "Massimo",
+    "group": "podstawowe",
+    "image": "tkanina-massimo",
+    "description": "Massimo jest elegancką, szenilową tkaniną o przepięknym wyglądzie. Interesujący efekt wizualny został osiągnięty poprzez połączenie nitek o dwóch barwach. Modne kolory umożliwiają wykorzystanie tej tkaniny w najróżniejszych typach wnętrz",
+    "specs": {
+      "type": "szenil",
+      "composition": "100% PES",
+      "martindale": 40000,
+      "weight": null,
+      "width": null,
+      "pilling": null,
+      "lightfastness": null,
+      "flammability": null,
+      "cleaning": null,
+      "certificates": null
+    }
+  },
+  {
+    "id": "touch-me",
+    "name": "Touch Me",
+    "group": "premium",
+    "image": "tkanina-touch-me",
+    "description": "To tkanina meblowa o idealnym połączeniu matowej nici z błyskiem tworzącym efekt trójwymiarowości. Powierzchnia tkaniny odbija światło i tworzy niewielki efekt iskrzenia z niezliczonymi drobnymi błyskami zapewniając niekonwencjonalny wygląd mebla. Tkanina tapicerska Touch Me jest delikatna i przyjemna w dotyku zapewniając komfort w użytkowaniu mebla. Do produkcji tkaniny Touch Me użyto barwników najwyższej jakości, które nie zmieniają swojej tonacji pod wpływem działania światła. Tkanina bezpieczna dla niemowląt",
+    "specs": {
+      "type": "welur",
+      "composition": "100% PES",
+      "martindale": 100000,
+      "weight": 440,
+      "width": 140,
+      "pilling": null,
+      "lightfastness": null,
+      "flammability": null,
+      "cleaning": "Tylko łagodne środki do tapicerki. Nie bielić, nie prasować, nie suszyć mechanicznie, nie czyścić chemicznie.",
+      "certificates": [
+        "bezpieczna dla niemowląt"
+      ]
+    }
+  },
+  {
+    "id": "chill-me",
+    "name": "Chill Me",
+    "group": "premium",
+    "image": "tkanina-chill-me",
+    "description": "To oryginalna, szlachetna kolekcja skomponowana z 16 wersji kolorystycznych. Materiał pochodzi z ekskluzywnej linii tkanin obiciowych renomowanej marki Toccare - kwintesencja elegancji zamknięta w melanżowej, przyjemnej w dotyku strukturze. Tkanina zdobyła liczne atesty, które potwierdzają jej wyjątkową jakość. Poniżej kilka z nich: Water blocked - właściwości plamoodporne polegające na ograniczeniu wchłaniania płynów w tkaninę Good for babies - bezpieczna dla dzieci, również niemowląt Good for pets - zwiększona odporność na zaciągnięcie i zerwanie nitek w skutek np. drapania przez domowe zwierzęta",
+    "specs": {
+      "type": "melanż",
+      "composition": "100% PES",
+      "martindale": 100000,
+      "weight": null,
+      "width": null,
+      "pilling": null,
+      "lightfastness": null,
+      "flammability": null,
+      "cleaning": null,
+      "certificates": [
+        "Water Blocked",
+        "Good for babies",
+        "Good for pets"
+      ]
+    }
+  },
+  {
+    "id": "catch-me",
+    "name": "Catch Me",
+    "group": "premium",
+    "image": "tkanina-catch-me",
+    "description": "Tkanina szenilowa typu baranek, charakterystyczna struktura jest wyraźnie wyczuwalna i przyjemna w dotyku, nadając przy tym materiałowi nietuzinkowego wyglądu",
+    "specs": {
+      "type": "szenil typu baranek",
+      "composition": "100% PES",
+      "martindale": 100000,
+      "weight": 550,
+      "width": null,
+      "pilling": null,
+      "lightfastness": null,
+      "flammability": null,
+      "cleaning": "Tylko łagodne środki do tapicerki. Nie bielić, nie prasować, nie suszyć mechanicznie, nie czyścić chemicznie.",
+      "certificates": null
+    }
+  },
+  {
+    "id": "feel-me",
+    "name": "Feel Me",
+    "group": "premium",
+    "image": "tkanina-feel-me",
+    "description": "Miękka tkanina obiciowa z gatunku Boucle o wysokiej odporności na ścieranie, trudnopalna. Tkanina posiada certyfikat REACH, jest przyjazna dla środowiska i człowieka. Nadaje się również na meble dziecięce",
+    "specs": {
+      "type": "boucle",
+      "composition": "100% PES",
+      "martindale": 100000,
+      "weight": null,
+      "width": null,
+      "pilling": null,
+      "lightfastness": null,
+      "flammability": null,
+      "cleaning": "Tylko łagodne środki do tapicerki. Nie bielić, nie prasować, nie suszyć mechanicznie, nie czyścić chemicznie.",
+      "certificates": [
+        "REACH",
+        "trudnopalna"
+      ]
+    }
+  },
+  {
+    "id": "dama",
+    "name": "Dama",
+    "group": "premium",
+    "image": "tkanina-dama",
+    "description": "Szlachetna, gęsto tkana tkanina wełniana o zastosowaniu tapicerskim z możliwością zastosowania dekoracyjnego. Posiada dobre parametry techniczne - jest naturalnie trudnopalna; przechodzi test papierosa i zapałki według brytyjskich standardów trudnopalności. Występuje w palecie ponad czterdziestu pięknych odcieni, wśród których są zarówno kolory natury (ziemi, trawy, kamienia), stonowane - beże, brązy, kremy i szarości, jak i nietypowe dla wełny soczyste, pełne wyrazu mocne barwy: fuksji, śliwki, bakłażana i szmaragdowej zieleni",
+    "specs": {
+      "type": "wełna",
+      "composition": "100% wełna z recyklingu",
+      "martindale": 100000,
+      "weight": null,
+      "width": null,
+      "pilling": null,
+      "lightfastness": null,
+      "flammability": null,
+      "cleaning": null,
+      "certificates": [
+        "trudnopalna (BS 5852)"
+      ]
+    }
+  },
+  {
+    "id": "zakard",
+    "name": "Żakard",
+    "group": "żakardowe",
+    "image": "tkanina-zakard",
+    "description": "Żakard to gruba i mocna tkanina. Niektórzy określają ją mianem mięsistego materiału. To pewnie za sprawą gęstego splotu. Wytrzymały materiał wykorzystywany jest przez projektantów mody, designerów oraz tapicerów",
+    "specs": {
+      "type": "żakard",
+      "composition": null,
+      "martindale": null,
+      "weight": null,
+      "width": null,
+      "pilling": null,
+      "lightfastness": null,
+      "flammability": null,
+      "cleaning": null,
+      "certificates": null
+    }
+  }
+]

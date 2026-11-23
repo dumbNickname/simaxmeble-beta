@@ -1,0 +1,2207 @@
+{
+ "b2b-1": {
+  "w": 2736,
+  "h": 3648,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#8c8e85",
+  "cutout": false
+ },
+ "fotel-allure-198": {
+  "w": 2388,
+  "h": 2847,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#b6c4bf",
+  "cutout": true
+ },
+ "fotel-allure-200": {
+  "w": 3457,
+  "h": 4446,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#7c9d85",
+  "cutout": true
+ },
+ "fotel-allure-201": {
+  "w": 1895,
+  "h": 2641,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#a8c0b9",
+  "cutout": true
+ },
+ "fotel-allure-202": {
+  "w": 2005,
+  "h": 2615,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#bcc7c4",
+  "cutout": true
+ },
+ "fotel-allure-203": {
+  "w": 2182,
+  "h": 2507,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#bdc7c4",
+  "cutout": true
+ },
+ "fotel-allure-204": {
+  "w": 2534,
+  "h": 2931,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#b9c6c2",
+  "cutout": true
+ },
+ "fotel-allure-249": {
+  "w": 2025,
+  "h": 2500,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d5d7d1",
+  "cutout": true
+ },
+ "fotel-allure-250": {
+  "w": 2025,
+  "h": 2500,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#dadcd9",
+  "cutout": true
+ },
+ "fotel-allure-251": {
+  "w": 2025,
+  "h": 2500,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d9dad7",
+  "cutout": true
+ },
+ "fotel-allure-252": {
+  "w": 2025,
+  "h": 2500,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d7d9d5",
+  "cutout": true
+ },
+ "fotel-allure-253": {
+  "w": 2025,
+  "h": 2500,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c1c3ba",
+  "cutout": true
+ },
+ "fotel-allure-254": {
+  "w": 2025,
+  "h": 2500,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#bdc0b7",
+  "cutout": true
+ },
+ "fotel-baltic-boucle-266": {
+  "w": 1670,
+  "h": 1693,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#e2e1e0",
+  "cutout": true
+ },
+ "fotel-baltic-boucle-267": {
+  "w": 1500,
+  "h": 1500,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#eae9e9",
+  "cutout": true
+ },
+ "fotel-baltic-boucle-268": {
+  "w": 1500,
+  "h": 1500,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#eeeeec",
+  "cutout": true
+ },
+ "fotel-baltic-boucle-269": {
+  "w": 1500,
+  "h": 1500,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#f0efee",
+  "cutout": true
+ },
+ "fotel-baltic-boucle-270": {
+  "w": 1632,
+  "h": 1553,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#dfdfde",
+  "cutout": true
+ },
+ "fotel-boston-166": {
+  "w": 2010,
+  "h": 2449,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#e4e2df",
+  "cutout": true
+ },
+ "fotel-boston-167": {
+  "w": 2154,
+  "h": 2657,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#e9e6e4",
+  "cutout": true
+ },
+ "fotel-boston-168": {
+  "w": 2186,
+  "h": 2764,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#e2e0dd",
+  "cutout": true
+ },
+ "fotel-boston-169": {
+  "w": 487,
+  "h": 600,
+  "widths": [
+   480,
+   487
+  ],
+  "color": "#e5e3e0",
+  "cutout": true
+ },
+ "fotel-carmo-107": {
+  "w": 2175,
+  "h": 2145,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#aeb4bc",
+  "cutout": true
+ },
+ "fotel-carmo-108": {
+  "w": 2700,
+  "h": 2700,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c8cdd2",
+  "cutout": true
+ },
+ "fotel-carmo-109": {
+  "w": 2700,
+  "h": 2700,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c6cace",
+  "cutout": true
+ },
+ "fotel-carmo-302": {
+  "w": 1382,
+  "h": 1397,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c5c6c2",
+  "cutout": false
+ },
+ "fotel-carmo-303": {
+  "w": 1369,
+  "h": 1382,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c8cac5",
+  "cutout": false
+ },
+ "fotel-carmo-304": {
+  "w": 1847,
+  "h": 1869,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d2d4d4",
+  "cutout": false
+ },
+ "fotel-carmo-305": {
+  "w": 1737,
+  "h": 1829,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#cccecc",
+  "cutout": false
+ },
+ "fotel-carmo-306": {
+  "w": 2500,
+  "h": 2704,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d7d5cf",
+  "cutout": true
+ },
+ "fotel-carmo-81": {
+  "w": 1797,
+  "h": 2028,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#878d9a",
+  "cutout": true
+ },
+ "fotel-carmo-82": {
+  "w": 1950,
+  "h": 2148,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#8e95a4",
+  "cutout": true
+ },
+ "fotel-carmo-83": {
+  "w": 2013,
+  "h": 2238,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#a1a3aa",
+  "cutout": true
+ },
+ "fotel-carmo-85": {
+  "w": 2250,
+  "h": 2250,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d5c5af",
+  "cutout": true
+ },
+ "fotel-carmo-86": {
+  "w": 2017,
+  "h": 2195,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d0b99c",
+  "cutout": true
+ },
+ "fotel-carmo-87": {
+  "w": 1871,
+  "h": 2053,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#cab498",
+  "cutout": true
+ },
+ "fotel-carmo-88": {
+  "w": 2250,
+  "h": 2250,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d5c5af",
+  "cutout": true
+ },
+ "fotel-carmo-89": {
+  "w": 2025,
+  "h": 2386,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#dac9b6",
+  "cutout": true
+ },
+ "fotel-carmo-91": {
+  "w": 1845,
+  "h": 2020,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#afb8b4",
+  "cutout": true
+ },
+ "fotel-carmo-92": {
+  "w": 1720,
+  "h": 1865,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#9aada6",
+  "cutout": true
+ },
+ "fotel-carmo-93": {
+  "w": 1770,
+  "h": 1911,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#95a7a1",
+  "cutout": true
+ },
+ "fotel-carmo-94": {
+  "w": 2250,
+  "h": 2250,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d5c5af",
+  "cutout": true
+ },
+ "fotel-carmo-glamour-119": {
+  "w": 2019,
+  "h": 2152,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#afb7b5",
+  "cutout": true
+ },
+ "fotel-carmo-glamour-120": {
+  "w": 535,
+  "h": 600,
+  "widths": [
+   480,
+   535
+  ],
+  "color": "#9baaad",
+  "cutout": true
+ },
+ "fotel-carmo-glamour-121": {
+  "w": 2250,
+  "h": 2247,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#b7bebc",
+  "cutout": true
+ },
+ "fotel-carmo-glamour-122": {
+  "w": 2035,
+  "h": 2158,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#cfc0ae",
+  "cutout": true
+ },
+ "fotel-carmo-glamour-123": {
+  "w": 1844,
+  "h": 2004,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c4ad94",
+  "cutout": true
+ },
+ "fotel-carmo-glamour-124": {
+  "w": 2241,
+  "h": 2387,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d5c9ba",
+  "cutout": true
+ },
+ "fotel-carmo-glamour-125": {
+  "w": 1948,
+  "h": 2137,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d1bfab",
+  "cutout": true
+ },
+ "fotel-carmo-glamour-126": {
+  "w": 549,
+  "h": 600,
+  "widths": [
+   480,
+   549
+  ],
+  "color": "#cdb088",
+  "cutout": true
+ },
+ "fotel-carmo-glamour-127": {
+  "w": 2241,
+  "h": 2387,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d5c9ba",
+  "cutout": true
+ },
+ "fotel-carmo-glamour-128": {
+  "w": 2055,
+  "h": 2218,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d8c4b2",
+  "cutout": true
+ },
+ "fotel-carmo-glamour-129": {
+  "w": 1984,
+  "h": 2139,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d2b696",
+  "cutout": true
+ },
+ "fotel-carmo-glamour-130": {
+  "w": 2250,
+  "h": 2385,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#dacaba",
+  "cutout": true
+ },
+ "fotel-eterno-157": {
+  "w": 1851,
+  "h": 1940,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c9b8b7",
+  "cutout": true
+ },
+ "fotel-eterno-158": {
+  "w": 2091,
+  "h": 2182,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#cab5b4",
+  "cutout": true
+ },
+ "fotel-eterno-159": {
+  "w": 2091,
+  "h": 2182,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d8d0cf",
+  "cutout": true
+ },
+ "fotel-eterno-160": {
+  "w": 2068,
+  "h": 2151,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d1c3c3",
+  "cutout": true
+ },
+ "fotel-eterno-161": {
+  "w": 1600,
+  "h": 1200,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c8c1bd",
+  "cutout": true
+ },
+ "fotel-eterno-271": {
+  "w": 1751,
+  "h": 2021,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#eaded3",
+  "cutout": true
+ },
+ "fotel-eterno-272": {
+  "w": 1920,
+  "h": 2184,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#ddcaba",
+  "cutout": true
+ },
+ "fotel-eterno-273": {
+  "w": 1896,
+  "h": 2118,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#dfcdbc",
+  "cutout": true
+ },
+ "fotel-eterno-274": {
+  "w": 1968,
+  "h": 2085,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#e4d4c3",
+  "cutout": true
+ },
+ "fotel-eterno-275": {
+  "w": 1616,
+  "h": 1781,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#e2ccb5",
+  "cutout": true
+ },
+ "fotel-eterno-276": {
+  "w": 1876,
+  "h": 2008,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#e0cebc",
+  "cutout": true
+ },
+ "fotel-eterno-333": {
+  "w": 2179,
+  "h": 2179,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#dbd2ca",
+  "cutout": true
+ },
+ "fotel-eterno-334": {
+  "w": 2179,
+  "h": 2179,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d5c8ba",
+  "cutout": true
+ },
+ "fotel-eterno-335": {
+  "w": 2179,
+  "h": 2179,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#e1ddda",
+  "cutout": true
+ },
+ "fotel-eterno-336": {
+  "w": 2179,
+  "h": 2179,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#dad6d4",
+  "cutout": true
+ },
+ "fotel-eterno-356": {
+  "w": 1526,
+  "h": 1526,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#dbdcdc",
+  "cutout": false
+ },
+ "fotel-eterno-357": {
+  "w": 1514,
+  "h": 1514,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#dadad9",
+  "cutout": false
+ },
+ "fotel-eterno-358": {
+  "w": 1514,
+  "h": 1514,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d9dadb",
+  "cutout": false
+ },
+ "fotel-eterno-359": {
+  "w": 1514,
+  "h": 1514,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d3d2d1",
+  "cutout": false
+ },
+ "fotel-eterno-360": {
+  "w": 2782,
+  "h": 2924,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#eceae7",
+  "cutout": true
+ },
+ "fotel-eterno-361": {
+  "w": 1510,
+  "h": 1510,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d6d2d2",
+  "cutout": true
+ },
+ "fotel-eterno-362": {
+  "w": 1523,
+  "h": 1523,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#e5dad8",
+  "cutout": true
+ },
+ "fotel-eterno-363": {
+  "w": 3074,
+  "h": 3074,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d7d8db",
+  "cutout": true
+ },
+ "fotel-eterno-364": {
+  "w": 1520,
+  "h": 1520,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#dfdfdf",
+  "cutout": true
+ },
+ "fotel-eterno-365": {
+  "w": 1523,
+  "h": 1524,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#e5dacf",
+  "cutout": true
+ },
+ "fotel-eterno-366": {
+  "w": 1522,
+  "h": 1523,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d1d5d3",
+  "cutout": true
+ },
+ "fotel-eterno-367": {
+  "w": 1412,
+  "h": 1412,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d1d7d9",
+  "cutout": true
+ },
+ "fotel-eterno-369": {
+  "w": 1525,
+  "h": 1525,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d2d4cf",
+  "cutout": true
+ },
+ "fotel-eterno-370": {
+  "w": 1525,
+  "h": 1525,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#cecfd0",
+  "cutout": true
+ },
+ "fotel-eterno-371": {
+  "w": 1201,
+  "h": 1201,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#e8dad7",
+  "cutout": true
+ },
+ "fotel-eterno-372": {
+  "w": 1405,
+  "h": 1406,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d0d7da",
+  "cutout": true
+ },
+ "fotel-eterno-373": {
+  "w": 1413,
+  "h": 1413,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#dee1e2",
+  "cutout": true
+ },
+ "fotel-eterno-374": {
+  "w": 1702,
+  "h": 1702,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d6dbdc",
+  "cutout": true
+ },
+ "fotel-eterno-375": {
+  "w": 1328,
+  "h": 1328,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c5cbce",
+  "cutout": true
+ },
+ "fotel-eterno-377": {
+  "w": 1408,
+  "h": 1408,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#ced4d7",
+  "cutout": true
+ },
+ "fotel-figaro-100": {
+  "w": 1875,
+  "h": 2250,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#87958e",
+  "cutout": true
+ },
+ "fotel-figaro-101": {
+  "w": 1572,
+  "h": 1875,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#9daea5",
+  "cutout": true
+ },
+ "fotel-figaro-102": {
+  "w": 2182,
+  "h": 2366,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#aab4af",
+  "cutout": true
+ },
+ "fotel-figaro-103": {
+  "w": 1968,
+  "h": 2148,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#ddc29e",
+  "cutout": true
+ },
+ "fotel-figaro-104": {
+  "w": 1861,
+  "h": 2061,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#dab78c",
+  "cutout": true
+ },
+ "fotel-figaro-105": {
+  "w": 1875,
+  "h": 2250,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#dec6ab",
+  "cutout": true
+ },
+ "fotel-figaro-106": {
+  "w": 2337,
+  "h": 2424,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#e4d0b5",
+  "cutout": true
+ },
+ "fotel-figaro-216": {
+  "w": 2002,
+  "h": 2077,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c1c9b8",
+  "cutout": true
+ },
+ "fotel-figaro-217": {
+  "w": 1878,
+  "h": 1987,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#bbc4b0",
+  "cutout": true
+ },
+ "fotel-figaro-218": {
+  "w": 2012,
+  "h": 2121,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c2c7ba",
+  "cutout": true
+ },
+ "fotel-figaro-219": {
+  "w": 2051,
+  "h": 2163,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c1c8b9",
+  "cutout": true
+ },
+ "fotel-figaro-95": {
+  "w": 2043,
+  "h": 2237,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#98a0ad",
+  "cutout": true
+ },
+ "fotel-figaro-96": {
+  "w": 2027,
+  "h": 2144,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#979ba8",
+  "cutout": true
+ },
+ "fotel-figaro-97": {
+  "w": 2059,
+  "h": 2324,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#a5abb7",
+  "cutout": true
+ },
+ "fotel-figaro-98": {
+  "w": 2360,
+  "h": 2617,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#b1b6c0",
+  "cutout": true
+ },
+ "fotel-figaro-99": {
+  "w": 1834,
+  "h": 2055,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#8e9b95",
+  "cutout": true
+ },
+ "fotel-grande-111": {
+  "w": 2035,
+  "h": 2058,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#a7abaf",
+  "cutout": true
+ },
+ "fotel-grande-112": {
+  "w": 1794,
+  "h": 1925,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#90949a",
+  "cutout": true
+ },
+ "fotel-grande-113": {
+  "w": 600,
+  "h": 590,
+  "widths": [
+   480,
+   600
+  ],
+  "color": "#aab0b6",
+  "cutout": true
+ },
+ "fotel-grande-114": {
+  "w": 2250,
+  "h": 2250,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#b4acab",
+  "cutout": true
+ },
+ "fotel-grande-115": {
+  "w": 2250,
+  "h": 2250,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#a19998",
+  "cutout": true
+ },
+ "fotel-grande-116": {
+  "w": 1893,
+  "h": 1996,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#aeafb5",
+  "cutout": true
+ },
+ "fotel-grande-117": {
+  "w": 1830,
+  "h": 1935,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#92959e",
+  "cutout": true
+ },
+ "fotel-grande-118": {
+  "w": 1989,
+  "h": 2176,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#a7aaaf",
+  "cutout": true
+ },
+ "fotel-grande-170": {
+  "w": 2162,
+  "h": 2214,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#ceb7b2",
+  "cutout": true
+ },
+ "fotel-grande-171": {
+  "w": 2217,
+  "h": 2359,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d6c2c0",
+  "cutout": true
+ },
+ "fotel-grande-172": {
+  "w": 2033,
+  "h": 2316,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c69ca2",
+  "cutout": true
+ },
+ "fotel-grande-173": {
+  "w": 2420,
+  "h": 2520,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d6c4c0",
+  "cutout": true
+ },
+ "fotel-grande-174": {
+  "w": 1600,
+  "h": 1200,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c8c1bd",
+  "cutout": true
+ },
+ "fotel-grande-197": {
+  "w": 1600,
+  "h": 1200,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c8c1bd",
+  "cutout": true
+ },
+ "fotel-grande-205": {
+  "w": 1600,
+  "h": 1200,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c8c1bd",
+  "cutout": true
+ },
+ "fotel-grande-292": {
+  "w": 1119,
+  "h": 1169,
+  "widths": [
+   480,
+   800,
+   1119
+  ],
+  "color": "#b3bec4",
+  "cutout": true
+ },
+ "fotel-grande-293": {
+  "w": 1204,
+  "h": 1156,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#bfc8cc",
+  "cutout": true
+ },
+ "fotel-grande-294": {
+  "w": 1217,
+  "h": 1172,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c6cccf",
+  "cutout": true
+ },
+ "fotel-grande-295": {
+  "w": 1040,
+  "h": 1073,
+  "widths": [
+   480,
+   800,
+   1040
+  ],
+  "color": "#ced2d4",
+  "cutout": true
+ },
+ "fotel-grande-296": {
+  "w": 1123,
+  "h": 1155,
+  "widths": [
+   480,
+   800,
+   1123
+  ],
+  "color": "#c0c6c9",
+  "cutout": true
+ },
+ "fotel-grande-297": {
+  "w": 1217,
+  "h": 1205,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c3c9cc",
+  "cutout": true
+ },
+ "fotel-grande-50": {
+  "w": 2010,
+  "h": 2205,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d8c4b1",
+  "cutout": true
+ },
+ "fotel-grande-52": {
+  "w": 1791,
+  "h": 1894,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#cabdba",
+  "cutout": true
+ },
+ "fotel-grande-57": {
+  "w": 1992,
+  "h": 2120,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#bbc0ba",
+  "cutout": true
+ },
+ "fotel-grande-58": {
+  "w": 2250,
+  "h": 2250,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#b4bebb",
+  "cutout": true
+ },
+ "fotel-grande-59": {
+  "w": 2250,
+  "h": 2325,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c2c0b8",
+  "cutout": true
+ },
+ "fotel-grande-60": {
+  "w": 2077,
+  "h": 2240,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#bec8c6",
+  "cutout": true
+ },
+ "fotel-grande-61": {
+  "w": 2148,
+  "h": 2180,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c1c1be",
+  "cutout": true
+ },
+ "fotel-grande-62": {
+  "w": 1962,
+  "h": 2004,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c6bdb8",
+  "cutout": true
+ },
+ "fotel-grande-63": {
+  "w": 2040,
+  "h": 2178,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#a09d9e",
+  "cutout": true
+ },
+ "fotel-grande-64": {
+  "w": 2250,
+  "h": 2325,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c2c0b8",
+  "cutout": true
+ },
+ "fotel-grande-65": {
+  "w": 2250,
+  "h": 2250,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#bcbcba",
+  "cutout": true
+ },
+ "fotel-grande-66": {
+  "w": 2250,
+  "h": 2250,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c5c5bc",
+  "cutout": true
+ },
+ "fotel-grande-67": {
+  "w": 1984,
+  "h": 2095,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#b9bfb7",
+  "cutout": true
+ },
+ "fotel-grande-68": {
+  "w": 2250,
+  "h": 2250,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#a5b2a9",
+  "cutout": true
+ },
+ "fotel-grande-69": {
+  "w": 1961,
+  "h": 2025,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d4c5b2",
+  "cutout": true
+ },
+ "fotel-grande-70": {
+  "w": 2226,
+  "h": 2267,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#cfb89c",
+  "cutout": true
+ },
+ "fotel-grande-71": {
+  "w": 2038,
+  "h": 2124,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c3bab3",
+  "cutout": true
+ },
+ "fotel-grande-72": {
+  "w": 1827,
+  "h": 1982,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#d4b2af",
+  "cutout": true
+ },
+ "fotel-grande-73": {
+  "w": 2250,
+  "h": 2400,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#dfd5d2",
+  "cutout": true
+ },
+ "fotel-grande-74": {
+  "w": 2099,
+  "h": 2118,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#decac7",
+  "cutout": true
+ },
+ "fotel-grande-75": {
+  "w": 1924,
+  "h": 2130,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c78e93",
+  "cutout": true
+ },
+ "fotel-grande-76": {
+  "w": 1924,
+  "h": 2075,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#cdadae",
+  "cutout": true
+ },
+ "fotel-grande-77": {
+  "w": 1924,
+  "h": 2021,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#cabdb8",
+  "cutout": true
+ },
+ "fotel-grande-78": {
+  "w": 1741,
+  "h": 1701,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c2bfbb",
+  "cutout": true
+ },
+ "fotel-grande-79": {
+  "w": 2108,
+  "h": 2018,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c5c7c4",
+  "cutout": true
+ },
+ "fotel-grande-80": {
+  "w": 1892,
+  "h": 1764,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#b7bbb8",
+  "cutout": true
+ },
+ "fotel-liteno-18": {
+  "w": 827,
+  "h": 820,
+  "widths": [
+   480,
+   800,
+   827
+  ],
+  "color": "#c4c1c1",
+  "cutout": true
+ },
+ "fotel-liteno-19": {
+  "w": 1200,
+  "h": 1200,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#e5e3e3",
+  "cutout": true
+ },
+ "fotel-liteno-20": {
+  "w": 1200,
+  "h": 1200,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#e3e2e2",
+  "cutout": true
+ },
+ "fotel-liteno-21": {
+  "w": 1200,
+  "h": 1200,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#e7e7e6",
+  "cutout": true
+ },
+ "fotel-liteno-22": {
+  "w": 1200,
+  "h": 1200,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#e3e2e2",
+  "cutout": true
+ },
+ "fotel-retro-prl-337": {
+  "w": 2000,
+  "h": 2666,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#bdbcbb",
+  "cutout": false
+ },
+ "fotel-retro-prl-338": {
+  "w": 2000,
+  "h": 2666,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#b5b5b5",
+  "cutout": false
+ },
+ "fotel-retro-prl-339": {
+  "w": 2000,
+  "h": 2666,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c7c6c4",
+  "cutout": false
+ },
+ "fotel-retro-prl-340": {
+  "w": 2000,
+  "h": 2666,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#e7e7e6",
+  "cutout": true
+ },
+ "kanapa-nuvem-boucle-341": {
+  "w": 1280,
+  "h": 720,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#aea291",
+  "cutout": false
+ },
+ "kanapa-nuvem-boucle-343": {
+  "w": 960,
+  "h": 960,
+  "widths": [
+   480,
+   800,
+   960
+  ],
+  "color": "#ece9e6",
+  "cutout": true
+ },
+ "kanapa-nuvem-boucle-344": {
+  "w": 960,
+  "h": 960,
+  "widths": [
+   480,
+   800,
+   960
+  ],
+  "color": "#f0eeeb",
+  "cutout": true
+ },
+ "kanapa-nuvem-boucle-345": {
+  "w": 960,
+  "h": 960,
+  "widths": [
+   480,
+   800,
+   960
+  ],
+  "color": "#aca29a",
+  "cutout": false
+ },
+ "kanapa-nuvem-boucle-355": {
+  "w": 960,
+  "h": 749,
+  "widths": [
+   480,
+   800,
+   960
+  ],
+  "color": "#e6e3df",
+  "cutout": true
+ },
+ "kanapa-simple-boucle-436": {
+  "w": 960,
+  "h": 960,
+  "widths": [
+   480,
+   800,
+   960
+  ],
+  "color": "#a79e96",
+  "cutout": false
+ },
+ "kanapa-simple-boucle-443": {
+  "w": 955,
+  "h": 539,
+  "widths": [
+   480,
+   800,
+   955
+  ],
+  "color": "#e9e7e3",
+  "cutout": true
+ },
+ "kanapa-simple-boucle-445": {
+  "w": 960,
+  "h": 960,
+  "widths": [
+   480,
+   800,
+   960
+  ],
+  "color": "#a69d96",
+  "cutout": false
+ },
+ "krzeslo-confortavel-225": {
+  "w": 2000,
+  "h": 3000,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#dde6ea",
+  "cutout": true
+ },
+ "krzeslo-confortavel-226": {
+  "w": 2000,
+  "h": 3000,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#dce5e9",
+  "cutout": true
+ },
+ "krzeslo-confortavel-228": {
+  "w": 2000,
+  "h": 3000,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#e0e8eb",
+  "cutout": true
+ },
+ "krzeslo-confortavel-229": {
+  "w": 2000,
+  "h": 3000,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#cfdee4",
+  "cutout": true
+ },
+ "krzeslo-confortavel-230": {
+  "w": 2000,
+  "h": 3000,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#dfe8ec",
+  "cutout": true
+ },
+ "krzeslo-confortavel-231": {
+  "w": 2000,
+  "h": 3000,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#cedce3",
+  "cutout": true
+ },
+ "krzeslo-confortavel-232": {
+  "w": 2000,
+  "h": 3000,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#cbdce5",
+  "cutout": true
+ },
+ "krzeslo-confortavel-233": {
+  "w": 2000,
+  "h": 3000,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#dae5ea",
+  "cutout": true
+ },
+ "krzeslo-confortavel-234": {
+  "w": 2000,
+  "h": 3000,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c4d8e0",
+  "cutout": true
+ },
+ "krzeslo-confortavel-235": {
+  "w": 2000,
+  "h": 3000,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#bbd1dd",
+  "cutout": true
+ },
+ "krzeslo-confortavel-236": {
+  "w": 2039,
+  "h": 2493,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c2d3dc",
+  "cutout": true
+ },
+ "lozko-como-160x200-379": {
+  "w": 1517,
+  "h": 1517,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#b6aba4",
+  "cutout": false
+ },
+ "lozko-dia-160x200-412": {
+  "w": 1500,
+  "h": 1500,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#7f756c",
+  "cutout": false
+ },
+ "lozko-dia-160x200-417": {
+  "w": 1500,
+  "h": 1500,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#796d62",
+  "cutout": false
+ },
+ "o-nas-1": {
+  "w": 570,
+  "h": 380,
+  "widths": [
+   480,
+   570
+  ],
+  "color": "#997f6c",
+  "cutout": false
+ },
+ "o-nas-2": {
+  "w": 776,
+  "h": 517,
+  "widths": [
+   480,
+   776
+  ],
+  "color": "#6f593e",
+  "cutout": false
+ },
+ "podnozek-grande-214": {
+  "w": 3009,
+  "h": 2607,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#e3eaee",
+  "cutout": true
+ },
+ "podnozek-grande-215": {
+  "w": 2066,
+  "h": 1829,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#e0edf1",
+  "cutout": true
+ },
+ "tkanina-austin": {
+  "w": 1745,
+  "h": 2340,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#9f8879",
+  "cutout": true
+ },
+ "tkanina-bluvel": {
+  "w": 1701,
+  "h": 2211,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#a39578",
+  "cutout": true
+ },
+ "tkanina-catch-me": {
+  "w": 1400,
+  "h": 2570,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#aa948d",
+  "cutout": true
+ },
+ "tkanina-chill-me": {
+  "w": 1832,
+  "h": 2428,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#958d80",
+  "cutout": true
+ },
+ "tkanina-dama": {
+  "w": 2083,
+  "h": 3976,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#a09192",
+  "cutout": true
+ },
+ "tkanina-element": {
+  "w": 1751,
+  "h": 2108,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#8c9085",
+  "cutout": true
+ },
+ "tkanina-feel-me": {
+  "w": 2250,
+  "h": 2250,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#858283",
+  "cutout": true
+ },
+ "tkanina-french-velvet": {
+  "w": 1833,
+  "h": 2482,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#917b69",
+  "cutout": true
+ },
+ "tkanina-massimo": {
+  "w": 3277,
+  "h": 3650,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#857e79",
+  "cutout": true
+ },
+ "tkanina-salvador": {
+  "w": 1912,
+  "h": 2152,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#887c78",
+  "cutout": true
+ },
+ "tkanina-touch-me": {
+  "w": 2429,
+  "h": 2302,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#8c8486",
+  "cutout": true
+ },
+ "tkanina-urban": {
+  "w": 1855,
+  "h": 2525,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#a89a80",
+  "cutout": true
+ },
+ "tkanina-zakard": {
+  "w": 1795,
+  "h": 2235,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#b5adab",
+  "cutout": true
+ },
+ "wybarwienia-1": {
+  "w": 1600,
+  "h": 1200,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#c8c1bd",
+  "cutout": true
+ }
+}

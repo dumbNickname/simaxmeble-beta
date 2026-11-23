@@ -1,0 +1,93 @@
+.wrap {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item figure {
+  margin: 0;
+}
+
+.item img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.item figcaption {
+  display: grid;
+  gap: 0.15rem;
+  padding-top: 0.6rem;
+  font-size: 0.9rem;
+}
+
+.author {
+  color: var(--muted);
+}
+
+.invite {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: clamp(1.25rem, 4vw, 3rem);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+}
+
+.invite h3 {
+  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+}
+
+.invite p {
+  max-width: 52ch;
+}
+
+.frames {
+  position: relative;
+  width: 9rem;
+  height: 8rem;
+}
+
+.frames span {
+  position: absolute;
+  inset: 0;
+  border: 6px solid #fff;
+  border-radius: 10px;
+  background: linear-gradient(160deg, var(--accent) 0 45%, var(--accent-2) 45% 100%);
+  box-shadow: 0 10px 24px -12px rgb(0 0 0 / 0.4);
+  transform-origin: 50% 90%;
+  transition: transform 0.6s var(--spring);
+}
+
+.frames span:nth-child(1) { transform: rotate(-12deg) translateX(-0.6rem); background: linear-gradient(160deg, #e3aeb1 0 50%, #1f2d57 50%); }
+.frames span:nth-child(2) { transform: rotate(7deg) translateX(0.5rem); background: linear-gradient(160deg, #1c9a9b 0 55%, #c9971c 55%); }
+
+.invite:hover .frames span:nth-child(1) { transform: rotate(-20deg) translateX(-1.4rem); }
+.invite:hover .frames span:nth-child(2) { transform: rotate(14deg) translateX(1.3rem); }
+.invite:hover .frames span:nth-child(3) { transform: translateY(-0.4rem); }
+
+@media (max-width: 560px) {
+  .invite {
+    grid-template-columns: 1fr;
+  }
+}
+
+:global(html[data-design="b"]) .invite {
+  border: var(--border);
+  box-shadow: var(--shadow);
+}
+
+:global(html[data-design="b"]) .frames span {
+  border-color: #fff;
+  outline: 2px solid var(--ink);
+}

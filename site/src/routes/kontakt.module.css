@@ -1,0 +1,73 @@
+.phone {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.mail {
+  font-weight: 700;
+  font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+  word-break: break-all;
+}
+
+.address {
+  margin-bottom: 1.25rem;
+  font-style: normal;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* A drawn map tile instead of an embedded map: no third-party scripts. */
+.map {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background:
+    linear-gradient(115deg, transparent 46%, #fff 46% 50%, transparent 50%),
+    linear-gradient(20deg, transparent 60%, #fff 60% 62.5%, transparent 62.5%),
+    repeating-linear-gradient(0deg, transparent 0 38px, rgb(0 0 0 / 0.05) 38px 39px),
+    repeating-linear-gradient(90deg, transparent 0 38px, rgb(0 0 0 / 0.05) 38px 39px),
+    #dcebd8;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.pin {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50% 50% 50% 0;
+  background: var(--accent-2);
+  box-shadow: inset 0 0 0 0.7rem var(--accent-2), inset 0 0 0 2rem #fff;
+  transform: rotate(-45deg);
+  animation: drop 1.6s var(--spring) infinite alternate;
+}
+
+@keyframes drop {
+  from { transform: rotate(-45deg) translate(0, 0); }
+  to { transform: rotate(-45deg) translate(6px, -6px); }
+}
+
+.mapLabel {
+  display: grid;
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  background: #fff;
+  font-weight: 700;
+  text-align: center;
+}
+
+.mapLabel small {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.map:hover .pin {
+  animation-duration: 0.5s;
+}
+
+:global(html[data-design="b"]) .map {
+  border: var(--border);
+}

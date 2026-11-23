@@ -1,0 +1,298 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(1.4) blur(14px);
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 4.25rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.mark {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 12px;
+  background: var(--ink);
+  color: var(--bg);
+  font-weight: 800;
+  font-size: 1.25rem;
+  transition: transform 0.5s var(--spring);
+}
+
+.mark::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--bg);
+}
+
+.brand:hover .mark {
+  transform: rotate(-8deg) scale(1.06);
+}
+
+.word {
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+}
+
+.word span {
+  margin-left: 0.35rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--muted);
+}
+
+.menu {
+  margin-left: auto;
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0 0.9rem;
+  border-radius: 999px;
+  background: var(--surface);
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.toggle::-webkit-details-marker {
+  display: none;
+}
+
+.burger,
+.burger::before,
+.burger::after {
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: transform 0.3s var(--ease);
+}
+
+.burger {
+  position: relative;
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.burger::before {
+  top: -6px;
+}
+
+.burger::after {
+  top: 6px;
+}
+
+.menu[open] .burger {
+  background: transparent;
+}
+
+.menu[open] .burger::before {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.menu[open] .burger::after {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav a {
+  display: block;
+  padding: 0.55rem 0.75rem;
+  border-radius: 10px;
+  color: var(--ink);
+  font-weight: 550;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav a:hover {
+  background: var(--surface);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.search,
+.phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2.75rem;
+  padding: 0 0.9rem;
+  border-radius: 999px;
+  font-weight: 650;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.search {
+  color: var(--ink);
+}
+
+.search span {
+  display: none;
+}
+
+.phone {
+  background: var(--accent);
+  color: var(--accent-ink);
+  transition: transform 0.35s var(--spring);
+}
+
+.phone:hover {
+  transform: translateY(-2px) rotate(-1.5deg);
+}
+
+@media (max-width: 979px) {
+  .nav {
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    right: 0;
+    padding: 0.75rem var(--gutter) 1.25rem;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 30px 40px -30px rgb(0 0 0 / 0.3);
+  }
+
+  .nav a {
+    padding: 0.85rem 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .phone span {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .word span {
+    display: none;
+  }
+}
+
+@media (min-width: 980px) {
+  .menu {
+    display: contents;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  /* <details> hides its content when closed; on desktop the nav is always shown. */
+  .menu::details-content {
+    display: contents;
+    content-visibility: visible;
+  }
+
+  .menu:not([open]) > .nav {
+    display: block;
+  }
+
+  .nav {
+    margin-left: auto;
+  }
+
+  .nav ul {
+    display: flex;
+    gap: 0.1rem;
+  }
+
+  .nav a {
+    padding: 0.5rem 0.65rem;
+    font-size: 0.95rem;
+  }
+
+  .search span {
+    display: inline;
+  }
+}
+
+/* ---- B */
+:global(html[data-design="b"]) .header {
+  background: var(--accent);
+  backdrop-filter: none;
+  border-bottom: 2px solid var(--ink);
+}
+
+:global(html[data-design="b"]) .mark {
+  border-radius: 50%;
+  background: var(--accent-2);
+  color: #fff;
+  border: 2px solid var(--ink);
+}
+
+:global(html[data-design="b"]) .mark::after {
+  background: var(--accent-soft);
+  box-shadow: 0 0 0 2px var(--ink);
+}
+
+:global(html[data-design="b"]) .word {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  letter-spacing: 0.02em;
+}
+
+:global(html[data-design="b"]) .word span {
+  color: var(--ink);
+  font-style: italic;
+}
+
+:global(html[data-design="b"]) .nav a:hover {
+  background: #fff;
+}
+
+:global(html[data-design="b"]) .toggle {
+  background: #fff;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-sm);
+}
+
+:global(html[data-design="b"]) .phone {
+  background: var(--ink);
+  color: #fff;
+  border-radius: var(--radius-sm);
+}

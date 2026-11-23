@@ -1,0 +1,21 @@
+.crumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+.crumbs li + li::before {
+  content: "/";
+  margin-right: 0.5rem;
+  opacity: 0.5;
+}
+.crumbs a {
+  color: inherit;
+}
+.crumbs a:hover {
+  color: var(--ink);
+}

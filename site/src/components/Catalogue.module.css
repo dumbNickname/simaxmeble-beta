@@ -1,0 +1,249 @@
+.catalogue {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.searchBar {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.4rem;
+  border-radius: 999px;
+  background: var(--surface);
+}
+
+.searchBar input {
+  flex: 1;
+  min-width: 0;
+  min-height: 3rem;
+  padding: 0 1.1rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--ink);
+  font: inherit;
+  font-size: 1.05rem;
+}
+
+.searchBar input:focus-visible {
+  outline: 3px solid var(--accent-2);
+  outline-offset: 0;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: transform 0.35s var(--spring), background 0.2s;
+}
+
+.chip:hover {
+  transform: translateY(-2px);
+}
+
+.chip[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.views {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.count {
+  margin: 0;
+  color: var(--muted);
+}
+
+.count strong {
+  color: var(--ink);
+}
+
+.toggle {
+  display: flex;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0.25rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--surface);
+}
+
+.toggle label {
+  position: relative;
+  padding: 0.45rem 0.95rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.toggle input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.toggle label:has(:checked) {
+  background: var(--bg);
+  box-shadow: 0 2px 8px -3px rgb(0 0 0 / 0.3);
+}
+
+.toggle label:has(:focus-visible) {
+  outline: 3px solid var(--accent-2);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+  gap: clamp(1.5rem, 3vw, 2.5rem) clamp(1rem, 2vw, 1.75rem);
+}
+
+.gallery {
+  display: none;
+  columns: 4 220px;
+  column-gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.catalogue:has(input[value="galeria"]:checked) .gallery {
+  display: block;
+}
+
+.catalogue:has(input[value="galeria"]:checked) .grid {
+  display: none;
+}
+
+.gallery li {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
+
+.gallery li[hidden] {
+  display: none;
+}
+
+.gallery a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.gallery picture {
+  background: var(--surface);
+}
+
+.gallery img {
+  width: 100%;
+  mix-blend-mode: multiply;
+  transition: transform 0.7s var(--ease);
+}
+
+.gallery span {
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  display: grid;
+  padding: 0.45rem 0.7rem;
+  border-radius: 10px;
+  background: var(--bg);
+  font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 1.25;
+  transform: translateY(140%);
+  transition: transform 0.45s var(--spring);
+}
+
+.gallery small {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.gallery a:hover img {
+  transform: scale(1.05);
+}
+
+.gallery a:hover span,
+.gallery a:focus-visible span {
+  transform: none;
+}
+
+@media (hover: none) {
+  .gallery span {
+    transform: none;
+  }
+}
+
+.grid > [hidden] {
+  display: none;
+}
+
+.empty {
+  padding: 2rem;
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+  font-weight: 600;
+}
+
+.empty[hidden] {
+  display: none;
+}
+
+:global(html[data-design="b"]) .searchBar {
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--accent);
+  box-shadow: var(--shadow);
+}
+
+:global(html[data-design="b"]) .searchBar input {
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--ink);
+}
+
+:global(html[data-design="b"]) .chip,
+:global(html[data-design="b"]) .toggle {
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-sm);
+  background: #fff;
+}
+
+:global(html[data-design="b"]) .chip[aria-pressed="true"] {
+  background: var(--accent-2);
+  color: #fff;
+}
+
+:global(html[data-design="b"]) .toggle label {
+  border-radius: var(--radius-sm);
+}
+
+:global(html[data-design="b"]) .toggle label:has(:checked) {
+  background: var(--accent);
+  box-shadow: none;
+}
+
+:global(html[data-design="b"]) .gallery a {
+  border: var(--border);
+}

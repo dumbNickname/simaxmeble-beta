@@ -1,0 +1,11 @@
+{
+  "_help": "Kolejność = kolejność na stronie głównej. Wpisz slug z products.json.",
+  "products": [
+    "fotel-grande",
+    "fotel-eterno",
+    "kanapa-nuvem-boucle",
+    "fotel-carmo",
+    "fotel-allure",
+    "lozko-como-160x200"
+  ]
+}

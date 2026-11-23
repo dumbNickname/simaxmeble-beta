@@ -1,0 +1,9 @@
+scraper/cache/
+node_modules/
+site/dist/
+.DS_Store
+*.swp
+.ipynb_checkpoints/
+cook/stills/
+cook/compare/
+.venv/

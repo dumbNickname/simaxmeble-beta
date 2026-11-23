@@ -1,0 +1,4 @@
+{
+  "_help": "Zdjęcia od klientów. Plik do site/public/img/klienci/, potem wpis: {\"file\": \"nazwa.jpg\", \"product\": \"fotel-grande\", \"author\": \"Anna z Poznania\", \"caption\": \"...\", \"date\": \"2026-11-01\"}. Zgoda autora wymagana.",
+  "photos": []
+}

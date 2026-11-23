@@ -1,0 +1,44 @@
+{
+  "name": "SIMAX meble",
+  "legalName": "SIMAX Henryk Maksim",
+  "tagline": "Producent mebli tapicerowanych",
+  "url": "https://simaxmeble.pl",
+  "phone": "+48 880 503 442",
+  "phoneHref": "+48880503442",
+  "email": "sklep@simaxmeble.pl",
+  "address": {
+    "street": "Łęka Mroczeńska 12",
+    "postalCode": "63-604",
+    "city": "Baranów",
+    "region": "wielkopolskie",
+    "country": "PL"
+  },
+  "shop": "https://simaxmeble.pl",
+  "allegro": "https://allegro.pl",
+  "shipping": {
+    "_help": "costPLN: null = nie publikuj stawki w schema (t.b.d.)",
+    "costPLN": null,
+    "handlingDays": null,
+    "transitDays": [
+      1,
+      5
+    ]
+  },
+  "returnPolicy": {
+    "_help": "Wg regulaminu: 14 dni na odstąpienie dla mebli w standardowym wzorze; zamówienia indywidualne (inna tkanina, modyfikacje) wyłączone (art. 38 pkt 3). Koszt odesłania po stronie klienta. Do potwierdzenia przez właściciela.",
+    "type": "finite",
+    "days": 14,
+    "customerPaysReturn": true
+  },
+  "geo": {
+    "lat": 51.22428,
+    "lng": 17.96589,
+    "_source": "OpenStreetMap, budynek Łęka Mroczeńska 12"
+  },
+  "maps": {
+    "place": "https://www.google.com/maps?cid=11029823089863800946",
+    "directions": "https://www.google.com/maps/dir/?api=1&destination=51.22428,17.96589",
+    "cid": "11029823089863800946",
+    "_help": "Wizytówka Google (Google Business Profile). Link 'place' idzie do schema hasMap i sameAs."
+  }
+}
