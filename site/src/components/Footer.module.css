@@ -93,10 +93,30 @@
 
 /* ============================================================ D: Riviera */
 
+/* A second awning, sun-yellow, hangs over the footer. */
 :global(html[data-design="d"]) .footer {
+  position: relative;
+  padding-top: calc(clamp(3rem, 6vw, 5rem) + 2.5rem);
+  background: var(--dark);
+}
+
+:global(html[data-design="d"]) .footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2.9rem;
   background:
-    repeating-linear-gradient(90deg, var(--sun) 0 2.5rem, #fff 2.5rem 5rem) top / 100% 0.6rem no-repeat,
-    var(--dark);
+    linear-gradient(180deg, rgb(10 30 60 / 0.25), transparent 1rem),
+    repeating-linear-gradient(90deg, var(--sun) 0 3rem, #fff 3rem 6rem);
+  -webkit-mask:
+    linear-gradient(#000 0 0) top / 100% 1rem no-repeat,
+    radial-gradient(farthest-side at 50% 0, #000 97%, #0000) 0 1rem / 3rem calc(100% - 1rem) repeat-x;
+  mask:
+    linear-gradient(#000 0 0) top / 100% 1rem no-repeat,
+    radial-gradient(farthest-side at 50% 0, #000 97%, #0000) 0 1rem / 3rem calc(100% - 1rem) repeat-x;
+  pointer-events: none;
 }
 
 /* ============================================================ E: Bottega */
