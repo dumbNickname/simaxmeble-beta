@@ -8,6 +8,8 @@ interface PictureProps {
   sizes?: string;
   /** Above-the-fold image: eager + high fetch priority. */
   priority?: boolean;
+  /** Not shown at first (e.g. the hover photo): fetched after the visible images. */
+  deferred?: boolean;
   class?: string;
   imgClass?: string;
 }
@@ -38,7 +40,7 @@ export default function Picture(props: PictureProps) {
         height={info()?.h}
         alt={props.alt}
         loading={props.priority ? "eager" : "lazy"}
-        fetchpriority={props.priority ? "high" : undefined}
+        fetchpriority={props.priority ? "high" : props.deferred ? "low" : undefined}
         decoding={props.priority ? "sync" : "async"}
       />
     </picture>

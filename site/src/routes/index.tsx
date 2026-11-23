@@ -76,6 +76,7 @@ export default function Home() {
                     class={styles.photo}
                     sizes="(min-width: 1000px) 560px, 90vw"
                     priority={i() === 0}
+                    deferred={i() > 0}
                   />
                 )}
               </For>

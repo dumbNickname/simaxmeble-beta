@@ -21,10 +21,10 @@ export default function ProductCard(props: Props) {
   return (
     <article class={`${styles.card} reveal`} data-search={search()} data-category={p().category}>
       <NavLink href={`/produkty/${p().slug}/`} class={styles.link}>
-        <div class={styles.media}>
+        <div class={styles.media} data-vt={p().slug}>
           <Picture image={p().cover!} alt={variantAlt(p(), v0(), 0)} class={styles.pic} imgClass={styles.img} priority={props.priority} />
           <Show when={second()}>
-            <Picture image={second()!} alt="" class={`${styles.pic} ${styles.alt}`} imgClass={styles.img} />
+            <Picture image={second()!} alt="" class={`${styles.pic} ${styles.alt}`} imgClass={styles.img} deferred />
           </Show>
           <span class={styles.price}>{priceLabel(p())}</span>
         </div>

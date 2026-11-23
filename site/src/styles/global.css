@@ -347,3 +347,27 @@ html[data-design="b"].motion .reveal:not(.is-in) {
     scroll-behavior: auto !important;
   }
 }
+
+/* ------------------------------------------------------ view transitions */
+/* Cross-document (MPA) transitions: the product card photo morphs into the
+   product page gallery, the header stays put, the rest crossfades. No JS. */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+
+  ::view-transition-group(*) {
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 0.28s;
+  }
+
+  ::view-transition-old(site-header),
+  ::view-transition-new(site-header) {
+    animation: none;
+  }
+}

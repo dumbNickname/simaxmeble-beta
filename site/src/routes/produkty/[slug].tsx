@@ -135,7 +135,12 @@ export default function ProductPage() {
                         <div class={styles.slides}>
                           <For each={v.images}>
                             {(img, i) => (
-                              <figure id={`zdjecie-${img}`} class={styles.slide} data-slide>
+                              <figure
+                                id={`zdjecie-${img}`}
+                                class={styles.slide}
+                                data-slide
+                                style={i() === 0 ? { "view-transition-name": `p-${p().slug}` } : undefined}
+                              >
                                 <Picture
                                   image={img}
                                   alt={variantAlt(p(), v, i())}

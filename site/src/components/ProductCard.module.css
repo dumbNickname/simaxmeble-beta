@@ -38,8 +38,13 @@
   padding: 0;
 }
 
-.alt .img {
+/* The second photo is an opaque layer on top (its own background, isolated
+   multiply), so fading just this layer is a clean crossfade. */
+.alt {
+  background: inherit;
+  isolation: isolate;
   opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .price {
@@ -107,13 +112,8 @@
     transform: scale(1.04);
   }
 
-  .link:hover .alt .img {
+  .link:hover .alt {
     opacity: 1;
-  }
-
-  /* Packshots use a multiply blend, so the first photo must fade out or both show through. */
-  .link:hover .media:has(.alt) .pic:not(.alt) .img {
-    opacity: 0;
   }
 
   .link:hover .dots li {
