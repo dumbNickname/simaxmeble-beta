@@ -270,3 +270,30 @@
   border-color: var(--ink);
   color: #fff;
 }
+
+/* ===================================================== D: Regał (shelf) */
+
+:global(html[data-design="d"]) .grid {
+  gap: 0;
+  grid-auto-rows: var(--row-h);
+  background: var(--shelves);
+  background-origin: content-box;
+  border: var(--frame) solid var(--oak);
+  border-image: var(--grain) 16;
+  box-shadow: 0 40px 50px -38px rgb(27 29 34 / 0.6);
+}
+
+:global(html[data-design="d"]) .chip,
+:global(html[data-design="d"]) .searchBar input {
+  border-radius: var(--radius-sm);
+}
+
+:global(html[data-design="d"]) .gallery a {
+  border-radius: 0;
+  box-shadow: 0 0 0 6px #2b2b2b;
+}
+
+:global(html[data-design="d"]) .gallery li {
+  margin-bottom: 1.25rem;
+  padding: 6px;
+}

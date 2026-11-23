@@ -750,138 +750,141 @@
   --btn-fg: #fff;
 }
 
-/* ================================================== A: wild fabric book */
+/* ===================================================== D: Regał (shelf) */
 
-/* The whole hero takes the colour picked under the chair (complementary to the
-   chair itself); the blob stays light so packshots blend cleanly. */
-:global(html[data-design="a"]) .hero {
-  --hero: var(--pop-teal);
-  background: var(--hero);
-  transition: background 0.8s var(--ease);
+:global(html[data-design="d"]) .products {
+  gap: 0;
+  grid-auto-rows: var(--row-h);
+  background: var(--shelves);
+  background-origin: content-box;
+  border: var(--frame) solid var(--oak);
+  border-image: var(--grain) 16;
+  box-shadow: 0 40px 50px -38px rgb(27 29 34 / 0.6);
 }
 
-:global(html[data-design="a"]) .hero:has(.picker label:nth-child(3) :checked) { --hero: var(--pop-mustard); }
-:global(html[data-design="a"]) .hero:has(.picker label:nth-child(4) :checked) { --hero: var(--pop-sage); }
-:global(html[data-design="a"]) .hero:has(.picker label:nth-child(5) :checked) { --hero: var(--pop-pink); }
-:global(html[data-design="a"]) .hero:has(.picker label:nth-child(6) :checked) { --hero: var(--pop-coral); }
-
-:global(html[data-design="a"]) .hero :global(.lead) {
-  color: var(--ink);
-}
-
-:global(html[data-design="a"]) .heroText h1 {
-  font-size: clamp(2.8rem, 7vw, 5.6rem);
-  line-height: 0.95;
-}
-
-:global(html[data-design="a"]) .hl::after {
+/* Hero: one chair on its own display shelf. */
+:global(html[data-design="d"]) .photos,
+:global(html[data-design="d"]) .stage:hover .photos {
+  border-radius: 0;
+  border: var(--frame) solid var(--oak);
+  border-image: var(--grain) 16;
   background: #fff;
-  height: 0.34em;
+  box-shadow: 0 40px 50px -38px rgb(27 29 34 / 0.6);
 }
 
-:global(html[data-design="a"]) .hero :global(.btn-ghost) {
-  --btn-bg: #fff;
-  box-shadow: none;
+:global(html[data-design="d"]) .photos::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: calc(var(--board) * 1.4);
+  background: var(--plank);
 }
 
-:global(html[data-design="a"]) .photos {
-  background: color-mix(in srgb, var(--hero) 22%, #fff);
-  box-shadow: 0 0 0 10px color-mix(in srgb, #fff 35%, transparent);
-  animation: blob 14s ease-in-out infinite alternate;
+:global(html[data-design="d"]) .photo {
+  inset: 6% 6% calc(var(--board) * 1.4);
 }
 
-@keyframes blob {
-  0% { border-radius: 46% 54% 42% 58% / 52% 44% 56% 48%; }
-  50% { border-radius: 58% 42% 55% 45% / 42% 58% 42% 58%; }
-  100% { border-radius: 40% 60% 48% 52% / 58% 46% 54% 42%; }
+:global(html[data-design="d"]) .photo img {
+  object-position: 50% 100%;
 }
 
-:global(html[data-design="a"]) .tag a {
-  background: var(--ink);
-  transform: rotate(-6deg);
-  animation: bob 4s ease-in-out infinite;
+:global(html[data-design="d"]) .picker {
+  border-radius: var(--radius-sm);
 }
 
-@keyframes bob {
-  50% { transform: rotate(-2deg) translateY(-6px); }
-}
-
-/* Category band: deep teal with tiles in four sample colours. */
-:global(html[data-design="a"]) .cats {
-  background: var(--pop-deep);
+:global(html[data-design="d"]) .tag a {
+  border-radius: 4px 4px 4px 18px;
+  background: var(--accent);
   color: #fff;
 }
 
-:global(html[data-design="a"]) .catGrid li:nth-child(4n + 1) .catPic { background: var(--pop-pink); }
-:global(html[data-design="a"]) .catGrid li:nth-child(4n + 2) .catPic { background: var(--pop-mustard); }
-:global(html[data-design="a"]) .catGrid li:nth-child(4n + 3) .catPic { background: var(--pop-sage); }
-:global(html[data-design="a"]) .catGrid li:nth-child(4n + 4) .catPic { background: var(--pop-coral); }
-
-:global(html[data-design="a"]) .catGrid li:nth-child(odd) .cat:hover {
-  transform: rotate(-2deg) translateY(-4px);
+:global(html[data-design="d"]) .hl::after {
+  background: var(--accent);
+  opacity: 0.35;
 }
 
-:global(html[data-design="a"]) .catGrid li:nth-child(even) .cat:hover {
-  transform: rotate(2deg) translateY(-4px);
+/* Categories: a row of compartments. */
+:global(html[data-design="d"]) .catGrid {
+  gap: 0;
+  border: var(--frame) solid var(--oak);
+  border-image: var(--grain) 16;
+  background: #fff;
+  box-shadow: 0 40px 50px -38px rgb(27 29 34 / 0.6);
 }
 
-:global(html[data-design="a"]) .cat {
-  transition: transform 0.5s var(--spring);
+:global(html[data-design="d"]) .catGrid li {
+  box-shadow: inset calc(-1 * var(--board) / 2) 0 0 var(--oak), inset calc(var(--board) / 2) 0 0 var(--oak);
 }
 
-/* How to order: three colour cards. */
-:global(html[data-design="a"]) .steps li:nth-child(1) { background: var(--pop-mustard); }
-:global(html[data-design="a"]) .steps li:nth-child(2) { background: var(--pop-pink); }
-:global(html[data-design="a"]) .steps li:nth-child(3) { background: var(--pop-sage); }
-
-:global(html[data-design="a"]) .steps li::before,
-:global(html[data-design="a"]) .steps li:nth-child(2)::before,
-:global(html[data-design="a"]) .steps li:nth-child(3)::before {
-  background: var(--ink);
+:global(html[data-design="d"]) .cat {
+  margin-inline: calc(var(--board) / 2);
+  padding: 1.25rem 0.9rem 1.1rem;
+  border-radius: 0;
+  background: #fff;
 }
 
-:global(html[data-design="a"]) .steps p {
+:global(html[data-design="d"]) .catPic {
+  position: relative;
+  overflow: visible;
+  margin-bottom: calc(var(--board) + 0.75rem);
+  border-radius: 0;
+  background: #fff;
+}
+
+:global(html[data-design="d"]) .catPic::after {
+  content: "";
+  position: absolute;
+  left: -1.35rem;
+  right: -1.35rem;
+  bottom: calc(-1 * var(--board));
+  height: var(--board);
+  background: var(--plank);
+}
+
+:global(html[data-design="d"]) .catPic img,
+:global(html[data-design="d"]) .catPic[data-fit="photo"] img {
+  object-fit: contain;
+  object-position: 50% 100%;
+  padding: 0.5rem 0.5rem 0;
+  border-radius: 0;
+}
+
+:global(html[data-design="d"]) .cat:hover .catPic img {
+  transform: translateY(-6px);
+}
+
+:global(html[data-design="d"]) .cats {
+  background: var(--surface-2);
+}
+
+/* Steps: three drawers with handles. */
+:global(html[data-design="d"]) .steps li {
+  border-radius: 4px;
+  background: var(--oak);
+  background-image: var(--grain);
+  color: var(--ink);
+  box-shadow: inset 0 -4px 0 var(--oak-dark), 0 14px 18px -14px rgb(0 0 0 / 0.5);
+}
+
+:global(html[data-design="d"]) .steps li::before,
+:global(html[data-design="d"]) .steps li:nth-child(2)::before,
+:global(html[data-design="d"]) .steps li:nth-child(3)::before {
+  border-radius: 999px;
+  background: #2b2b2b;
+  transform: none;
+}
+
+:global(html[data-design="d"]) .steps p {
   color: var(--ink);
 }
 
-:global(html[data-design="a"]) .steps li {
-  transition: transform 0.5s var(--spring);
+:global(html[data-design="d"]) .call {
+  background: var(--dark);
+  color: #fff;
 }
 
-:global(html[data-design="a"]) .steps li:hover {
-  transform: translateX(8px) rotate(-1deg);
-}
-
-/* Fabrics on pink; swatches wobble. */
-:global(html[data-design="a"]) .fabrics {
-  background: var(--pop-pink);
-}
-
-:global(html[data-design="a"]) .fabrics .section-head p {
-  color: var(--ink);
-}
-
-:global(html[data-design="a"]) .swatches a:hover .swatchPic {
-  animation: wobble-swatch 0.6s var(--spring);
-}
-
-@keyframes wobble-swatch {
-  30% { transform: rotate(10deg) scale(1.08); }
-  60% { transform: rotate(-6deg) scale(1.02); }
-}
-
-:global(html[data-design="a"]) .call {
-  background: var(--pop-mustard);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  :global(html[data-design="a"]) .photos,
-  :global(html[data-design="a"]) .tag a {
-    animation: none;
-  }
-}
-
-/* No white strip between the colour band and the dark footer. */
-:global(html[data-design="a"]) .call {
-  margin-bottom: calc(-1 * var(--section));
+:global(html[data-design="d"]) .call :global(.btn-ghost) {
+  color: #fff;
 }

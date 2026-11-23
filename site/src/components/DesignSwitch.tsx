@@ -13,6 +13,7 @@ export default function DesignSwitch() {
       <a href={`${withTrailingSlash(location.pathname)}?v=a`} data-design-link="a">A</a>
       <a href={`${withTrailingSlash(location.pathname)}?v=b`} data-design-link="b">B</a>
       <a href={`${withTrailingSlash(location.pathname)}?v=c`} data-design-link="c">C</a>
+      <a href={`${withTrailingSlash(location.pathname)}?v=d`} data-design-link="d">D</a>
     </nav>
   );
 }

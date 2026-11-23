@@ -355,7 +355,7 @@
   font-weight: 500;
 }
 
-/* =========================================== original logo (designs A and C) */
+/* =========================================== original logo (designs C and D) */
 
 /* The shop's logo as a mask, so it takes the header's text colour. */
 .logo {
@@ -367,19 +367,19 @@
   mask: url("/img/logo-simax.png") center / contain no-repeat;
 }
 
-:global(html[data-design="a"]) .logo,
+:global(html[data-design="d"]) .logo,
 :global(html[data-design="c"]) .logo {
   display: block;
 }
 
-:global(html[data-design="a"]) .mark,
-:global(html[data-design="a"]) .word,
+:global(html[data-design="d"]) .mark,
+:global(html[data-design="d"]) .word,
 :global(html[data-design="c"]) .mark,
 :global(html[data-design="c"]) .word {
   display: none;
 }
 
-:global(html[data-design="a"]) .brand:hover .logo {
+:global(html[data-design="d"]) .brand:hover .logo {
   animation: logo-wiggle 0.6s var(--spring);
 }
 

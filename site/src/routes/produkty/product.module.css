@@ -541,21 +541,52 @@
   letter-spacing: -0.02em;
 }
 
-/* ================================================== A: wild fabric book */
+/* ===================================================== D: Regał (shelf) */
 
-:global(html[data-design="a"]) .slide,
-:global(html[data-design="a"]) .thumbs a {
-  background: #d7f0ed;
+:global(html[data-design="d"]) .slides {
+  border-radius: 0;
+  border: var(--frame) solid var(--oak);
+  border-image: var(--grain) 16;
+  background: #fff;
+  box-shadow: 0 40px 50px -38px rgb(27 29 34 / 0.6);
 }
 
-:global(html[data-design="a"]) .trust li:nth-child(1)::before { background: var(--pop-mustard); }
-:global(html[data-design="a"]) .trust li:nth-child(2)::before { background: var(--pop-teal); }
-:global(html[data-design="a"]) .trust li:nth-child(3)::before { background: var(--pop-coral); }
-
-:global(html[data-design="a"]) .facts {
-  background: #fdebc4;
+:global(html[data-design="d"]) .slide {
+  position: relative;
+  background: #fff;
 }
 
-:global(html[data-design="a"]) .facts {
+:global(html[data-design="d"]) .slide::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--board);
+  background: var(--plank);
+}
+
+:global(html[data-design="d"]) .slide img {
+  object-position: 50% 100%;
+  padding: 4% 4% var(--board);
+}
+
+:global(html[data-design="d"]) .thumbs a {
+  border-radius: 0;
+  background: #fff;
+  box-shadow: inset 0 -5px 0 var(--oak);
+}
+
+:global(html[data-design="d"]) .option {
+  border-radius: var(--radius-sm);
+}
+
+:global(html[data-design="d"]) .facts,
+:global(html[data-design="d"]) .card {
+  background: #fff;
+  border-radius: var(--radius-sm);
+}
+
+:global(html[data-design="d"]) .facts {
   margin-top: 1rem;
 }

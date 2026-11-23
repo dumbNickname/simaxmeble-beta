@@ -1,5 +1,5 @@
 /* Two design proposals share one DOM; html[data-design] swaps the tokens
-   (and a few layouts in the component modules). A = "Próbnik", B = "Salon". */
+   (and a few layouts in the component modules). A = "Próbnik", B = "Salon", C = "Lagom", D = "Regał". */
 
 :root,
 html[data-design="a"] {
@@ -14,13 +14,6 @@ html[data-design="a"] {
   --accent-soft: #d6eeea;
   --accent-2: #11706f;
   --on-dark: #ffffff;
-  /* A's fabric-book palette: colour blocks, card tints, hero backgrounds. */
-  --pop-mustard: #f2b33d;
-  --pop-teal: #3fb8af;
-  --pop-pink: #f6a8b6;
-  --pop-coral: #ff7a59;
-  --pop-sage: #9fcaa4;
-  --pop-deep: #0f5f5e;
   --dark: #16181d;
 
   /* Named system fonts first: on some Linux setups system-ui resolves to a monospace face. */
@@ -66,6 +59,49 @@ html[data-design="b"] {
   --border: 2px solid var(--ink);
   --shadow: 6px 6px 0 var(--ink);
   --shadow-hover: 10px 10px 0 var(--ink);
+}
+
+/* D = "Regał": the site is one big shelving unit. Oak planks and uprights,
+   white back panels so packshots keep full contrast, colour only on the
+   painted wall around the shelves and on the price tags. */
+html[data-design="d"] {
+  --bg: #e9eef2;
+  --surface: #ffffff;
+  --surface-2: #dde4ea;
+  --ink: #1b1d22;
+  --muted: #4a5058;
+  --line: #cfd6dc;
+  --accent: #e0532f;
+  --accent-ink: #ffffff;
+  --accent-soft: #fbe0d6;
+  --accent-2: #2f5d8a;
+  --dark: #23303b;
+
+  --oak: #c8955b;
+  --oak-dark: #9c6c3a;
+  --oak-light: #e2b984;
+  --plank: linear-gradient(180deg, var(--oak-light) 0 3px, var(--oak) 3px calc(100% - 4px), var(--oak-dark) calc(100% - 4px));
+  --frame: clamp(10px, 1.2vw, 16px);
+  --board: 14px;
+  /* Shelf rows have a fixed height so the planks can be drawn by the
+     carcass background and run on under empty compartments. */
+  --shelf-h: 15rem;
+  --label-h: 4.6rem;
+  --row-h: calc(var(--shelf-h) + var(--board) + var(--label-h));
+  --shelves: repeating-linear-gradient(180deg,
+    #fff 0 var(--shelf-h),
+    var(--oak-light) var(--shelf-h) calc(var(--shelf-h) + 3px),
+    var(--oak) calc(var(--shelf-h) + 3px) calc(var(--shelf-h) + var(--board) - 4px),
+    var(--oak-dark) calc(var(--shelf-h) + var(--board) - 4px) calc(var(--shelf-h) + var(--board)),
+    rgb(0 0 0 / 0.14) calc(var(--shelf-h) + var(--board)),
+    #fff calc(var(--shelf-h) + var(--board) + 9px) var(--row-h));
+  /* The carcass: oak frame round a white back panel. */
+  --grain: repeating-linear-gradient(90deg, #c8955b 0 9px, #c08c52 9px 13px, #cd9c63 13px 23px, #c8955b 23px 31px);
+
+  --radius: 8px;
+  --radius-sm: 6px;
+  --shadow: 0 24px 40px -26px rgb(27 29 34 / 0.45);
+  --shadow-hover: 0 28px 50px -24px rgb(27 29 34 / 0.5);
 }
 
 /* C = "Lagom": strict Scandinavian. White and cool grey, one pine accent,
@@ -401,20 +437,22 @@ html[data-design="c"] .btn-ghost:hover {
   --btn-bg: var(--surface);
 }
 
-/* A: a four-colour selvedge stripe under the header, like the edge of a fabric sample. */
-html[data-design="a"] body {
-  background:
-    linear-gradient(90deg, var(--pop-mustard) 0 25%, var(--pop-teal) 25% 50%, var(--pop-pink) 50% 75%, var(--pop-coral) 75%) top / 100% 6px no-repeat,
-    var(--bg);
+html[data-design="d"] h1,
+html[data-design="d"] h2 {
+  letter-spacing: -0.03em;
 }
 
-html[data-design="a"] .btn-primary:hover {
-  --btn-bg: var(--pop-deep);
+html[data-design="d"] .btn {
+  border-radius: var(--radius-sm);
 }
 
-html[data-design="a"] .btn-ghost:hover {
-  --btn-bg: var(--pop-mustard);
-  box-shadow: inset 0 0 0 1.5px var(--ink);
+html[data-design="d"] .btn-accent {
+  --btn-bg: var(--accent);
+  --btn-fg: #fff;
+}
+
+html[data-design="d"] .btn-ghost:hover {
+  --btn-bg: #fff;
 }
 
 /* -------------------------------------------------------------- motion */
