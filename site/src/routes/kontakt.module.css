@@ -71,3 +71,10 @@
 :global(html[data-design="b"]) .map {
   border: var(--border);
 }
+
+/* ============================================================== C: Lagom */
+
+:global(html[data-design="c"]) .map {
+  border-radius: 0;
+  box-shadow: none;
+}

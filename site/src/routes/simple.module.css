@@ -110,3 +110,10 @@
 :global(html[data-design="b"]) .photos picture:nth-child(2) {
   transform: rotate(1.5deg);
 }
+
+/* ============================================================== C: Lagom */
+
+:global(html[data-design="c"]) .panel {
+  border-radius: 0;
+  box-shadow: none;
+}

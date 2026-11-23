@@ -24,7 +24,8 @@
   text-decoration: none;
 }
 :global(html[data-design="a"]) .switch a[data-design-link="a"],
-:global(html[data-design="b"]) .switch a[data-design-link="b"] {
+:global(html[data-design="b"]) .switch a[data-design-link="b"],
+:global(html[data-design="c"]) .switch a[data-design-link="c"] {
   background: #fff;
   color: #16181d;
 }

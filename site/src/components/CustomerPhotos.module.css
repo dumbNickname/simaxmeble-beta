@@ -91,3 +91,10 @@
   border-color: #fff;
   outline: 2px solid var(--ink);
 }
+
+/* ============================================================== C: Lagom */
+
+:global(html[data-design="c"]) .invite {
+  border-radius: 0;
+  box-shadow: none;
+}

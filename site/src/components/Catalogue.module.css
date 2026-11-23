@@ -247,3 +247,26 @@
 :global(html[data-design="b"]) .gallery a {
   border: var(--border);
 }
+
+/* ============================================================== C: Lagom */
+
+:global(html[data-design="c"]) .searchBar,
+:global(html[data-design="c"]) .searchBar input,
+:global(html[data-design="c"]) .chip,
+:global(html[data-design="c"]) .toggle,
+:global(html[data-design="c"]) .toggle label {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+:global(html[data-design="c"]) .chip {
+  background: #fff;
+  border: 1px solid var(--line);
+  font-weight: 400;
+}
+
+:global(html[data-design="c"]) .chip[aria-pressed="true"] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+}

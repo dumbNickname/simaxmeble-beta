@@ -193,3 +193,41 @@
     transform: rotate(-8deg) scale(1.08);
   }
 }
+
+/* ============================================================== C: Lagom */
+
+:global(html[data-design="c"]) .media {
+  border-radius: 0;
+}
+
+:global(html[data-design="c"]) .img {
+  transition: transform 1.2s var(--ease), opacity 0.45s var(--ease);
+}
+
+:global(html[data-design="c"]) .alt {
+  transition-duration: 0.9s;
+}
+
+:global(html[data-design="c"]) .price {
+  left: 0;
+  bottom: 0;
+  padding: 0.5rem 0.85rem;
+  border-radius: 0;
+  box-shadow: none;
+  font-weight: 500;
+}
+
+:global(html[data-design="c"]) .name {
+  font-weight: 400;
+  letter-spacing: -0.015em;
+}
+
+@media (hover: hover) {
+  :global(html[data-design="c"]) .link:hover .media {
+    animation: none;
+  }
+
+  :global(html[data-design="c"]) .link:hover .img {
+    transform: scale(1.025);
+  }
+}

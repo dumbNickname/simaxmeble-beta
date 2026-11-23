@@ -581,3 +581,195 @@
   padding: 0;
   border-radius: calc(var(--radius) - 8px);
 }
+
+/* ============================================================== C: Lagom */
+
+:global(html[data-design="c"]) .hero {
+  padding-block: clamp(2.5rem, 6vw, 5rem) clamp(4rem, 9vw, 7rem);
+}
+
+:global(html[data-design="c"]) .heroText h1 {
+  max-width: 11ch;
+}
+
+:global(html[data-design="c"]) .hl {
+  color: var(--accent);
+  white-space: normal;
+}
+
+:global(html[data-design="c"]) .hl::after {
+  display: none;
+}
+
+:global(html[data-design="c"]) .photos,
+:global(html[data-design="c"]) .stage:hover .photos {
+  aspect-ratio: 4 / 5;
+  border-radius: 0;
+  background: color-mix(in srgb, var(--c) 10%, var(--surface));
+  transition: background 1.2s var(--ease);
+}
+
+:global(html[data-design="c"]) .photo {
+  inset: 8%;
+  transform: none;
+  transition: opacity 0.9s var(--ease);
+}
+
+:global(html[data-design="c"]) .stage {
+  margin-bottom: 2.75rem;
+}
+
+:global(html[data-design="c"]) .picker {
+  top: auto;
+  right: auto;
+  left: 0;
+  bottom: -2.75rem;
+  grid-auto-flow: column;
+  gap: 0.6rem;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+:global(html[data-design="c"]) .picker label {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0;
+  transition: box-shadow 0.3s var(--ease);
+}
+
+:global(html[data-design="c"]) .picker label:hover {
+  transform: none;
+}
+
+:global(html[data-design="c"]) .picker label:has(:checked) {
+  box-shadow: 0 0 0 2px var(--bg), 0 0 0 3px var(--ink);
+}
+
+:global(html[data-design="c"]) .tag {
+  left: auto;
+  right: 0;
+  bottom: 0;
+}
+
+:global(html[data-design="c"]) .tag a {
+  border-radius: 0;
+  background: #fff;
+  color: var(--ink);
+  transform: none;
+}
+
+:global(html[data-design="c"]) .tag a:hover {
+  transform: none;
+  background: var(--ink);
+  color: #fff;
+}
+
+:global(html[data-design="c"]) .tag strong {
+  font-weight: 400;
+}
+
+:global(html[data-design="c"]) .cat,
+:global(html[data-design="c"]) .catPic,
+:global(html[data-design="c"]) .catPic[data-fit="photo"] img {
+  border-radius: 0;
+}
+
+:global(html[data-design="c"]) .cat {
+  padding: 0 0 1rem;
+}
+
+:global(html[data-design="c"]) .cat .catName,
+:global(html[data-design="c"]) .cat .catCount {
+  padding-inline: 0;
+}
+
+:global(html[data-design="c"]) .catName {
+  font-weight: 400;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+}
+
+:global(html[data-design="c"]) .cat:hover .catPic img {
+  transform: scale(1.03);
+}
+
+:global(html[data-design="c"]) .cats {
+  background: var(--surface);
+}
+
+:global(html[data-design="c"]) .cats .cat {
+  background: transparent;
+}
+
+:global(html[data-design="c"]) .cats .catPic {
+  background: #fff;
+}
+
+:global(html[data-design="c"]) .steps {
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+
+:global(html[data-design="c"]) .steps li {
+  padding: 1.6rem 0 1.6rem 3.5rem;
+  border-radius: 0;
+  background: transparent;
+  border-bottom: 1px solid var(--line);
+}
+
+:global(html[data-design="c"]) .steps li::before,
+:global(html[data-design="c"]) .steps li:nth-child(2)::before,
+:global(html[data-design="c"]) .steps li:nth-child(3)::before {
+  left: 0;
+  top: 1.85rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 0;
+  transform: none;
+}
+
+:global(html[data-design="c"]) .steps li::before {
+  background: var(--surface-2);
+}
+
+:global(html[data-design="c"]) .steps li:nth-child(2)::before {
+  background: var(--muted);
+}
+
+:global(html[data-design="c"]) .steps li:nth-child(3)::before {
+  background: var(--accent);
+}
+
+:global(html[data-design="c"]) .swatchPic,
+:global(html[data-design="c"]) .swatches a:hover .swatchPic {
+  border-radius: 0;
+  transform: none;
+}
+
+:global(html[data-design="c"]) .swatchPic img {
+  transition: transform 1.2s var(--ease);
+}
+
+:global(html[data-design="c"]) .swatches a:hover .swatchPic img {
+  transform: scale(1.8);
+}
+
+:global(html[data-design="c"]) .swatches span {
+  font-weight: 500;
+}
+
+:global(html[data-design="c"]) .call {
+  background: var(--ink);
+  color: #fff;
+}
+
+:global(html[data-design="c"]) .call :global(.btn-accent) {
+  --btn-bg: #fff;
+  --btn-fg: var(--ink);
+}
+
+:global(html[data-design="c"]) .call :global(.btn-ghost) {
+  color: #fff;
+}

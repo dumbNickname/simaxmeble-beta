@@ -160,3 +160,19 @@
   border: 2px solid var(--ink);
   border-radius: 0;
 }
+
+/* ============================================================== C: Lagom */
+
+:global(html[data-design="c"]) .jump a,
+:global(html[data-design="c"]) .fabric,
+:global(html[data-design="c"]) .samples,
+:global(html[data-design="c"]) .swatch,
+:global(html[data-design="c"]) .wood picture {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+:global(html[data-design="c"]) .fabric {
+  background: #fff;
+  border-top: 1px solid var(--line);
+}

@@ -32,3 +32,10 @@
   background: #fff;
   box-shadow: var(--shadow);
 }
+
+/* ============================================================== C: Lagom */
+
+:global(html[data-design="c"]) .intro {
+  border-radius: 0;
+  box-shadow: none;
+}
