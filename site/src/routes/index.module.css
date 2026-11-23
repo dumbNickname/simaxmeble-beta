@@ -753,37 +753,49 @@
 /* ===================================================== D: Regał (shelf) */
 
 :global(html[data-design="d"]) .products {
-  gap: 0;
-  grid-auto-rows: var(--row-h);
-  background: var(--shelves);
-  background-origin: content-box;
-  border: var(--frame) solid var(--oak);
-  border-image: var(--grain) 16;
-  box-shadow: 0 40px 50px -38px rgb(27 29 34 / 0.6);
+  --shelf-h: 16.5rem;
+  --label-h: 5.25rem;
+  gap: 0 clamp(1rem, 3vw, 2.5rem);
+  --pt: 0.45rem;
+  --pf: 1rem;
+  --row: calc(var(--shelf-h) + var(--pt) + var(--pf) + var(--label-h));
+  grid-auto-rows: var(--row);
+  background: repeating-linear-gradient(180deg,
+    transparent 0 var(--shelf-h),
+    var(--oak-light) var(--shelf-h) calc(var(--shelf-h) + var(--pt)),
+    var(--oak) calc(var(--shelf-h) + var(--pt)) calc(var(--shelf-h) + var(--pt) + var(--pf) - 3px),
+    var(--oak-dark) calc(var(--shelf-h) + var(--pt) + var(--pf) - 3px) calc(var(--shelf-h) + var(--pt) + var(--pf)),
+    rgb(40 24 8 / 0.22) calc(var(--shelf-h) + var(--pt) + var(--pf)),
+    transparent calc(var(--shelf-h) + var(--pt) + var(--pf) + 1.1rem) var(--row));
+  /* planks run into the uprights of the compartment */
+  margin-inline: calc(-1 * var(--gutter));
+  padding-inline: var(--gutter);
 }
 
-/* Hero: one chair on its own display shelf. */
+/* Hero: the chair stands on the compartment's own plank. */
+:global(html[data-design="d"]) .hero {
+  padding-bottom: 0;
+  overflow: visible;
+}
+
+:global(html[data-design="d"]) .heroGrid {
+  align-items: end;
+}
+
+:global(html[data-design="d"]) .heroText {
+  align-self: center;
+  padding-bottom: 2rem;
+}
+
 :global(html[data-design="d"]) .photos,
 :global(html[data-design="d"]) .stage:hover .photos {
   border-radius: 0;
-  border: var(--frame) solid var(--oak);
-  border-image: var(--grain) 16;
-  background: #fff;
-  box-shadow: 0 40px 50px -38px rgb(27 29 34 / 0.6);
-}
-
-:global(html[data-design="d"]) .photos::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: calc(var(--board) * 1.4);
-  background: var(--plank);
+  background: radial-gradient(50% 7% at 50% 97%, rgb(40 24 8 / 0.35), transparent 70%);
+  box-shadow: none;
 }
 
 :global(html[data-design="d"]) .photo {
-  inset: 6% 6% calc(var(--board) * 1.4);
+  inset: 6% 4% 1%;
 }
 
 :global(html[data-design="d"]) .photo img {
@@ -791,7 +803,14 @@
 }
 
 :global(html[data-design="d"]) .picker {
+  top: 6%;
   border-radius: var(--radius-sm);
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+:global(html[data-design="d"]) .tag {
+  bottom: 18%;
 }
 
 :global(html[data-design="d"]) .tag a {
@@ -802,89 +821,206 @@
 
 :global(html[data-design="d"]) .hl::after {
   background: var(--accent);
-  opacity: 0.35;
+  opacity: 0.3;
 }
 
-/* Categories: a row of compartments. */
+/* Categories: one shelf, items standing on it. */
+:global(html[data-design="d"]) .cats {
+  background: transparent;
+}
+
 :global(html[data-design="d"]) .catGrid {
-  gap: 0;
-  border: var(--frame) solid var(--oak);
-  border-image: var(--grain) 16;
-  background: #fff;
-  box-shadow: 0 40px 50px -38px rgb(27 29 34 / 0.6);
-}
-
-:global(html[data-design="d"]) .catGrid li {
-  box-shadow: inset calc(-1 * var(--board) / 2) 0 0 var(--oak), inset calc(var(--board) / 2) 0 0 var(--oak);
+  --shelf-h: 11rem;
+  --label-h: 4.25rem;
+  gap: 0 1rem;
+  --pt: 0.45rem;
+  --pf: 1rem;
+  --row: calc(var(--shelf-h) + var(--pt) + var(--pf) + var(--label-h));
+  grid-auto-rows: var(--row);
+  background: repeating-linear-gradient(180deg,
+    transparent 0 var(--shelf-h),
+    var(--oak-light) var(--shelf-h) calc(var(--shelf-h) + var(--pt)),
+    var(--oak) calc(var(--shelf-h) + var(--pt)) calc(var(--shelf-h) + var(--pt) + var(--pf) - 3px),
+    var(--oak-dark) calc(var(--shelf-h) + var(--pt) + var(--pf) - 3px) calc(var(--shelf-h) + var(--pt) + var(--pf)),
+    rgb(40 24 8 / 0.22) calc(var(--shelf-h) + var(--pt) + var(--pf)),
+    transparent calc(var(--shelf-h) + var(--pt) + var(--pf) + 1.1rem) var(--row));
+  /* planks run into the uprights of the compartment */
+  margin-inline: calc(-1 * var(--gutter));
+  padding-inline: var(--gutter);
 }
 
 :global(html[data-design="d"]) .cat {
-  margin-inline: calc(var(--board) / 2);
-  padding: 1.25rem 0.9rem 1.1rem;
+  display: block;
+  padding: 0;
   border-radius: 0;
-  background: #fff;
+  background: transparent;
 }
 
 :global(html[data-design="d"]) .catPic {
-  position: relative;
+  height: var(--shelf-h);
+  aspect-ratio: auto;
+  margin: 0 0 calc(var(--pt) + var(--pf) + 0.6rem);
   overflow: visible;
-  margin-bottom: calc(var(--board) + 0.75rem);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   border-radius: 0;
-  background: #fff;
-}
-
-:global(html[data-design="d"]) .catPic::after {
-  content: "";
-  position: absolute;
-  left: -1.35rem;
-  right: -1.35rem;
-  bottom: calc(-1 * var(--board));
-  height: var(--board);
-  background: var(--plank);
+  background: radial-gradient(42% 6% at 50% 97%, rgb(40 24 8 / 0.35), transparent 70%);
 }
 
 :global(html[data-design="d"]) .catPic img,
 :global(html[data-design="d"]) .catPic[data-fit="photo"] img {
   object-fit: contain;
   object-position: 50% 100%;
-  padding: 0.5rem 0.5rem 0;
+  padding: 1.25rem 0.25rem 0.2rem;
   border-radius: 0;
+  transform-origin: 50% 100%;
+}
+
+/* room shots as small framed pictures on the shelf */
+:global(html[data-design="d"]) .catPic[data-fit="photo"] img {
+  width: auto;
+  max-width: 82%;
+  height: 68%;
+  margin-bottom: 7px;
+  padding: 0;
+  object-fit: cover;
+  aspect-ratio: 1;
+  box-shadow: 0 0 0 5px var(--walnut), 0 10px 14px -8px rgb(40 24 8 / 0.6);
+  transform: rotate(-2deg);
 }
 
 :global(html[data-design="d"]) .cat:hover .catPic img {
   transform: translateY(-6px);
 }
 
-:global(html[data-design="d"]) .cats {
-  background: var(--surface-2);
+:global(html[data-design="d"]) .catName,
+:global(html[data-design="d"]) .catCount {
+  display: block;
+  text-align: center;
 }
 
-/* Steps: three drawers with handles. */
+/* How to order: three drawers with brass pulls. */
 :global(html[data-design="d"]) .steps li {
-  border-radius: 4px;
-  background: var(--oak);
-  background-image: var(--grain);
+  padding-top: 1.75rem;
+  border-radius: 3px;
+  background: var(--grain-v);
   color: var(--ink);
-  box-shadow: inset 0 -4px 0 var(--oak-dark), 0 14px 18px -14px rgb(0 0 0 / 0.5);
+  box-shadow: inset 0 0 0 1px var(--oak-dark), inset 0 -5px 0 var(--oak-dark), 0 3px 0 rgb(40 24 8 / 0.25);
 }
 
 :global(html[data-design="d"]) .steps li::before,
 :global(html[data-design="d"]) .steps li:nth-child(2)::before,
 :global(html[data-design="d"]) .steps li:nth-child(3)::before {
+  top: 0.55rem;
+  left: 50%;
+  width: 3.5rem;
+  height: 0.55rem;
+  margin-left: -1.75rem;
   border-radius: 999px;
-  background: #2b2b2b;
+  background: linear-gradient(180deg, #f3d488, #b8892f);
+  box-shadow: 0 2px 2px rgb(0 0 0 / 0.35);
   transform: none;
+}
+
+:global(html[data-design="d"]) .steps li {
+  padding-left: 1.5rem;
 }
 
 :global(html[data-design="d"]) .steps p {
   color: var(--ink);
 }
 
+:global(html[data-design="d"]) .steps li:hover {
+  transform: translateY(4px);
+}
+
+/* Fabrics: folded samples stacked on a shelf. */
+:global(html[data-design="d"]) .fabrics {
+  background: transparent;
+}
+
+:global(html[data-design="d"]) .swatches {
+  --shelf-h: 8.5rem;
+  --label-h: 3.5rem;
+  gap: 0 1rem;
+  --pt: 0.45rem;
+  --pf: 1rem;
+  --row: calc(var(--shelf-h) + var(--pt) + var(--pf) + var(--label-h));
+  grid-auto-rows: var(--row);
+  background: repeating-linear-gradient(180deg,
+    transparent 0 var(--shelf-h),
+    var(--oak-light) var(--shelf-h) calc(var(--shelf-h) + var(--pt)),
+    var(--oak) calc(var(--shelf-h) + var(--pt)) calc(var(--shelf-h) + var(--pt) + var(--pf) - 3px),
+    var(--oak-dark) calc(var(--shelf-h) + var(--pt) + var(--pf) - 3px) calc(var(--shelf-h) + var(--pt) + var(--pf)),
+    rgb(40 24 8 / 0.22) calc(var(--shelf-h) + var(--pt) + var(--pf)),
+    transparent calc(var(--shelf-h) + var(--pt) + var(--pf) + 1.1rem) var(--row));
+  /* planks run into the uprights of the compartment */
+  margin-inline: calc(-1 * var(--gutter));
+  padding-inline: var(--gutter);
+}
+
+:global(html[data-design="d"]) .swatches a {
+  display: block;
+}
+
+:global(html[data-design="d"]) .swatchPic {
+  width: auto;
+  height: calc(var(--shelf-h) - 1rem);
+  margin: 1rem auto calc(var(--pt) + var(--pf) + 0.5rem);
+  border-radius: 6px 6px 0 0;
+  box-shadow: 0 -2px 0 rgb(255 255 255 / 0.4) inset, 0 6px 8px -4px rgb(40 24 8 / 0.5);
+}
+
+:global(html[data-design="d"]) .swatches span,
+:global(html[data-design="d"]) .swatches small {
+  display: block;
+  text-align: center;
+}
+
 :global(html[data-design="d"]) .call {
-  background: var(--dark);
-  color: #fff;
+  background: transparent;
+}
+
+:global(html[data-design="d"]) .call {
+  color: var(--ink);
 }
 
 :global(html[data-design="d"]) .call :global(.btn-ghost) {
-  color: #fff;
+  color: var(--ink);
+}
+
+@media (max-width: 40rem) {
+  :global(html[data-design="d"]) .catGrid {
+    --shelf-h: 8rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  :global(html[data-design="d"]) .products {
+    --shelf-h: 14rem;
+  }
+}
+
+/* Stacked hero: the chair gets its own little shelf above the text. */
+@media (max-width: 959px) {
+  :global(html[data-design="d"]) .photos::after {
+    content: "";
+    position: absolute;
+    left: calc(-1 * var(--gutter));
+    right: calc(-1 * var(--gutter));
+    bottom: calc(-1 * (var(--pt) + var(--pf)));
+    height: calc(var(--pt) + var(--pf));
+    background:
+      linear-gradient(180deg, var(--oak-light) 0 var(--pt), transparent var(--pt) calc(100% - 3px), var(--oak-dark) calc(100% - 3px)),
+      var(--grain-h);
+    box-shadow: 0 10px 12px -8px rgb(40 24 8 / 0.4);
+  }
+
+  :global(html[data-design="d"]) .photos {
+    margin-bottom: 2.5rem;
+  }
+
+  :global(html[data-design="d"]) .heroText {
+    padding-bottom: clamp(2.5rem, 8vw, 4rem);
+  }
 }

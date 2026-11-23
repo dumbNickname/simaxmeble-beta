@@ -543,17 +543,18 @@
 
 /* ===================================================== D: Regał (shelf) */
 
+/* The gallery is a display shelf: item on a plank, the back panel behind. */
 :global(html[data-design="d"]) .slides {
   border-radius: 0;
-  border: var(--frame) solid var(--oak);
-  border-image: var(--grain) 16;
   background: #fff;
-  box-shadow: 0 40px 50px -38px rgb(27 29 34 / 0.6);
+  box-shadow: var(--cast);
+  border: var(--upright) solid var(--oak);
+  border-image: var(--grain-v) 30;
 }
 
 :global(html[data-design="d"]) .slide {
   position: relative;
-  background: #fff;
+  background: radial-gradient(44% 5% at 50% calc(100% - 1.6rem), rgb(40 24 8 / 0.35), transparent 70%);
 }
 
 :global(html[data-design="d"]) .slide::after {
@@ -562,19 +563,21 @@
   left: 0;
   right: 0;
   bottom: 0;
-  height: var(--board);
-  background: var(--plank);
+  height: 1.5rem;
+  background:
+    linear-gradient(180deg, var(--oak-light) 0 0.45rem, transparent 0.45rem calc(100% - 3px), var(--oak-dark) calc(100% - 3px)),
+    var(--grain-h);
 }
 
 :global(html[data-design="d"]) .slide img {
   object-position: 50% 100%;
-  padding: 4% 4% var(--board);
+  padding: 4% 4% 1.55rem;
 }
 
 :global(html[data-design="d"]) .thumbs a {
   border-radius: 0;
   background: #fff;
-  box-shadow: inset 0 -5px 0 var(--oak);
+  box-shadow: inset 0 -6px 0 var(--oak), 0 0 0 1px var(--line);
 }
 
 :global(html[data-design="d"]) .option {
@@ -583,10 +586,29 @@
 
 :global(html[data-design="d"]) .facts,
 :global(html[data-design="d"]) .card {
+  margin-top: 1rem;
+  border-radius: 3px;
   background: #fff;
-  border-radius: var(--radius-sm);
+  box-shadow: 0 1px 0 var(--line), 0 10px 16px -12px rgb(40 24 8 / 0.45);
+  border-top: 3px solid var(--walnut);
 }
 
-:global(html[data-design="d"]) .facts {
-  margin-top: 1rem;
+:global(html[data-design="d"]) .related {
+  --shelf-h: 14rem;
+  --label-h: 5.25rem;
+  gap: 0 clamp(1rem, 3vw, 2.5rem);
+  --pt: 0.45rem;
+  --pf: 1rem;
+  --row: calc(var(--shelf-h) + var(--pt) + var(--pf) + var(--label-h));
+  grid-auto-rows: var(--row);
+  background: repeating-linear-gradient(180deg,
+    transparent 0 var(--shelf-h),
+    var(--oak-light) var(--shelf-h) calc(var(--shelf-h) + var(--pt)),
+    var(--oak) calc(var(--shelf-h) + var(--pt)) calc(var(--shelf-h) + var(--pt) + var(--pf) - 3px),
+    var(--oak-dark) calc(var(--shelf-h) + var(--pt) + var(--pf) - 3px) calc(var(--shelf-h) + var(--pt) + var(--pf)),
+    rgb(40 24 8 / 0.22) calc(var(--shelf-h) + var(--pt) + var(--pf)),
+    transparent calc(var(--shelf-h) + var(--pt) + var(--pf) + 1.1rem) var(--row));
+  /* planks run into the uprights of the compartment */
+  margin-inline: calc(-1 * var(--gutter));
+  padding-inline: var(--gutter);
 }
