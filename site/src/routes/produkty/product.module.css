@@ -540,3 +540,97 @@
 :global(html[data-design="c"]) .title {
   letter-spacing: -0.02em;
 }
+
+/* ============================================================ D: Riviera */
+
+:global(html[data-design="d"]) .slides {
+  border-radius: 999px 999px var(--radius) var(--radius);
+  box-shadow: inset 0 0 0 2px var(--line);
+}
+
+:global(html[data-design="d"]) .slide {
+  background: #fff;
+}
+
+:global(html[data-design="d"]) .thumbs a {
+  border-radius: 999px 999px 8px 8px;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+:global(html[data-design="d"]) .option {
+  border-radius: 999px;
+}
+
+:global(html[data-design="d"]) .swatch,
+:global(html[data-design="d"]) .swatch::after {
+  border-radius: 50%;
+}
+
+:global(html[data-design="d"]) .title {
+  font-family: var(--font-display);
+}
+
+:global(html[data-design="d"]) .facts {
+  background: var(--accent-soft);
+  border-radius: 6px;
+  mask: var(--ticket);
+  padding-inline: 1.75rem;
+}
+
+:global(html[data-design="d"]) .card {
+  background: var(--surface);
+}
+
+:global(html[data-design="d"]) .trust li::before {
+  background: var(--terra);
+}
+
+/* ============================================================ E: Bottega */
+
+:global(html[data-design="e"]) .slides {
+  position: relative;
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+:global(html[data-design="e"]) .slide {
+  background: #fff;
+}
+
+:global(html[data-design="e"]) .gallery {
+  position: relative;
+}
+
+:global(html[data-design="e"]) .thumbs a {
+  background: #fff;
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+:global(html[data-design="e"]) .option:has(:checked) {
+  outline: 1.5px dashed var(--accent);
+  outline-offset: 2px;
+}
+
+:global(html[data-design="e"]) .facts {
+  background: var(--accent-soft);
+  outline: 1.5px dashed color-mix(in srgb, var(--accent-2) 60%, transparent);
+  outline-offset: -6px;
+}
+
+:global(html[data-design="e"]) .card {
+  background: var(--surface);
+  outline: 1.5px dashed color-mix(in srgb, var(--tan) 60%, transparent);
+  outline-offset: -8px;
+}
+
+:global(html[data-design="e"]) .trust li::before {
+  background: var(--brass);
+}
+
+:global(html[data-design="d"]) .slides {
+  outline: 2px solid var(--line);
+}
+
+:global(html[data-design="d"]) .slide img {
+  padding: 13% 7% 3%;
+}

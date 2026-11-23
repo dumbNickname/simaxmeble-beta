@@ -270,3 +270,36 @@
   border-color: var(--ink);
   color: #fff;
 }
+
+/* ============================================================ D: Riviera */
+
+:global(html[data-design="d"]) .chip[aria-pressed="true"] {
+  background: var(--ink);
+  color: #fff;
+}
+
+:global(html[data-design="d"]) .gallery a {
+  border-radius: 999px 999px var(--radius-sm) var(--radius-sm);
+}
+
+/* ============================================================ E: Bottega */
+
+:global(html[data-design="e"]) .searchBar,
+:global(html[data-design="e"]) .chip,
+:global(html[data-design="e"]) .toggle,
+:global(html[data-design="e"]) .toggle label {
+  border-radius: var(--radius-sm);
+}
+
+:global(html[data-design="e"]) .chip {
+  background: #fff;
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+:global(html[data-design="e"]) .chip[aria-pressed="true"] {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: none;
+  outline: 1.5px dashed var(--thread);
+  outline-offset: -4px;
+}

@@ -749,3 +749,282 @@
   --btn-bg: var(--ink);
   --btn-fg: #fff;
 }
+
+/* ============================================================ D: Riviera */
+
+/* Sun-yellow hero; the chair sits in a white round "piazza" ringed by an awning. */
+:global(html[data-design="d"]) .hero {
+  background: var(--sun);
+  padding-top: clamp(3.5rem, 7vw, 5.5rem);
+}
+
+:global(html[data-design="d"]) .hero :global(.lead) {
+  color: var(--ink);
+}
+
+:global(html[data-design="d"]) .hl::after {
+  background: var(--terra);
+  opacity: 0.85;
+  height: 0.16em;
+  bottom: -0.02em;
+}
+
+:global(html[data-design="d"]) .photos,
+:global(html[data-design="d"]) .stage:hover .photos {
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0 14px #fff, 0 0 0 16px var(--terra), 0 30px 50px -30px rgb(19 41 75 / 0.6);
+}
+
+:global(html[data-design="d"]) .picker {
+  background: #fff;
+  border-radius: 999px;
+}
+
+:global(html[data-design="d"]) .tag a {
+  border-radius: 4px;
+  padding-inline: 1.5rem;
+  background: var(--terra);
+  color: #fff;
+  mask: var(--ticket);
+}
+
+/* Categories in arched windows on a sea-blue band. */
+:global(html[data-design="d"]) .cats {
+  background: var(--sea);
+  color: #fff;
+}
+
+:global(html[data-design="d"]) .cats :global(.section-head) p {
+  color: rgb(255 255 255 / 0.85);
+}
+
+:global(html[data-design="d"]) .cat {
+  border-radius: 999px 999px var(--radius) var(--radius);
+  padding-top: 1.25rem;
+  text-align: center;
+  transition: transform 0.5s var(--spring);
+}
+
+:global(html[data-design="d"]) .catPic {
+  border-radius: 999px 999px 10px 10px;
+  background: #fff;
+}
+
+:global(html[data-design="d"]) .cat:hover {
+  transform: translateY(-6px);
+}
+
+/* Steps are tickets with a terracotta stub. */
+:global(html[data-design="d"]) .steps li {
+  border-radius: 6px;
+  background: linear-gradient(90deg, var(--terra) 0 3.25rem, var(--accent-soft) 3.25rem);
+  mask:
+    radial-gradient(circle at 3.25rem 0, #0000 0.45rem, #000 0.48rem) top / 100% 51% no-repeat,
+    radial-gradient(circle at 3.25rem 100%, #0000 0.45rem, #000 0.48rem) bottom / 100% 51% no-repeat;
+  transition: rotate 0.5s var(--spring);
+}
+
+:global(html[data-design="d"]) .steps li::before,
+:global(html[data-design="d"]) .steps li:nth-child(2)::before,
+:global(html[data-design="d"]) .steps li:nth-child(3)::before {
+  border-radius: 50%;
+  background: #fff;
+  transform: none;
+}
+
+:global(html[data-design="d"]) .steps li:hover {
+  rotate: -1.5deg;
+}
+
+/* Fabrics on terracotta. */
+:global(html[data-design="d"]) .fabrics {
+  background: var(--terra);
+  color: #fff;
+}
+
+:global(html[data-design="d"]) .fabrics :global(.section-head) p,
+:global(html[data-design="d"]) .swatches a {
+  color: #fff;
+}
+
+:global(html[data-design="d"]) .swatches small {
+  color: rgb(255 255 255 / 0.8);
+}
+
+:global(html[data-design="d"]) .swatchPic {
+  box-shadow: 0 0 0 4px #fff;
+}
+
+:global(html[data-design="d"]) .fabrics :global(.btn-ghost) {
+  box-shadow: none;
+}
+
+:global(html[data-design="d"]) .call {
+  background: var(--sun);
+  color: var(--ink);
+}
+
+:global(html[data-design="d"]) .call :global(.btn-accent) {
+  --btn-bg: var(--terra);
+}
+
+/* ============================================================ E: Bottega */
+
+/* Hero: the chair on a white pad with a stitched ring; tailor's tape on top
+   of the category and closing sections. */
+:global(html[data-design="e"]) .hl::after {
+  height: 0.09em;
+  bottom: -0.04em;
+  border-radius: 0;
+  background: repeating-linear-gradient(90deg, var(--accent) 0 0.4em, transparent 0.4em 0.65em);
+}
+
+:global(html[data-design="e"]) .photos,
+:global(html[data-design="e"]) .stage:hover .photos {
+  border-radius: 50%;
+  background: var(--surface);
+  outline: 2px dashed var(--tan);
+  outline-offset: -16px;
+}
+
+:global(html[data-design="e"]) .picker {
+  border-radius: var(--radius-sm);
+  background: var(--leather);
+}
+
+:global(html[data-design="e"]) .tag a {
+  position: relative;
+  padding-left: 2.1rem;
+  border-radius: 6px 16px 16px 6px;
+  background: var(--accent);
+  color: #fff;
+  outline: 1.5px dashed var(--thread);
+  outline-offset: -5px;
+}
+
+:global(html[data-design="e"]) .tag a::before {
+  content: "";
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-top: -0.35rem;
+  border-radius: 50%;
+  background: var(--brass);
+  box-shadow: 0 0 0 2px #5b3a12;
+}
+
+:global(html[data-design="e"]) .cats {
+  background: var(--tape), var(--surface);
+}
+
+:global(html[data-design="e"]) .cat {
+  position: relative;
+  border-radius: var(--radius);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+:global(html[data-design="e"]) .cat::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1.5px dashed color-mix(in srgb, var(--tan) 60%, transparent);
+  border-radius: calc(var(--radius) - 4px);
+  pointer-events: none;
+}
+
+/* Steps: leather patches stitched on, with brass rivets. */
+:global(html[data-design="e"]) .steps li {
+  border-radius: var(--radius);
+  background: var(--leather);
+  color: var(--on-dark);
+  outline: 2px dashed var(--thread);
+  outline-offset: -8px;
+  transition: transform 0.5s var(--spring);
+}
+
+:global(html[data-design="e"]) .steps p {
+  color: color-mix(in srgb, var(--on-dark) 82%, transparent);
+}
+
+:global(html[data-design="e"]) .steps li::before,
+:global(html[data-design="e"]) .steps li:nth-child(2)::before,
+:global(html[data-design="e"]) .steps li:nth-child(3)::before {
+  width: 1.15rem;
+  height: 1.15rem;
+  border-radius: 50%;
+  background: var(--brass);
+  box-shadow: 0 0 0 2px #5b3a12, 0 2px 3px rgb(0 0 0 / 0.5);
+  transform: none;
+}
+
+:global(html[data-design="e"]) .steps li:hover {
+  transform: rotate(-1deg) translateY(-2px);
+}
+
+/* Fabric samples cut with pinking shears. */
+:global(html[data-design="e"]) .swatchPic,
+:global(html[data-design="e"]) .swatches a:hover .swatchPic {
+  --z: 5px;
+  border-radius: 0;
+  mask:
+    conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) bottom / calc(2 * var(--z)) 51% repeat-x,
+    conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) top / calc(2 * var(--z)) 51% repeat-x;
+}
+
+:global(html[data-design="e"]) .swatches a:hover .swatchPic {
+  transform: rotate(-4deg) scale(1.04);
+}
+
+:global(html[data-design="e"]) .call {
+  background: var(--tape), var(--leather);
+  padding-top: calc(clamp(3rem, 6vw, 5rem) + 1rem);
+  color: var(--on-dark);
+}
+
+:global(html[data-design="e"]) .call :global(.btn-accent) {
+  --btn-bg: var(--thread);
+  --btn-fg: var(--ink);
+  outline-color: var(--accent);
+}
+
+:global(html[data-design="e"]) .call :global(.btn-ghost) {
+  color: var(--on-dark);
+  box-shadow: inset 0 0 0 1.5px var(--thread);
+}
+
+/* Keep the chair inside the round piazza. */
+:global(html[data-design="d"]) .photo {
+  inset: 11%;
+}
+
+:global(html[data-design="d"]) .photos {
+  width: min(100%, calc(100vw - 2 * var(--gutter) - 32px));
+  margin-inline: auto;
+}
+
+/* Numbered ticket stubs. */
+:global(html[data-design="d"]) .steps {
+  counter-reset: none;
+}
+
+:global(html[data-design="d"]) .steps li::before,
+:global(html[data-design="d"]) .steps li:nth-child(2)::before,
+:global(html[data-design="d"]) .steps li:nth-child(3)::before {
+  content: counter(list-item);
+  display: grid;
+  place-items: center;
+  left: 0.8rem;
+  color: var(--terra);
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+:global(html[data-design="e"]) .picker {
+  background: #fff;
+  outline: 1.5px dashed var(--tan);
+  outline-offset: -5px;
+  box-shadow: var(--shadow);
+}
