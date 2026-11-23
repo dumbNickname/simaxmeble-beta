@@ -78,3 +78,8 @@
   border-radius: 0;
   box-shadow: none;
 }
+
+:global(html[data-design="c"]) .phone {
+  background: var(--surface);
+  color: var(--ink);
+}

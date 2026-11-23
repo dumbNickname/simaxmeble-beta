@@ -304,6 +304,24 @@ def undash(s: str) -> str:
     return re.sub(r"\s+[-\u2013\u2014]\s+", ": ", s)
 
 
+def drop_repeated_lists(s: str) -> str:
+    """The shop copy sometimes repeats a feature list with small edits: drop a
+    <ul> when most of its items start like an item of an earlier list."""
+    seen: set[str] = set()
+
+    def key(li: str) -> str:
+        return re.sub(r"[^a-ząćęłńóśźż]", "", re.sub(r"<[^>]+>", "", li).lower())[:28]
+
+    def check(m):
+        items = [key(x) for x in re.findall(r"<li>(.*?)</li>", m.group(0), flags=re.S)]
+        if items and sum(k in seen for k in items) / len(items) >= 0.5:
+            return ""
+        seen.update(items)
+        return m.group(0)
+
+    return re.sub(r"<ul>.*?</ul>", check, s, flags=re.S)
+
+
 def clean_html(src: str) -> str:
     c = Cleaner()
     c.feed(src)
@@ -322,7 +340,7 @@ def clean_html(src: str) -> str:
     # Decorative check marks from the shop copy; the site styles list bullets itself.
     s = re.sub(r"[\u2705\u2714\u2713\u2611]\ufe0f?\s*", "", s)
     s = undash(re.sub(r"\s+", " ", s).replace("> <", "><").strip())
-    return s.replace("\u2014", ", ")
+    return drop_repeated_lists(s.replace("\u2014", ", "))
 
 
 def text(src: str) -> str:

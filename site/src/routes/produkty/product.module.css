@@ -510,3 +510,33 @@
 :global(html[data-design="c"]) .trust li::before {
   border-radius: 0;
 }
+
+/* One primary action; the shop and Allegro buttons step back. */
+:global(html[data-design="c"]) .ctas :global(.btn-accent) {
+  --btn-bg: transparent;
+  --btn-fg: var(--ink);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+:global(html[data-design="c"]) .ctas :global(.btn-ghost) {
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+:global(html[data-design="c"]) .ctas :global(.btn-accent):hover,
+:global(html[data-design="c"]) .ctas :global(.btn-ghost):hover {
+  --btn-bg: var(--surface);
+  box-shadow: inset 0 0 0 1px var(--ink);
+}
+
+:global(html[data-design="c"]) .price span {
+  flex-basis: 100%;
+}
+
+:global(html[data-design="c"]) .order {
+  display: grid;
+  gap: 1.5rem;
+}
+
+:global(html[data-design="c"]) .title {
+  letter-spacing: -0.02em;
+}
