@@ -231,3 +231,30 @@
     transform: scale(1.025);
   }
 }
+
+/* ================================================== A: wild fabric book */
+
+:global(html[data-design="a"]) .card:nth-child(5n + 1) .media { background: #fde3e8; }
+:global(html[data-design="a"]) .card:nth-child(5n + 2) .media { background: #d7f0ed; }
+:global(html[data-design="a"]) .card:nth-child(5n + 3) .media { background: #fdebc4; }
+:global(html[data-design="a"]) .card:nth-child(5n + 4) .media { background: #e1f0e2; }
+:global(html[data-design="a"]) .card:nth-child(5n + 5) .media { background: #ffe0d6; }
+
+:global(html[data-design="a"]) .price {
+  background: var(--ink);
+  color: #fff;
+  transform: rotate(-4deg);
+  transition: transform 0.5s var(--spring), background 0.3s;
+}
+
+@media (hover: hover) {
+  :global(html[data-design="a"]) .link:hover .price {
+    background: var(--pop-coral);
+    color: var(--ink);
+    transform: rotate(3deg) scale(1.1);
+  }
+
+  :global(html[data-design="a"]) .link:hover .media {
+    border-radius: 34% 22px 22px 22px;
+  }
+}

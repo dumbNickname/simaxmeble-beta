@@ -540,3 +540,22 @@
 :global(html[data-design="c"]) .title {
   letter-spacing: -0.02em;
 }
+
+/* ================================================== A: wild fabric book */
+
+:global(html[data-design="a"]) .slide,
+:global(html[data-design="a"]) .thumbs a {
+  background: #d7f0ed;
+}
+
+:global(html[data-design="a"]) .trust li:nth-child(1)::before { background: var(--pop-mustard); }
+:global(html[data-design="a"]) .trust li:nth-child(2)::before { background: var(--pop-teal); }
+:global(html[data-design="a"]) .trust li:nth-child(3)::before { background: var(--pop-coral); }
+
+:global(html[data-design="a"]) .facts {
+  background: #fdebc4;
+}
+
+:global(html[data-design="a"]) .facts {
+  margin-top: 1rem;
+}

@@ -37,7 +37,7 @@ export function organizationNode() {
     legalName: site.legalName,
     description: "Producent mebli tapicerowanych: fotele, sofy, łóżka i krzesła szyte na zamówienie w Polsce.",
     url: `${site.url}/`,
-    logo: { "@type": "ImageObject", url: `${site.url}/logo.svg` },
+    logo: { "@type": "ImageObject", url: `${site.url}/img/logo-simax-square.png`, width: 300, height: 300 },
     image: `${site.url}/logo.svg`,
     telephone: site.phone,
     email: site.email,

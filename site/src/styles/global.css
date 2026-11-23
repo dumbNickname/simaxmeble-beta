@@ -14,6 +14,13 @@ html[data-design="a"] {
   --accent-soft: #d6eeea;
   --accent-2: #11706f;
   --on-dark: #ffffff;
+  /* A's fabric-book palette: colour blocks, card tints, hero backgrounds. */
+  --pop-mustard: #f2b33d;
+  --pop-teal: #3fb8af;
+  --pop-pink: #f6a8b6;
+  --pop-coral: #ff7a59;
+  --pop-sage: #9fcaa4;
+  --pop-deep: #0f5f5e;
   --dark: #16181d;
 
   /* Named system fonts first: on some Linux setups system-ui resolves to a monospace face. */
@@ -392,6 +399,22 @@ html[data-design="c"] .btn-ghost {
 
 html[data-design="c"] .btn-ghost:hover {
   --btn-bg: var(--surface);
+}
+
+/* A: a four-colour selvedge stripe under the header, like the edge of a fabric sample. */
+html[data-design="a"] body {
+  background:
+    linear-gradient(90deg, var(--pop-mustard) 0 25%, var(--pop-teal) 25% 50%, var(--pop-pink) 50% 75%, var(--pop-coral) 75%) top / 100% 6px no-repeat,
+    var(--bg);
+}
+
+html[data-design="a"] .btn-primary:hover {
+  --btn-bg: var(--pop-deep);
+}
+
+html[data-design="a"] .btn-ghost:hover {
+  --btn-bg: var(--pop-mustard);
+  box-shadow: inset 0 0 0 1.5px var(--ink);
 }
 
 /* -------------------------------------------------------------- motion */
