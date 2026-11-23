@@ -917,7 +917,7 @@
 }
 
 :global(html[data-design="e"]) .cats {
-  background: var(--tape), var(--surface);
+  background: var(--surface);
 }
 
 :global(html[data-design="e"]) .cat {
@@ -979,8 +979,7 @@
 }
 
 :global(html[data-design="e"]) .call {
-  background: var(--tape), var(--leather);
-  padding-top: calc(clamp(3rem, 6vw, 5rem) + 1rem);
+  background: var(--leather);
   color: var(--on-dark);
 }
 
