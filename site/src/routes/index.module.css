@@ -1027,3 +1027,8 @@
   outline-offset: -5px;
   box-shadow: var(--shadow);
 }
+
+/* the yellow hero runs up under the valance */
+:global(html[data-design="d"]) .hero {
+  margin-top: -1.9rem;
+}

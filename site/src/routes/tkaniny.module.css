@@ -176,3 +176,7 @@
   background: #fff;
   border-top: 1px solid var(--line);
 }
+
+:global(html[data-design="d"]) [id] {
+  scroll-margin-top: 0;
+}

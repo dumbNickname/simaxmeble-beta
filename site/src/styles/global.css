@@ -507,6 +507,16 @@ html[data-design="e"] .btn-ghost:hover {
   --btn-bg: var(--accent-soft);
 }
 
+/* D: the awning header is taller and its valance hangs below it, so keep
+   content and anchor targets clear of both. */
+html[data-design="d"] {
+  scroll-padding-top: 9rem;
+}
+
+html[data-design="d"] main {
+  padding-top: 1.9rem;
+}
+
 /* -------------------------------------------------------------- motion */
 /* Content is visible by default; the hidden start state only applies once
    motion.ts sets html.motion (JS on, reduced motion off). */
