@@ -4,7 +4,7 @@ import { basePath } from "./utils/base";
 
 // Two design proposals share one DOM. Runs before first paint: `?v=a|b` picks
 // one and remembers it; without JS the server default (A) stays.
-const designInit = `(function(){try{var q=new URLSearchParams(location.search).get("v");if(q==="a"||q==="b"||q==="c"||q==="d")localStorage.setItem("simax_design",q);var d=q||localStorage.getItem("simax_design");if(d==="b"||d==="c"||d==="d")document.documentElement.setAttribute("data-design",d)}catch(e){}})()`;
+const designInit = `(function(){try{var q=new URLSearchParams(location.search).get("v");if(q==="a"||q==="b"||q==="c")localStorage.setItem("simax_design",q);var d=q||localStorage.getItem("simax_design");if(d==="b"||d==="c")document.documentElement.setAttribute("data-design",d)}catch(e){}})()`;
 
 // Cross-document view transitions: only the card that leads to (or came from) a
 // product page gets a name, so just that photo morphs into the product gallery

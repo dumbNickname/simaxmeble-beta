@@ -355,7 +355,7 @@
   font-weight: 500;
 }
 
-/* =========================================== original logo (designs C and D) */
+/* =========================================== original logo (design C) */
 
 /* The shop's logo as a mask, so it takes the header's text colour. */
 .logo {
@@ -367,60 +367,17 @@
   mask: url("/img/logo-simax.png") center / contain no-repeat;
 }
 
-:global(html[data-design="d"]) .logo,
 :global(html[data-design="c"]) .logo {
   display: block;
 }
 
-:global(html[data-design="d"]) .mark,
-:global(html[data-design="d"]) .word,
 :global(html[data-design="c"]) .mark,
 :global(html[data-design="c"]) .word {
   display: none;
-}
-
-:global(html[data-design="d"]) .brand:hover .logo {
-  animation: logo-wiggle 0.6s var(--spring);
-}
-
-@keyframes logo-wiggle {
-  40% { transform: rotate(-3deg) scale(1.04); }
 }
 
 @media (max-width: 30rem) {
   .logo {
     width: 7.5rem;
   }
-}
-
-/* ===================================================== D: Regał (crown) */
-
-/* The crown board: overhangs the uprights like a cornice. */
-:global(html[data-design="d"]) .header {
-  margin-inline: calc(-1 * var(--upright) - 10px);
-  padding-inline: calc(var(--upright) + 10px);
-  background:
-    linear-gradient(180deg, var(--oak-dark) 0 4px, var(--oak-light) 4px 7px, transparent 7px calc(100% - 7px), var(--oak-dark) calc(100% - 7px)),
-    var(--grain-h);
-  backdrop-filter: none;
-  border-bottom: 0;
-  box-shadow: 0 14px 18px -10px rgb(40 24 8 / 0.5);
-}
-
-:global(html[data-design="d"]) .nav a {
-  font-weight: 650;
-}
-
-:global(html[data-design="d"]) .nav a:hover {
-  background: rgb(255 255 255 / 0.35);
-}
-
-:global(html[data-design="d"]) .toggle {
-  background: rgb(255 255 255 / 0.4);
-  border-radius: var(--radius-sm);
-}
-
-:global(html[data-design="d"]) .phone {
-  border-radius: var(--radius-sm);
-  box-shadow: inset 0 -3px 0 rgb(0 0 0 / 0.25);
 }
