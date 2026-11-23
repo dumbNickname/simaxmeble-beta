@@ -236,7 +236,7 @@
 
 /* Arched window, white inside; the price is a ticket. */
 :global(html[data-design="d"]) .media {
-  border-radius: 999px 999px var(--radius-sm) var(--radius-sm);
+  border-radius: 50% 50% var(--radius-sm) var(--radius-sm) / var(--arch) var(--arch) var(--radius-sm) var(--radius-sm);
   background: #fff;
   transition: transform 0.6s var(--spring), box-shadow 0.3s var(--ease);
 }

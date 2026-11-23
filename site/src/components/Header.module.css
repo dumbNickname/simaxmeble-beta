@@ -23,49 +23,6 @@
   text-decoration: none;
 }
 
-.mark {
-  position: relative;
-  display: grid;
-  place-items: center;
-  width: 2.4rem;
-  height: 2.4rem;
-  border-radius: 12px;
-  background: var(--ink);
-  color: var(--bg);
-  font-weight: 800;
-  font-size: 1.25rem;
-  transition: transform 0.5s var(--spring);
-}
-
-.mark::after {
-  content: "";
-  position: absolute;
-  top: -3px;
-  right: -3px;
-  width: 0.7rem;
-  height: 0.7rem;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 3px var(--bg);
-}
-
-.brand:hover .mark {
-  transform: rotate(-8deg) scale(1.06);
-}
-
-.word {
-  font-weight: 800;
-  font-size: 1.15rem;
-  letter-spacing: 0.06em;
-}
-
-.word span {
-  margin-left: 0.35rem;
-  font-weight: 500;
-  letter-spacing: 0;
-  color: var(--muted);
-}
-
 .menu {
   margin-left: auto;
 }
@@ -208,12 +165,6 @@
   }
 }
 
-@media (max-width: 420px) {
-  .word span {
-    display: none;
-  }
-}
-
 @media (min-width: 980px) {
   .menu {
     display: contents;
@@ -259,29 +210,6 @@
   border-bottom: 2px solid var(--ink);
 }
 
-:global(html[data-design="b"]) .mark {
-  border-radius: 50%;
-  background: var(--accent-2);
-  color: #fff;
-  border: 2px solid var(--ink);
-}
-
-:global(html[data-design="b"]) .mark::after {
-  background: var(--accent-soft);
-  box-shadow: 0 0 0 2px var(--ink);
-}
-
-:global(html[data-design="b"]) .word {
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  letter-spacing: 0.02em;
-}
-
-:global(html[data-design="b"]) .word span {
-  color: var(--ink);
-  font-style: italic;
-}
-
 :global(html[data-design="b"]) .nav a:hover {
   background: #fff;
 }
@@ -306,33 +234,6 @@
   border-bottom: 1px solid var(--line);
 }
 
-:global(html[data-design="c"]) .mark {
-  width: 2.1rem;
-  height: 2.1rem;
-  border-radius: 0;
-  font-weight: 400;
-  font-size: 1.1rem;
-}
-
-:global(html[data-design="c"]) .mark::after {
-  display: none;
-}
-
-:global(html[data-design="c"]) .brand:hover .mark {
-  transform: none;
-  background: var(--accent);
-}
-
-:global(html[data-design="c"]) .word {
-  font-weight: 500;
-  letter-spacing: 0.18em;
-}
-
-:global(html[data-design="c"]) .word span {
-  font-weight: 300;
-  letter-spacing: 0.02em;
-}
-
 :global(html[data-design="c"]) .nav a {
   border-radius: 0;
   font-weight: 400;
@@ -355,11 +256,11 @@
   font-weight: 500;
 }
 
-/* =========================================== original logo (design C) */
+/* ============================================ original logo (all designs) */
 
 /* The shop's logo as a mask, so it takes the header's text colour. */
 .logo {
-  display: none;
+  display: block;
   width: 9.5rem;
   aspect-ratio: 230 / 73;
   background: currentColor;
@@ -369,11 +270,6 @@
 
 :global(html[data-design="c"]) .logo {
   display: block;
-}
-
-:global(html[data-design="c"]) .mark,
-:global(html[data-design="c"]) .word {
-  display: none;
 }
 
 @media (max-width: 30rem) {
@@ -438,11 +334,6 @@
   color: var(--ink);
 }
 
-:global(html[data-design="d"]) .mark,
-:global(html[data-design="d"]) .word {
-  display: none;
-}
-
 :global(html[data-design="d"]) .nav a:hover {
   background: var(--accent-soft);
 }
@@ -505,11 +396,6 @@
 :global(html[data-design="e"]) .logo {
   display: block;
   color: var(--on-dark);
-}
-
-:global(html[data-design="e"]) .mark,
-:global(html[data-design="e"]) .word {
-  display: none;
 }
 
 :global(html[data-design="e"]) .nav a,

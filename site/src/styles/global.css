@@ -79,6 +79,8 @@ html[data-design="d"] {
   --sea: #1f6fb2;
   --terra: #c8553d;
   --sun: #f2c14e;
+  /* height of the arch top: a shallow arch keeps the whole photo in view */
+  --arch: 18%;
 
   --font-display: Futura, "Futura PT", "Century Gothic", "Avenir Next", "Trebuchet MS", "Segoe UI", Roboto, "Liberation Sans", sans-serif;
   --display-weight: 800;

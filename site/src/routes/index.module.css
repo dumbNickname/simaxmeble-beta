@@ -800,14 +800,14 @@
 }
 
 :global(html[data-design="d"]) .cat {
-  border-radius: 999px 999px var(--radius) var(--radius);
+  border-radius: 50% 50% var(--radius) var(--radius) / var(--arch) var(--arch) var(--radius) var(--radius);
   padding-top: 1.25rem;
   text-align: center;
   transition: transform 0.5s var(--spring);
 }
 
 :global(html[data-design="d"]) .catPic {
-  border-radius: 999px 999px 10px 10px;
+  border-radius: 50% 50% 10px 10px / var(--arch) var(--arch) 10px 10px;
   background: #fff;
 }
 

@@ -16,8 +16,6 @@ export default function Header() {
     <header class={styles.header}>
       <div class={`container ${styles.bar}`}>
         <NavLink href="/" class={styles.brand} aria-label="SIMAX meble, strona główna">
-          <span class={styles.mark} aria-hidden="true">S</span>
-          <span class={styles.word}>SIMAX<span>meble</span></span>
           <span class={styles.logo} aria-hidden="true" />
         </NavLink>
         <details class={styles.menu}>

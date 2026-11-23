@@ -279,7 +279,7 @@
 }
 
 :global(html[data-design="d"]) .gallery a {
-  border-radius: 999px 999px var(--radius-sm) var(--radius-sm);
+  border-radius: 50% 50% var(--radius-sm) var(--radius-sm) / var(--arch) var(--arch) var(--radius-sm) var(--radius-sm);
 }
 
 /* ============================================================ E: Bottega */
