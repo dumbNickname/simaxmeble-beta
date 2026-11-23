@@ -2,7 +2,7 @@
 
 .hero {
   position: relative;
-  padding-top: clamp(2rem, 5vw, 4rem);
+  padding-block: clamp(2rem, 5vw, 4rem) clamp(3rem, 7vw, 5rem);
   overflow: hidden;
 }
 
@@ -10,6 +10,14 @@
   display: grid;
   gap: clamp(2rem, 5vw, 4rem);
   align-items: center;
+}
+
+@media (max-width: 959px) {
+  .stage {
+    order: -1;
+    width: min(100%, 22rem);
+    justify-self: center;
+  }
 }
 
 @media (min-width: 960px) {
@@ -52,25 +60,6 @@
   margin: 2rem 0 2.25rem;
 }
 
-.facts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 2rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  color: var(--muted);
-}
-
-.facts strong {
-  display: block;
-  color: var(--ink);
-  font-family: var(--font-display);
-  font-size: 2rem;
-  font-weight: var(--display-weight);
-  line-height: 1.1;
-}
-
 .stage {
   --c: var(--accent);
   position: relative;
@@ -81,7 +70,7 @@
   position: relative;
   aspect-ratio: 1;
   border-radius: 46% 54% 42% 58% / 52% 44% 56% 48%;
-  background: color-mix(in srgb, var(--c) 26%, #fff);
+  background: color-mix(in srgb, var(--c) 34%, #fff);
   transition: background 0.6s var(--ease), border-radius 1.2s var(--ease);
 }
 
@@ -170,8 +159,8 @@
   transform: none;
 }
 
-.stage:has(label:nth-child(2) :checked) { --c: #c9971c; }
-.stage:has(label:nth-child(3) :checked) { --c: #1c9a9b; }
+.stage:has(label:nth-child(2) :checked) { --c: #1c9a9b; }
+.stage:has(label:nth-child(3) :checked) { --c: #e0a82a; }
 .stage:has(label:nth-child(4) :checked) { --c: #e3aeb1; }
 .stage:has(label:nth-child(5) :checked) { --c: #b8332a; }
 .stage:has(label:nth-child(6) :checked) { --c: #5a6270; }
@@ -208,48 +197,6 @@
   font-size: 1.2rem;
 }
 
-.ribbon {
-  margin-top: clamp(2rem, 5vw, 3.5rem);
-  padding-block: 0.9rem;
-  overflow: hidden;
-  background: var(--ink);
-  color: var(--bg);
-  white-space: nowrap;
-}
-
-.ribbon > div {
-  display: inline-flex;
-  animation: marquee 60s linear infinite;
-}
-
-.ribbon i {
-  margin-right: 2.5rem;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1.05rem;
-}
-
-.ribbon i::after {
-  content: "";
-  display: inline-block;
-  width: 0.5rem;
-  height: 0.5rem;
-  margin-left: 2.5rem;
-  border-radius: 50%;
-  background: var(--accent);
-  vertical-align: middle;
-}
-
-@keyframes marquee {
-  to { transform: translateX(-50%); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .ribbon > div {
-    animation: none;
-  }
-}
-
 /* -------------------------------------------------------------- sections */
 
 .products {
@@ -277,24 +224,21 @@
 }
 
 .cat {
-  position: relative;
   display: grid;
-  align-content: end;
-  min-height: 15rem;
-  padding: 1.25rem;
-  overflow: hidden;
+  gap: 0.15rem;
+  padding: 0.75rem 0.75rem 1.1rem;
   border-radius: var(--radius);
   background: var(--bg);
   color: var(--ink);
   text-decoration: none;
-  isolation: isolate;
 }
 
 .catPic {
-  position: absolute;
-  inset: 0 0 3.5rem;
-  z-index: -1;
-  background: transparent;
+  aspect-ratio: 4 / 3;
+  margin-bottom: 0.6rem;
+  overflow: hidden;
+  border-radius: calc(var(--radius) - 8px);
+  background: var(--surface);
   transition: transform 0.7s var(--spring);
 }
 
@@ -302,12 +246,18 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  padding: 0.75rem;
+  padding: 0.5rem;
   mix-blend-mode: multiply;
+  transition: transform 0.7s var(--spring);
 }
 
-.cat:hover .catPic {
-  transform: translateY(-8px) rotate(-3deg) scale(1.05);
+.cat:hover .catPic img {
+  transform: translateY(-6px) rotate(-3deg) scale(1.06);
+}
+
+.cat .catName,
+.cat .catCount {
+  padding-inline: 0.4rem;
 }
 
 .catName {
@@ -467,6 +417,7 @@
 
 :global(html[data-design="b"]) .hero {
   padding-top: 0;
+  padding-bottom: clamp(3.5rem, 7vw, 5.5rem);
   background: var(--accent-2);
   color: #fff;
   border-bottom: 2px solid var(--ink);
@@ -492,14 +443,6 @@
 
 :global(html[data-design="b"]) .hl::after {
   display: none;
-}
-
-:global(html[data-design="b"]) .facts {
-  color: rgb(255 255 255 / 0.8);
-}
-
-:global(html[data-design="b"]) .facts strong {
-  color: #fff;
 }
 
 :global(html[data-design="b"]) .hero :global(.btn-primary) {
@@ -555,25 +498,6 @@
 
 @keyframes wobble {
   50% { transform: rotate(4deg) scale(1.04); }
-}
-
-:global(html[data-design="b"]) .ribbon {
-  margin-top: clamp(3rem, 6vw, 4.5rem);
-  background: var(--accent);
-  color: var(--ink);
-  border-top: 2px solid var(--ink);
-}
-
-:global(html[data-design="b"]) .ribbon i {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 1.3rem;
-}
-
-:global(html[data-design="b"]) .ribbon i::after {
-  background: var(--ink);
-  border-radius: 0;
-  transform: rotate(45deg);
 }
 
 :global(html[data-design="b"]) .cats {

@@ -1845,13 +1845,13 @@
  },
  "kanapa-simple-boucle-445": {
   "w": 960,
-  "h": 960,
+  "h": 893,
   "widths": [
    480,
    800,
    960
   ],
-  "color": "#a69d96",
+  "color": "#a69e97",
   "cutout": false
  },
  "krzeslo-confortavel-225": {
@@ -1977,7 +1977,7 @@
  },
  "lozko-como-160x200-379": {
   "w": 1517,
-  "h": 1517,
+  "h": 1411,
   "widths": [
    480,
    800,
@@ -1988,13 +1988,13 @@
  },
  "lozko-dia-160x200-412": {
   "w": 1500,
-  "h": 1500,
+  "h": 1395,
   "widths": [
    480,
    800,
    1200
   ],
-  "color": "#7f756c",
+  "color": "#7e756b",
   "cutout": false
  },
  "lozko-dia-160x200-417": {

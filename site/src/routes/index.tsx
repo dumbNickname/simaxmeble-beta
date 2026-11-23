@@ -1,4 +1,4 @@
-import { For } from "solid-js";
+import { For, Show } from "solid-js";
 import Layout from "~/components/Layout";
 import SeoHead, { absolute } from "~/components/SeoHead";
 import NavLink from "~/components/NavLink";
@@ -7,14 +7,14 @@ import ProductCard from "~/components/ProductCard";
 import CustomerPhotos from "~/components/CustomerPhotos";
 import bestsellers from "~/data/bestsellers.json";
 import site from "~/data/site.json";
-import { allCategories, allFabrics, allProducts, productBySlug, formatPrice, variantColour, type Product } from "~/utils/catalog";
+import customerPhotos from "~/data/customer-photos.json";
+import { allCategories, allFabrics, allProducts, productBySlug, formatPrice, variantColour, imageInfo, type Product } from "~/utils/catalog";
 import styles from "./index.module.css";
 
 const grande = productBySlug("fotel-grande")!;
 const heroVariants = [12, 13, 18, 19, 15].map((id) => grande.variants.find((v) => v.id === id)!);
 const picks = bestsellers.products.map((slug) => productBySlug(slug)).filter(Boolean) as Product[];
 const cheapest = Math.min(...allProducts.map((p) => p.priceMin));
-const variantCount = allProducts.reduce((n, p) => n + p.variants.length, 0);
 
 const steps = [
   { title: "Wybierz model", text: "Fotel, sofa, łóżko albo krzesło. Każdy model ma zdjęcia, wymiary i cenę." },
@@ -53,11 +53,6 @@ export default function Home() {
               <NavLink href="/fotele/" class="btn btn-primary">Zobacz fotele</NavLink>
               <a class="btn btn-ghost" href={`tel:${site.phoneHref}`}>Zadzwoń: {site.phone.replace("+48 ", "")}</a>
             </div>
-            <ul class={styles.facts}>
-              <li><strong>{allProducts.length}</strong> modeli</li>
-              <li><strong>{variantCount}</strong> gotowych wersji</li>
-              <li><strong>{allFabrics.length}</strong> kolekcji tkanin</li>
-            </ul>
           </div>
 
           <div class={styles.stage}>
@@ -93,17 +88,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div class={styles.ribbon} aria-hidden="true">
-          <div>
-            <For each={[0, 1]}>
-              {() => (
-                <span>
-                  <For each={allProducts}>{(p) => <i>{p.name}</i>}</For>
-                </span>
-              )}
-            </For>
-          </div>
-        </div>
       </section>
 
       <section class="section" aria-labelledby="bestsellery">
@@ -127,7 +111,8 @@ export default function Home() {
           <ul class={styles.catGrid}>
             <For each={allCategories.filter((c) => c.products.length)}>
               {(c) => {
-                const p = productBySlug(c.products[0])!;
+                // Prefer a packshot so the tiles share one look.
+                const p = c.products.map((s) => productBySlug(s)!).find((o) => imageInfo(o.cover!)?.cutout) ?? productBySlug(c.products.at(-1)!)!;
                 return (
                   <li class="reveal">
                     <NavLink href={`/${c.slug}/`} class={styles.cat}>
@@ -185,6 +170,7 @@ export default function Home() {
         </div>
       </section>
 
+      <Show when={customerPhotos.photos.length}>
       <section class="section" aria-labelledby="meble-u-was">
         <div class="container">
           <div class="section-head">
@@ -194,6 +180,7 @@ export default function Home() {
           <CustomerPhotos limit={6} />
         </div>
       </section>
+      </Show>
 
       <section class={styles.call} aria-labelledby="kontakt-skrot">
         <div class={`container ${styles.callInner}`}>

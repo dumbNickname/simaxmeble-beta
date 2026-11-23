@@ -57,6 +57,8 @@ const variantScript = `(function(){var s=document.currentScript.parentElement,q=
 
 function Specs(props: { v: Variant }) {
   const fabric = () => fabricById(props.v.fabricId);
+  const value = (key: string) => (fabric()?.specs as Record<string, unknown> | undefined)?.[key];
+  const missing = () => SPEC_ROWS.filter(([key]) => value(key) == null).map(([, label]) => label);
   return (
     <table class="spec-table">
       <caption class="sr-only">Parametry tkaniny: {fabricLabel(props.v) ?? "do wyboru"}</caption>
@@ -69,21 +71,20 @@ function Specs(props: { v: Variant }) {
             </Show>
           </td>
         </tr>
-        <For each={SPEC_ROWS}>
-          {([key, label, format]) => {
-            const value = () => (fabric()?.specs as Record<string, unknown> | undefined)?.[key];
-            return (
-              <tr>
-                <th scope="row">{label}</th>
-                <td>
-                  <Show when={value() != null} fallback={<span class="tbd">{TBD}</span>}>
-                    {format ? format(value() as never) : String(value())}
-                  </Show>
-                </td>
-              </tr>
-            );
-          }}
+        <For each={SPEC_ROWS.filter(([key]) => value(key) != null)}>
+          {([key, label, format]) => (
+            <tr>
+              <th scope="row">{label}</th>
+              <td>{format ? format(value(key) as never) : String(value(key))}</td>
+            </tr>
+          )}
         </For>
+        <Show when={missing().length}>
+          <tr class={styles.missing}>
+            <th scope="row">{missing().join(", ")}</th>
+            <td><span class="tbd">{TBD}</span></td>
+          </tr>
+        </Show>
       </tbody>
     </table>
   );
@@ -164,7 +165,6 @@ export default function ProductPage() {
                 </div>
 
                 <div class={styles.info}>
-                  <p class={styles.cat}><NavLink href={`/${category().slug}/`}>{category().name}</NavLink></p>
                   <h1 class={styles.title}>{p().name}</h1>
 
                   <div class={styles.priceRow}>
@@ -172,28 +172,26 @@ export default function ProductPage() {
                       {(v) => (
                         <p class={styles.price} data-v={v.id}>
                           {formatPrice(v.price)}
-                          <span>brutto, szyty na zamówienie</span>
+                          <span>brutto, szyty na zamówienie{p().priceMin !== p().priceMax ? `. Wersje od ${formatPrice(p().priceMin)} do ${formatPrice(p().priceMax)}` : ""}</span>
                         </p>
                       )}
                     </For>
                   </div>
 
-                  <p class={styles.lead}>{p().lead}</p>
-
                   <fieldset class={styles.picker} hidden={!multi()}>
                     <legend>
                       Wersja <span>({variantsLabel(p().variants.length)})</span>
+                      <For each={p().variants}>{(v) => <b class={styles.chosen} data-v={v.id}>{v.label}, {formatPrice(v.price)}</b>}</For>
                     </legend>
                     <div class={styles.options}>
                       <For each={p().variants}>
                         {(v, i) => (
-                          <label class={styles.option} id={`wariant-${v.id}`}>
+                          <label class={styles.option} id={`wariant-${v.id}`} title={`${v.label}, ${formatPrice(v.price)}`}>
                             <input type="radio" name="wariant" id={`v-${v.id}`} value={String(v.id)} checked={i() === 0} />
                             <span class={styles.swatch} style={{ "--sw": variantColour(v) }}>
                               <Picture image={v.images[0]} alt="" sizes="64px" />
                             </span>
-                            <span class={styles.optLabel}>{v.label}</span>
-                            <span class={styles.optPrice}>{formatPrice(v.price)}</span>
+                            <span class="sr-only">{v.label}, {formatPrice(v.price)}</span>
                           </label>
                         )}
                       </For>
@@ -204,12 +202,6 @@ export default function ProductPage() {
                   <For each={p().variants}>
                     {(v) => (
                       <div class={styles.order} data-v={v.id}>
-                        <dl class={styles.facts}>
-                          <Show when={multi()}><div><dt>Wybrana wersja</dt><dd>{v.label}</dd></div></Show>
-                          <Show when={v.base}><div><dt>Podstawa</dt><dd>{v.base}</dd></div></Show>
-                          <div><dt>Tkanina</dt><dd>{fabricLabel(v) ?? "do wyboru"}</dd></div>
-                          <div><dt>Kod</dt><dd>{v.sku}</dd></div>
-                        </dl>
                         <div class={styles.ctas}>
                           <a class="btn btn-primary" href={`tel:${site.phoneHref}`}>
                             <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z" /></svg>
@@ -222,9 +214,17 @@ export default function ProductPage() {
                             <a class="btn btn-ghost" href={allegro(v)!} rel="noopener nofollow" target="_blank">Kup na Allegro</a>
                           </Show>
                         </div>
+                        <dl class={styles.facts}>
+                          <Show when={multi()}><div><dt>Wybrana wersja</dt><dd>{v.label}</dd></div></Show>
+                          <Show when={v.base}><div><dt>Podstawa</dt><dd>{v.base}</dd></div></Show>
+                          <div><dt>Tkanina</dt><dd>{fabricLabel(v) ?? "do wyboru"}</dd></div>
+                          <div><dt>Kod</dt><dd>{v.sku}</dd></div>
+                        </dl>
                       </div>
                     )}
                   </For>
+
+                  <p class={styles.lead}>{p().lead}</p>
 
                   <ul class={styles.trust}>
                     <li>Szyty ręcznie w Polsce, w naszej pracowni</li>

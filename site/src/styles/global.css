@@ -7,11 +7,11 @@ html[data-design="a"] {
   --surface: #f2f3f1;
   --surface-2: #e8eae6;
   --ink: #16181d;
-  --muted: #5b616b;
+  --muted: #474d56;
   --line: #dfe1dd;
   --accent: #d9a21b;
   --accent-ink: #16181d;
-  --accent-soft: #fbf0d2;
+  --accent-soft: #d6eeea;
   --accent-2: #11706f;
   --on-dark: #ffffff;
   --dark: #16181d;
@@ -42,11 +42,11 @@ html[data-design="b"] {
   --surface: #e7f1ee;
   --surface-2: #cfe5de;
   --ink: #121212;
-  --muted: #4d4a45;
+  --muted: #3d3a36;
   --line: #121212;
   --accent: #f2b134;
   --accent-ink: #121212;
-  --accent-soft: #f7c9c3;
+  --accent-soft: #fde3a7;
   --accent-2: #0f5c58;
   --dark: #0f5c58;
 
@@ -272,6 +272,7 @@ html[data-design="b"] .btn-ghost {
 
 .prose {
   max-width: 68ch;
+  font-size: 1.0625rem;
 }
 
 .prose h3 {

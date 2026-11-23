@@ -5,10 +5,9 @@ import { allCategories } from "~/utils/catalog";
 import styles from "./Header.module.css";
 
 const links = [
-  ...allCategories.filter((c) => c.products.length).map((c) => ({ href: `/${c.slug}/`, label: c.name })),
+  // Short labels keep the bar to one line; full names are in the footer and the H1s.
+  ...allCategories.filter((c) => c.products.length).map((c) => ({ href: `/${c.slug}/`, label: c.name.split(" ")[0] })),
   { href: "/tkaniny/", label: "Tkaniny" },
-  { href: "/meble-u-was/", label: "Meble u Was" },
-  { href: "/o-nas/", label: "O nas" },
   { href: "/kontakt/", label: "Kontakt" },
 ];
 

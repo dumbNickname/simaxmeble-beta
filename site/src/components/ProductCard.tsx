@@ -29,7 +29,6 @@ export default function ProductCard(props: Props) {
           <span class={styles.price}>{priceLabel(p())}</span>
         </div>
         <div class={styles.body}>
-          <p class={styles.cat}>{categoryName(p().category)}</p>
           <Heading>{p().name}</Heading>
           <div class={styles.meta}>
             <ul class={styles.dots} aria-label={`Dostępne wersje: ${p().variants.map((v) => v.label).join(", ")}`}>

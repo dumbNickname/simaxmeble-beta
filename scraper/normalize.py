@@ -298,6 +298,12 @@ class Cleaner(HTMLParser):
         return "".join(self.out)
 
 
+def undash(s: str) -> str:
+    """Spaced hyphens used as dashes: number ranges get an en dash, the rest a colon."""
+    s = re.sub(r"(\d) [-\u2013\u2014] (\d)", "\\1\u2013\\2", s)
+    return re.sub(r"\s+[-\u2013\u2014]\s+", ": ", s)
+
+
 def clean_html(src: str) -> str:
     c = Cleaner()
     c.feed(src)
@@ -315,13 +321,12 @@ def clean_html(src: str) -> str:
     s = re.sub(r"<strong>\s*</strong>", "", s)
     # Decorative check marks from the shop copy; the site styles list bullets itself.
     s = re.sub(r"[\u2705\u2714\u2713\u2611]\ufe0f?\s*", "", s)
-    s = re.sub(r"\s+", " ", s).replace("> <", "><").strip()
-    s = s.replace(" – ", ", ").replace("–", "-").replace("—", ", ")
-    return s
+    s = undash(re.sub(r"\s+", " ", s).replace("> <", "><").strip())
+    return s.replace("\u2014", ", ")
 
 
 def text(src: str) -> str:
-    return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", src))).strip()
+    return undash(re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", src))).strip())
 
 
 def num(v: str) -> str:

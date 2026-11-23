@@ -111,6 +111,11 @@
     opacity: 1;
   }
 
+  /* Packshots use a multiply blend, so the first photo must fade out or both show through. */
+  .link:hover .media:has(.alt) .pic:not(.alt) .img {
+    opacity: 0;
+  }
+
   .link:hover .dots li {
     transform: translateY(-3px);
   }

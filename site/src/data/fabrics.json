@@ -44,7 +44,7 @@
     "name": "Element",
     "group": "podstawowe",
     "image": "tkanina-element",
-    "description": "Kolekcja Element jest tkaniną welurową, posiadają certyfikaty gwarantujące bezpieczeństwo podczas użytkowania tkanin przez dzieci i niemowlęta. Są przyjazne dla skóry człowieka, nie powodując podrażnień. Ponadto tkaniny te posiadają właściwości trudnozapalne i wodoodporne – WATER BLOCKED, zatrzymując rozlane płyny na powierzchni materiału. Tkaniny Element są odporne na mechacenie i płowienie, nienagannie prezentując się na meblach przez wiele lat",
+    "description": "Kolekcja Element jest tkaniną welurową, posiadają certyfikaty gwarantujące bezpieczeństwo podczas użytkowania tkanin przez dzieci i niemowlęta. Są przyjazne dla skóry człowieka, nie powodując podrażnień. Ponadto tkaniny te posiadają właściwości trudnozapalne i wodoodporne: WATER BLOCKED, zatrzymując rozlane płyny na powierzchni materiału. Tkaniny Element są odporne na mechacenie i płowienie, nienagannie prezentując się na meblach przez wiele lat",
     "specs": {
       "type": "welur",
       "composition": null,
@@ -173,7 +173,7 @@
     "name": "Chill Me",
     "group": "premium",
     "image": "tkanina-chill-me",
-    "description": "To oryginalna, szlachetna kolekcja skomponowana z 16 wersji kolorystycznych. Materiał pochodzi z ekskluzywnej linii tkanin obiciowych renomowanej marki Toccare - kwintesencja elegancji zamknięta w melanżowej, przyjemnej w dotyku strukturze. Tkanina zdobyła liczne atesty, które potwierdzają jej wyjątkową jakość. Poniżej kilka z nich: Water blocked - właściwości plamoodporne polegające na ograniczeniu wchłaniania płynów w tkaninę Good for babies - bezpieczna dla dzieci, również niemowląt Good for pets - zwiększona odporność na zaciągnięcie i zerwanie nitek w skutek np. drapania przez domowe zwierzęta",
+    "description": "To oryginalna, szlachetna kolekcja skomponowana z 16 wersji kolorystycznych. Materiał pochodzi z ekskluzywnej linii tkanin obiciowych renomowanej marki Toccare: kwintesencja elegancji zamknięta w melanżowej, przyjemnej w dotyku strukturze. Tkanina zdobyła liczne atesty, które potwierdzają jej wyjątkową jakość. Poniżej kilka z nich: Water blocked: właściwości plamoodporne polegające na ograniczeniu wchłaniania płynów w tkaninę Good for babies: bezpieczna dla dzieci, również niemowląt Good for pets: zwiększona odporność na zaciągnięcie i zerwanie nitek w skutek np. drapania przez domowe zwierzęta",
     "specs": {
       "type": "melanż",
       "composition": "100% PES",
@@ -237,7 +237,7 @@
     "name": "Dama",
     "group": "premium",
     "image": "tkanina-dama",
-    "description": "Szlachetna, gęsto tkana tkanina wełniana o zastosowaniu tapicerskim z możliwością zastosowania dekoracyjnego. Posiada dobre parametry techniczne - jest naturalnie trudnopalna; przechodzi test papierosa i zapałki według brytyjskich standardów trudnopalności. Występuje w palecie ponad czterdziestu pięknych odcieni, wśród których są zarówno kolory natury (ziemi, trawy, kamienia), stonowane - beże, brązy, kremy i szarości, jak i nietypowe dla wełny soczyste, pełne wyrazu mocne barwy: fuksji, śliwki, bakłażana i szmaragdowej zieleni",
+    "description": "Szlachetna, gęsto tkana tkanina wełniana o zastosowaniu tapicerskim z możliwością zastosowania dekoracyjnego. Posiada dobre parametry techniczne: jest naturalnie trudnopalna; przechodzi test papierosa i zapałki według brytyjskich standardów trudnopalności. Występuje w palecie ponad czterdziestu pięknych odcieni, wśród których są zarówno kolory natury (ziemi, trawy, kamienia), stonowane: beże, brązy, kremy i szarości, jak i nietypowe dla wełny soczyste, pełne wyrazu mocne barwy: fuksji, śliwki, bakłażana i szmaragdowej zieleni",
     "specs": {
       "type": "wełna",
       "composition": "100% wełna z recyklingu",

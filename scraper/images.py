@@ -15,6 +15,8 @@ SRC = ROOT / "cache" / "img"
 OUT = ROOT.parent / "site" / "public" / "img"
 SIZES = ROOT.parent / "site" / "src" / "data" / "image-sizes.json"
 WIDTHS = [480, 800, 1200]
+# Supplier renders with a "Quelle 0X" caption in the bottom-right corner: crop it off.
+CROP_BOTTOM = {"kanapa-simple-boucle-445": 0.07, "lozko-como-160x200-379": 0.07, "lozko-dia-160x200-412": 0.07}
 
 
 def flatten(im: Image.Image) -> Image.Image:
@@ -37,6 +39,8 @@ def main():
             print("missing", rel)
             continue
         im = flatten(Image.open(src))
+        if key in CROP_BOTTOM:
+            im = im.crop((0, 0, im.width, round(im.height * (1 - CROP_BOTTOM[key]))))
         w, h = im.size
         widths = [x for x in WIDTHS if x < w] + ([min(w, WIDTHS[-1])] if w <= WIDTHS[-1] else [])
         widths = sorted(set(widths)) or [w]
