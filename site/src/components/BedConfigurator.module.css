@@ -1,0 +1,359 @@
+/* Simple bed configurator. The preview reacts to the checked radios with :has(), so it works without JS;
+   JS only writes the text summary and opens the mail app. */
+
+.wrap {
+  scroll-margin-top: 6rem;
+}
+
+.cfg {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+}
+
+@media (min-width: 960px) {
+  .cfg {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  }
+
+  .previewCol {
+    position: sticky;
+    top: 6rem;
+  }
+}
+
+.previewCol {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.preview {
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.preview svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.summary {
+  margin: 0;
+  font-weight: 700;
+}
+
+.note,
+.hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* ---------------------------------------------------------------- drawing */
+
+.floor {
+  stroke: color-mix(in srgb, var(--ink) 35%, transparent);
+  stroke-width: 2;
+}
+
+.bed,
+.head,
+.head [data-h] {
+  transform-box: view-box;
+  transition: transform 0.5s var(--ease), opacity 0.3s var(--ease);
+}
+
+.bed {
+  transform-origin: 400px 470px;
+}
+
+.head {
+  transform-origin: 400px 370px;
+}
+
+.fabric {
+  fill: color-mix(in srgb, var(--accent-2) 22%, var(--bg));
+  stroke: var(--ink);
+  stroke-width: 3;
+  vector-effect: non-scaling-stroke;
+}
+
+.seam {
+  fill: none;
+  stroke: color-mix(in srgb, var(--ink) 55%, transparent);
+  stroke-width: 2;
+  stroke-dasharray: 6 6;
+  vector-effect: non-scaling-stroke;
+}
+
+.button {
+  fill: var(--ink);
+}
+
+.mattress {
+  fill: var(--bg);
+  stroke: color-mix(in srgb, var(--ink) 50%, transparent);
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+
+.pillow {
+  fill: var(--surface-2);
+  stroke: color-mix(in srgb, var(--ink) 50%, transparent);
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+
+.box path {
+  fill: none;
+  stroke: var(--accent-2);
+  stroke-width: 2.5;
+  stroke-dasharray: 10 7;
+  vector-effect: non-scaling-stroke;
+}
+
+.boxText,
+.sizeText text {
+  fill: var(--ink);
+  font-family: var(--font);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.boxText {
+  fill: var(--accent-2);
+  font-size: 18px;
+}
+
+.dimLine {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+
+.legs path,
+.legs rect {
+  fill: var(--ink);
+  stroke: var(--ink);
+  stroke-width: 6;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.legs [data-l="wood"] path {
+  fill: #9a6a3c;
+  stroke: #6b4523;
+  stroke-width: 2;
+}
+
+/* everything optional starts hidden, the checked radio reveals it */
+.head [data-h],
+.legs [data-l],
+.sizeText text {
+  display: none;
+}
+
+.cfg:has([data-o="arc"]:checked) [data-h="arc"],
+.cfg:has([data-o="pads"]:checked) [data-h="pads"],
+.cfg:has([data-o="tuft"]:checked) [data-h="tuft"],
+.cfg:has([data-o="chan"]:checked) [data-h="chan"],
+.cfg:has([data-o="metal"]:checked) [data-l="metal"],
+.cfg:has([data-o="plinth"]:checked) [data-l="plinth"],
+.cfg:has([data-o="wood"]:checked) [data-l="wood"] {
+  display: inline;
+}
+
+.cfg:has([data-o="s140"]:checked) [data-s="s140"],
+.cfg:has([data-o="s160"]:checked) [data-s="s160"],
+.cfg:has([data-o="s180"]:checked) [data-s="s180"],
+.cfg:has([data-o="s200"]:checked) [data-s="s200"],
+.cfg:has([data-o="sx"]:checked) [data-s="sx"] {
+  display: inline;
+}
+
+/* width follows the mattress, 160 is the drawn size */
+.cfg:has([data-o="s140"]:checked) .bed {
+  transform: scaleX(0.875);
+}
+
+.cfg:has([data-o="s180"]:checked) .bed {
+  transform: scaleX(1.125);
+}
+
+.cfg:has([data-o="s200"]:checked) .bed {
+  transform: scaleX(1.25);
+}
+
+.cfg:has([data-o="hlow"]:checked) .head {
+  transform: scaleY(0.72);
+}
+
+.cfg:has([data-o="hhigh"]:checked) .head {
+  transform: scaleY(1.32);
+}
+
+.cfg:has([data-o="nobox"]:checked) .box,
+.cfg:has([data-o="nobox"]:checked) .boxText {
+  display: none;
+}
+
+/* headboard only: drop the bed, stand the headboard on the floor */
+.cfg:has([data-o="head"]:checked) .frame,
+.cfg:has([data-o="head"]:checked) .boxText {
+  display: none;
+}
+
+.cfg:has([data-o="head"]:checked) .head {
+  transform-origin: 400px 470px;
+}
+
+.cfg:has([data-o="head"]:checked) .head [data-h] {
+  transform: translateY(100px);
+}
+
+.cfg:has([data-o="head"]:checked) .bedOnly {
+  opacity: 0.45;
+}
+
+/* ---------------------------------------------------------------- steps */
+
+.steps {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.step {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+  display: grid;
+  gap: 0.5rem;
+  transition: opacity 0.3s var(--ease);
+}
+
+.step legend {
+  padding: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.choices label {
+  position: relative;
+  cursor: pointer;
+}
+
+.choices input {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.choices span {
+  display: inline-block;
+  padding: 0.55rem 0.95rem;
+  border: 1px solid color-mix(in srgb, var(--ink) 30%, transparent);
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 0.95rem;
+  transition: background-color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.choices label:hover span {
+  border-color: var(--ink);
+}
+
+.choices input:checked + span {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--bg);
+  font-weight: 700;
+}
+
+.choices input:focus-visible + span {
+  outline: 3px solid var(--accent-2);
+  outline-offset: 2px;
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.field span {
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: 2.9rem;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid color-mix(in srgb, var(--ink) 30%, transparent);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--ink);
+  font: inherit;
+}
+
+.field input:focus-visible,
+.field select:focus-visible,
+.field textarea:focus-visible {
+  outline: 3px solid var(--accent-2);
+  outline-offset: 1px;
+}
+
+.submit {
+  display: grid;
+  gap: 0.75rem;
+  justify-items: start;
+}
+
+.submit p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.submit a {
+  color: var(--accent-2);
+}
+
+.sent {
+  font-weight: 700;
+}
+
+:global(html[data-design="c"]) .preview,
+:global(html[data-design="c"]) .choices span,
+:global(html[data-design="c"]) .field input,
+:global(html[data-design="c"]) .field select,
+:global(html[data-design="c"]) .field textarea {
+  border-radius: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bed,
+  .head,
+  .head [data-h],
+  .step,
+  .choices span {
+    transition: none;
+  }
+}

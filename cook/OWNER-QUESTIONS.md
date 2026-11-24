@@ -90,6 +90,32 @@ Gdzie: `site/src/data/projects.json` (format opisany w `_help`), zdjęcia do `si
 - [ ] Dla każdego modelu z kolekcji: co konkretnie da się w nim zmienić (lamówka, guziki, nogi, podnóżek do kompletu)?
 - [ ] Na zdjęciach z osobą siedzącą w fotelu: ile ta osoba ma wzrostu (dla skali)?
 
+## 9. Konfigurator łóżka (wersja wstępna na /lozko-na-zamowienie/)
+
+Zrobiliśmy prosty konfigurator: rozmiar materaca, kształt i wysokość wezgłowia, pojemnik, nogi, tkanina. Wysyła maila z wybranymi opcjami. Żeby zrobić go lepiej:
+
+- [ ] Jakie kształty wezgłowia faktycznie szyjecie (gładkie zaokrąglone, poduchy, pikowane, pionowe przeszycia, inne)? Czy są zdjęcia albo rysunki?
+- [ ] Jakie rozmiary materaca robicie standardowo (140, 160, 180, 200 × 200)? Czy także 90/120 i długość 210–220?
+- [ ] W jakim zakresie można zmienić wysokość wezgłowia (np. od 90 do 130 cm)?
+- [ ] Pojemnik na pościel: zawsze dostępny? Czy jest wersja bez pojemnika (niższa cena)?
+- [ ] Jakie nogi są do wyboru przy łóżkach (metalowe, drewniane, schowane)?
+- [ ] Czy robicie samo wezgłowie (na ścianę albo do istniejącej ramy)?
+- [ ] Czy można podać orientacyjne ceny dopłat (np. większy rozmiar +XX zł), żeby konfigurator pokazywał cenę „od”?
+
+## 10. Co jeszcze chcecie mieć na stronie? (pomysły z fotelownia.com.pl)
+
+Zaznaczcie, co Was interesuje. Pominęliśmy rzeczy, które nie pasują (wyskakujący newsletter, koszyk, widżety Facebooka).
+
+- [ ] Wzornik tkanin w PDF do pobrania.
+- [ ] Zamawianie bezpłatnych próbek przez formularz.
+- [ ] Usługa renowacji / nowego obicia z wyceną ze zdjęcia (osobna strona).
+- [ ] Tabela kosztów dostawy dla fotela, sofy i łóżka.
+- [ ] Lista „od ręki”: meble gotowe, z ekspozycji albo nadwyżki.
+- [ ] Paleta kolorów nóg (bejce) ze zdjęciami.
+- [ ] Godziny kontaktu przy numerze telefonu.
+- [ ] Wersja niemieckojęzyczna, jeśli wysyłacie do Niemiec.
+- [ ] Siatka zdjęć z Instagrama (z Waszych plików, bez wtyczek).
+
 ## Propozycje domeny
 
 Propozycja do decyzji właściciela:

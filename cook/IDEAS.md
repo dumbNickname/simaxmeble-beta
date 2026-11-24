@@ -69,6 +69,11 @@ What to skip or do better:
 - **B16 Brief form attachments hint.** The mailto flow can't attach files. Add a visible line: "Zdjęcia i szkice dołączysz w mailu, który się otworzy" next to the button (the hint is currently only inside the email body).
 - **B17 Pick a final design** (A–E) and remove the rest before production, including the design switch and the `?v=` handling.
 
+## C. Bed configurator
+
+- **C1 Placeholder (done).** `/lozko-na-zamowienie/` with `BedConfigurator.tsx`: what to order (bed or headboard only), mattress size, headboard shape and height, storage box, legs, fabric, notes, contact. The SVG front view reacts to the radios via CSS `:has()`, so it works without JS. The inline JS writes a summary and opens a prefilled mail. Linked from `/lozka/`, `/na-zamowienie/` and the footer.
+- **C2 Real configurator (later, owner).** Once the owner sends specific headboard designs, size ranges and surcharges (OWNER-QUESTIONS section 9): replace the generic shapes with their designs, add an "od XX zł" price that updates with the options, and maybe offer the same for armchairs (on top of IdeaStage).
+
 ## Next step suggestion
 
 Build the **ready** items first (A7 colour note, A10 dimension audit, A13 fabric field in the brief form, B16 hint). They're small and need no owner input. Send the owner `cook/OWNER-QUESTIONS.md`: its new section 8 covers the fotelownia-inspired questions (deposit, lead time, free samples, own fabric, wood stains, renovation, shipping, hours).

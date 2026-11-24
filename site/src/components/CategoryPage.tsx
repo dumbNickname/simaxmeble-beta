@@ -40,6 +40,12 @@ export default function CategoryPage(props: { slug: string }) {
           <p class={styles.count}>
             Gotowe projekty z kolekcji: {products.length} {products.length === 1 ? "model" : products.length < 5 ? "modele" : "modeli"}, od {formatPrice(from)}. <NavLink href="/na-zamowienie/">Chcesz inny wymiar albo kształt?</NavLink>
           </p>
+          <Show when={c.slug === "lozka"}>
+            <p class={styles.configure}>
+              <NavLink href="/lozko-na-zamowienie/" class="btn btn-primary">Skonfiguruj łóżko na wymiar</NavLink>
+              <span>Rozmiar, wezgłowie, pojemnik i nogi w kilku kliknięciach.</span>
+            </p>
+          </Show>
           <nav class={styles.siblings} aria-label="Inne kategorie">
             <For each={allCategories.filter((o) => o.products.length && o.slug !== c.slug)}>
               {(o) => <NavLink href={`/${o.slug}/`}>{o.name}</NavLink>}

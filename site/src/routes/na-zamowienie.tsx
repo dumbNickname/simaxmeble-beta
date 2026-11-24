@@ -90,6 +90,9 @@ export default function MadeToOrder() {
                 )}
               </For>
             </ul>
+            <p class={styles.muted}>
+              Planujesz łóżko? Zacznij od <NavLink href="/lozko-na-zamowienie/">konfiguratora łóżka</NavLink>: rozmiar, wezgłowie, pojemnik i nogi z podglądem.
+            </p>
           </div>
           <div class={styles.photoStack}>
             <Picture image="b2b-1" alt="Zielony fotel uszak SIMAX we wnętrzu" sizes="(min-width: 960px) 480px, 92vw" />

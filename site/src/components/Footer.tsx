@@ -17,6 +17,7 @@ export default function Footer() {
           <p class={styles.heading}>Na zamówienie</p>
           <ul>
             <li><NavLink href="/na-zamowienie/">Jak powstaje mebel na zamówienie</NavLink></li>
+            <li><NavLink href="/lozko-na-zamowienie/">Konfigurator łóżka</NavLink></li>
             <li><NavLink href="/dla-firm/">Meble dla firm i HoReCa</NavLink></li>
             <li><NavLink href="/realizacje/">Realizacje</NavLink></li>
             <For each={allCategories.filter((c) => c.products.length)}>{(c) => <li><NavLink href={`/${c.slug}/`}>{c.heading}</NavLink></li>}</For>

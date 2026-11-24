@@ -503,6 +503,17 @@
   font-size: 0.95rem;
 }
 
+.flushTop {
+  padding-top: 0;
+}
+
+.beds {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: clamp(1.5rem, 3vw, 2.5rem) clamp(1rem, 2vw, 1.75rem);
+  margin-bottom: 2rem;
+}
+
 /* ---------------------------------------------------------------- designs */
 
 :global(html[data-design="b"]) .path,

@@ -35,7 +35,7 @@ const staticPages = readdirSync(resolve(root, "src/routes"), { recursive: true, 
   .filter((r) => r !== "/meble-u-was/" || customerPhotos.length)
   .filter((r) => r !== "/realizacje/" || projects.length);
 
-const KEY_PAGES = ["/na-zamowienie/", "/dla-firm/"];
+const KEY_PAGES = ["/na-zamowienie/", "/lozko-na-zamowienie/", "/dla-firm/"];
 const priority = (path) =>
   path === "/" ? "1.0" : KEY_PAGES.includes(path) || categories.some((c) => `/${c.slug}/` === path) ? "0.9" : "0.6";
 
@@ -119,6 +119,7 @@ const llms = `# ${site.name}
 ## Na zamówienie
 
 - [Meble na zamówienie: jak to działa, co można zmienić, wycena](${url("/na-zamowienie/")})
+- [Łóżko tapicerowane na zamówienie: konfigurator rozmiaru, wezgłowia i nóg](${url("/lozko-na-zamowienie/")})
 - [Meble tapicerowane dla firm: restauracje, hotele, biura](${url("/dla-firm/")})
 ${projects.length ? `- [Realizacje: od pomysłu do gotowego mebla](${url("/realizacje/")})\n` : ""}
 ## Kategorie
