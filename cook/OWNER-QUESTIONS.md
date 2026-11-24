@@ -74,6 +74,22 @@ Gdzie: `site/src/data/projects.json` (format opisany w `_help`), zdjęcia do `si
 - [ ] Zasady zwrotu: 14 dni dla gotowych modeli, brak zwrotu dla zamówień indywidualnych (art. 38 pkt 3). Proszę potwierdzić.
 - [ ] Zgody klientów na zdjęcia w „Meble u Was”.
 
+## 8. Płatność, terminy, próbki, usługi (inspiracja: fotelownia.com.pl)
+
+- [ ] Zaliczka przy zamówieniu na wymiar: ile procent? Kiedy płatna jest reszta (przed wysyłką, przy odbiorze)? Regulamin sklepu wspomina już o zaliczce, czy te zasady obowiązują też tutaj?
+- [ ] Typowy czas realizacji: „zwykle od X do Y tygodni”? Liczony od zaliczki czy od akceptacji projektu?
+- [ ] Próbki tkanin: czy wysyłka jest bezpłatna? Ile próbek naraz? Czy możemy zrobić wzornik tkanin w PDF do pobrania?
+- [ ] Czy szyjecie z tkaniny klienta (tkanina powierzona)? Jeśli tak, na jakich warunkach?
+- [ ] Kolory nóg: jaka jest paleta bejc / lakierów? Czy są zdjęcia próbek drewna?
+- [ ] Czy robicie renowację / nowe obicie mebli klienta? Wycena ze zdjęcia? Jakie meble (fotele, sofy, krzesła, PRL)?
+- [ ] Tkaniny we wzory: czy ustalacie z klientem, jak ułożyć wzór na meblu?
+- [ ] Dostawa: koszt dla fotela, sofy i łóżka? Kurier czy własny transport? Czy kierowca wnosi mebel? Czy nogi są odkręcane do wysyłki? Odbiór osobisty w pracowni bez opłat?
+- [ ] Wysyłka za granicę (np. Niemcy)?
+- [ ] Godziny, w których odbieracie telefon (np. pon–pt 8–16)?
+- [ ] Czy są meble gotowe od ręki (ekspozycja, nadwyżki), które można pokazać osobno?
+- [ ] Dla każdego modelu z kolekcji: co konkretnie da się w nim zmienić (lamówka, guziki, nogi, podnóżek do kompletu)?
+- [ ] Na zdjęciach z osobą siedzącą w fotelu: ile ta osoba ma wzrostu (dla skali)?
+
 ## Propozycje domeny
 
 Propozycja do decyzji właściciela:
