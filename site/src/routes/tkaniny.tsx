@@ -114,6 +114,9 @@ export default function Fabrics() {
                             </For>
                           </tbody>
                         </table>
+                        <p class={styles.used}>
+                          <NavLink href={`/na-zamowienie/?tkanina=${f.id}#napisz`}>Zapytaj o mebel w tkaninie {f.name}</NavLink>
+                        </p>
                         <Show when={usedIn(f).length}>
                           <p class={styles.used}>
                             Na zdjęciach w:{" "}
