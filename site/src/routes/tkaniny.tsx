@@ -143,6 +143,7 @@ export default function Fabrics() {
         <section class={styles.samples} aria-labelledby="probki">
           <h2 id="probki">Chcesz dotknąć tkaniny przed zamówieniem?</h2>
           <p>Wyślemy próbki do najbliższego paczkomatu. Zadzwoń albo napisz, jakie kolory Cię interesują.</p>
+          <p>Kolory na zdjęciach zależą od ekranu i mogą różnić się od prawdziwej tkaniny. Próbka w dłoni i w świetle Twojego pokoju rozwiewa wątpliwości.</p>
           <div class={styles.ctas}>
             <a class="btn btn-primary" href={`tel:${site.phoneHref}`}>{site.phone}</a>
             <a class="btn btn-ghost" href={`mailto:${site.email}?subject=${encodeURIComponent("Próbki tkanin")}`}>Zamów próbki mailem</a>
