@@ -57,7 +57,7 @@ export function organizationNode() {
     geo: { "@type": "GeoCoordinates", latitude: site.geo.lat, longitude: site.geo.lng },
     hasMap: site.maps.place,
     // The stock shop is the same company on its own domain.
-    sameAs: [site.maps.place, site.shop.replace(/\/?$/, "/")],
+    sameAs: [site.maps.place, site.shop.replace(/\/?$/, "/"), site.instagram],
     contactPoint: {
       "@type": "ContactPoint",
       telephone: site.phone,

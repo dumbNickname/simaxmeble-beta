@@ -1,7 +1,6 @@
 import { For } from "solid-js";
 import NavLink from "./NavLink";
 import site from "~/data/site.json";
-import projects from "~/data/projects.json";
 import { allCategories } from "~/utils/catalog";
 import styles from "./Footer.module.css";
 
@@ -19,7 +18,7 @@ export default function Footer() {
           <ul>
             <li><NavLink href="/na-zamowienie/">Jak powstaje mebel na zamówienie</NavLink></li>
             <li><NavLink href="/dla-firm/">Meble dla firm i HoReCa</NavLink></li>
-            {projects.projects.length > 0 && <li><NavLink href="/realizacje/">Realizacje</NavLink></li>}
+            <li><NavLink href="/realizacje/">Realizacje</NavLink></li>
             <For each={allCategories.filter((c) => c.products.length)}>{(c) => <li><NavLink href={`/${c.slug}/`}>{c.heading}</NavLink></li>}</For>
           </ul>
         </nav>
@@ -39,6 +38,7 @@ export default function Footer() {
           <p>{site.legalName}<br />{site.address.street}<br />{site.address.postalCode} {site.address.city}</p>
           <p><a href={`mailto:${site.email}`}>{site.email}</a></p>
           <p><a href={site.maps.place} rel="noopener" target="_blank">Zobacz w Mapach Google</a></p>
+          <p><a href={site.instagram} rel="noopener" target="_blank">Instagram @simaxmeble.pl</a></p>
         </address>
       </div>
       <div class={`container ${styles.bottom}`}>

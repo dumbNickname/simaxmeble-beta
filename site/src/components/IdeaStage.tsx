@@ -139,7 +139,7 @@ export default function IdeaStage(props: Props) {
 
       <div class={styles.captions} aria-live="polite">
         <p data-etap="pomysl">Szkic na kartce, zdjęcie z internetu albo kilka zdań. Od tego zaczynamy.</p>
-        <p data-etap="projekt">Rysunek z wymiarami. Tu wymiary prawdziwego modelu {p().name.replace(/^Fotel\s+/i, "")}.</p>
+        <p data-etap="projekt">Każdy wymiar ustalamy razem z Tobą. Tu wymiary prawdziwego modelu {p().name.replace(/^Fotel\s+/i, "")}.</p>
         <p data-etap="mebel">
           <NavLink href={`/produkty/${p().slug}/`}>{p().name}</NavLink>, dziś gotowy projekt z kolekcji, od {formatPrice(p().priceMin)}.
         </p>

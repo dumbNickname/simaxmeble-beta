@@ -36,6 +36,11 @@ export default function Contact() {
               <a class={k.mail} href={`mailto:${site.email}`}>{site.email}</a>
               <p>Wyślij zdjęcie wnętrza albo mebla, który chcesz obić, odpiszemy z propozycją.</p>
             </section>
+            <section class={styles.panel} aria-labelledby="instagram">
+              <h2 id="instagram">Instagram</h2>
+              <a class={k.mail} href={site.instagram} target="_blank" rel="noopener">@simaxmeble.pl</a>
+              <p>Zdjęcia mebli prosto z naszej pracowni.</p>
+            </section>
           </div>
           <section class={styles.panel} aria-labelledby="adres">
             <h2 id="adres">Pracownia i odbiór osobisty</h2>

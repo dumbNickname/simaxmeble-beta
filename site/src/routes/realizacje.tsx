@@ -3,6 +3,7 @@ import Layout from "~/components/Layout";
 import SeoHead from "~/components/SeoHead";
 import Breadcrumbs from "~/components/Breadcrumbs";
 import NavLink from "~/components/NavLink";
+import IdeaStage from "~/components/IdeaStage";
 import data from "~/data/projects.json";
 import site from "~/data/site.json";
 import { basePath } from "~/utils/base";
@@ -29,6 +30,8 @@ interface Project {
 
 const projects = data.projects as unknown as Project[];
 const crumbs = [{ name: "Strona główna", href: "/" }, { name: "Realizacje" }];
+const grande = productBySlug("fotel-grande")!;
+const grandeVariant = grande.variants.find((v) => v.id === 12)!;
 const photo = (file: string) => `${basePath}/img/realizacje/${file}`;
 
 export default function Projects() {
@@ -36,7 +39,7 @@ export default function Projects() {
     <Layout>
       <SeoHead
         title="Realizacje: meble tapicerowane na zamówienie od pomysłu do efektu | SIMAX"
-        description="Meble tapicerowane, które uszyliśmy na zamówienie: pomysł klienta, rysunek z wymiarami i gotowy mebel. Fotele, sofy i siedziska dla domów i firm."
+        description="Meble tapicerowane, które uszyliśmy na zamówienie: pomysł klienta, wspólny projekt i gotowy mebel. Fotele, sofy i siedziska dla domów i firm."
         canonical="/realizacje/"
         breadcrumbs={crumbs}
         pageType="CollectionPage"
@@ -46,18 +49,30 @@ export default function Projects() {
         <header class={styles.head}>
           <Breadcrumbs items={crumbs} />
           <h1>Realizacje na zamówienie</h1>
-          <p class="lead">Każda historia w trzech krokach: z czym klient przyszedł, co narysowaliśmy i co z tego wyszło.</p>
+          <p class="lead">Każda historia w trzech krokach: z czym klient przyszedł, jak wyglądał projekt i co z tego wyszło.</p>
         </header>
 
         <Show
           when={projects.length}
           fallback={
-            <div class={styles.panel}>
-              <h2 class={styles.small}>Pierwsze historie zbieramy</h2>
-              <p>
-                Publikujemy tylko realizacje, na które klient się zgodził. Jeśli mamy już Twój mebel i chcesz go tu pokazać, napisz na <a href={`mailto:${site.email}`}>{site.email}</a>.
-              </p>
-              <NavLink href="/na-zamowienie/" class="btn btn-primary">Jak powstaje mebel na zamówienie</NavLink>
+            <div class={styles.split}>
+              <div class={styles.panel}>
+                <h2 class={styles.small}>Pierwsze historie właśnie zbieramy</h2>
+                <p>
+                  Pokazujemy tylko realizacje, na które klient się zgodził, więc ta strona rośnie powoli. Do tego czasu zdjęcia mebli z pracowni znajdziesz na naszym Instagramie.
+                </p>
+                <p>
+                  Mamy już Twój mebel i chcesz go tu pokazać? Napisz na <a href={`mailto:${site.email}`}>{site.email}</a>.
+                </p>
+                <div class={styles.ctas}>
+                  <a class="btn btn-primary" href={site.instagram} target="_blank" rel="noopener">Instagram @simaxmeble.pl</a>
+                  <NavLink href="/na-zamowienie/" class="btn btn-ghost">Jak powstaje mebel na zamówienie</NavLink>
+                </div>
+              </div>
+              <figure class={styles.example}>
+                <IdeaStage product={grande} variant={grandeVariant} />
+                <figcaption>Tak opiszemy każdą realizację: pomysł, projekt, efekt. Tu na przykładzie fotela GRANDE z naszej kolekcji.</figcaption>
+              </figure>
             </div>
           }
         >

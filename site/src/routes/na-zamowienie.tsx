@@ -29,7 +29,7 @@ export default function MadeToOrder() {
     <Layout>
       <SeoHead
         title="Meble tapicerowane na zamówienie: fotele, sofy, łóżka na wymiar | SIMAX"
-        description="Fotel, sofa albo łóżko tapicerowane na zamówienie: od Twojego pomysłu, przez rysunek z wymiarami i dobór tkaniny, do gotowego mebla z pracowni SIMAX w Wielkopolsce."
+        description="Fotel, sofa albo łóżko tapicerowane na zamówienie: od Twojego pomysłu, przez wspólny projekt z wymiarami i dobór tkaniny, do gotowego mebla z pracowni SIMAX w Wielkopolsce."
         canonical="/na-zamowienie/"
         image="b2b-1"
         breadcrumbs={crumbs}
@@ -56,7 +56,7 @@ export default function MadeToOrder() {
           <Breadcrumbs items={crumbs} />
           <h1>Meble tapicerowane na zamówienie</h1>
           <p class="lead">
-            Masz pomysł na fotel, sofę albo łóżko, którego nie ma w żadnym sklepie? Zrobimy z niego projekt z wymiarami, dobierzemy tkaninę i uszyjemy go w naszej pracowni w Łęce Mroczeńskiej.
+            Masz pomysł na fotel, sofę albo łóżko, którego nie ma w żadnym sklepie? Razem z Tobą zamienimy go w projekt z wymiarami, dobierzemy tkaninę i uszyjemy mebel w naszej pracowni w Łęce Mroczeńskiej.
           </p>
           <div class={styles.ctas}>
             <NavLink href="/na-zamowienie/#brief" class="btn btn-primary">Opisz swój pomysł</NavLink>
@@ -142,7 +142,7 @@ export default function MadeToOrder() {
         <div class={`container ${styles.briefGrid}`}>
           <div>
             <h2 id="napisz">Opisz swój pomysł</h2>
-            <p class="lead">Na początek wystarczy kilka zdań. Odezwiemy się z pytaniami, a potem z rysunkiem i wyceną.</p>
+            <p class="lead">Na początek wystarczy kilka zdań. Odezwiemy się z pytaniami, razem dopracujemy projekt, a potem podamy wycenę.</p>
             <h3 class={styles.small}>Co warto przygotować</h3>
             <ul class={styles.checklist}>
               <For each={prepare}>{(item) => <li>{item}</li>}</For>

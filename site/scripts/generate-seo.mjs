@@ -108,7 +108,7 @@ console.log("robots.txt: generated");
 const price = (n) => `${n.toLocaleString("pl-PL")} zł`;
 const llms = `# ${site.name}
 
-> ${site.tagline}: pracownia tapicerska, która szyje fotele, sofy, łóżka i siedziska według pomysłu klienta, od szkicu przez rysunek z wymiarami do gotowego mebla. Dla domów i dla firm (restauracje, hotele, biura). Gotowe modele z kolekcji są w sklepie SIMAX: ${site.shop}
+> ${site.tagline}: pracownia tapicerska, która szyje fotele, sofy, łóżka i siedziska według pomysłu klienta, od szkicu przez wspólny projekt z wymiarami do gotowego mebla. Dla domów i dla firm (restauracje, hotele, biura). Gotowe modele z kolekcji są w sklepie SIMAX: ${site.shop}
 
 - Firma: ${site.legalName}
 - Adres: ${site.address.street}, ${site.address.postalCode} ${site.address.city}, woj. ${site.address.region}

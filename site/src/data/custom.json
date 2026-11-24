@@ -11,9 +11,9 @@
     {
       "id": "projekt",
       "name": "Projekt",
-      "short": "Rysunek z wymiarami, dobór tkaniny i pianki, wycena. Zmieniamy, dopóki projekt nie będzie Twój.",
-      "you": "Wybierasz tkaninę z próbek (wysyłamy je do paczkomatu) i akceptujesz rysunek.",
-      "we": "Przygotowujemy rysunek z wymiarami, proponujemy konstrukcję i wypełnienie, podajemy cenę i termin."
+      "short": "Rozmawiamy, proponujemy, poprawiamy. Ustalamy razem każdy wymiar, tkaninę i wypełnienie, dopóki projekt nie będzie Twój.",
+      "you": "Mówisz, co Ci pasuje, a co nie. Wybierasz tkaninę z próbek (wysyłamy je do paczkomatu) i potwierdzasz komplet ustaleń.",
+      "we": "Zadajemy pytania, proponujemy konstrukcję, wymiary i wypełnienie, zmieniamy projekt po Twoich uwagach. Na koniec podajemy cenę i termin."
     },
     {
       "id": "wykonanie",
@@ -59,7 +59,7 @@
   "faq": [
     {
       "q": "Ile kosztuje mebel na zamówienie?",
-      "a": "Zależy od wielkości, konstrukcji i tkaniny, więc cenę podajemy po pierwszej rozmowie i rysunku. Punkt odniesienia: gotowe modele z naszej kolekcji kosztują od {cheapest}. Przeróbka modelu z kolekcji jest zwykle tańsza niż projekt od zera, bo konstrukcja jest już sprawdzona."
+      "a": "Zależy od wielkości, konstrukcji i tkaniny, więc cenę podajemy, gdy razem ustalimy wymiary i szczegóły. Punkt odniesienia: gotowe modele z naszej kolekcji kosztują od {cheapest}. Przeróbka modelu z kolekcji jest zwykle tańsza niż projekt od zera, bo konstrukcja jest już sprawdzona."
     },
     {
       "q": "Ile trwa realizacja?",
@@ -108,11 +108,11 @@
       },
       {
         "name": "Projekt i próbki",
-        "text": "Rysunek z wymiarami, próbki tkanin do intensywnego użytku, wycena całej serii."
+        "text": "Rozmowa o lokalu i gościach, propozycja modeli z wymiarami, próbki tkanin do intensywnego użytku, wycena całej serii."
       },
       {
         "name": "Akceptacja",
-        "text": "Akceptujesz rysunek, tkaninę z próbki i wycenę całej serii. Dopiero wtedy zaczynamy szyć."
+        "text": "Potwierdzasz wymiary, tkaninę z próbki i wycenę całej serii. Dopiero wtedy zaczynamy szyć."
       },
       {
         "name": "Seria i dostawa",

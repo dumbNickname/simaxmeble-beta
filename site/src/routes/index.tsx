@@ -11,6 +11,7 @@ import bestsellers from "~/data/bestsellers.json";
 import custom from "~/data/custom.json";
 import site from "~/data/site.json";
 import customerPhotos from "~/data/customer-photos.json";
+import projects from "~/data/projects.json";
 import { allCategories, allFabrics, allProducts, productBySlug, formatPrice, type Product } from "~/utils/catalog";
 import styles from "./index.module.css";
 
@@ -25,7 +26,7 @@ export default function Home() {
     <Layout>
       <SeoHead
         title="Meble tapicerowane na zamówienie: od pomysłu do gotowego mebla | SIMAX"
-        description="Pracownia SIMAX z Wielkopolski szyje fotele, sofy i łóżka tapicerowane na zamówienie: Twój pomysł, rysunek z wymiarami, tkanina z próbek i gotowy mebel. Także serie dla restauracji i hoteli."
+        description="Pracownia SIMAX z Wielkopolski szyje fotele, sofy i łóżka tapicerowane na zamówienie: Twój pomysł, wspólny projekt z wymiarami, tkanina z próbek i gotowy mebel. Także serie dla restauracji i hoteli."
         canonical="/"
         image={heroVariant.images[0]}
         graph={[
@@ -45,7 +46,7 @@ export default function Home() {
               Meble tapicerowane <span class={styles.hl}>na zamówienie</span>
             </h1>
             <p class="lead">
-              Przynieś szkic, zdjęcie albo wymiary wnęki. Zrobimy rysunek, dobierzemy tkaninę i uszyjemy mebel w naszej pracowni w Wielkopolsce. Od pomysłu do fotela, który stanie u Ciebie.
+              Przynieś szkic, zdjęcie albo wymiary wnęki. Razem dopracujemy projekt i wymiary, dobierzemy tkaninę i uszyjemy mebel w naszej pracowni w Wielkopolsce. Od pomysłu do fotela, który stanie u Ciebie.
             </p>
             <div class={styles.ctas}>
               <NavLink href="/na-zamowienie/#brief" class="btn btn-primary">Opisz swój pomysł</NavLink>
@@ -125,6 +126,26 @@ export default function Home() {
         </div>
       </section>
 
+      <section class="section" aria-labelledby="realizacje">
+        <div class={`container ${styles.work}`}>
+          <div>
+            <h2 id="realizacje">Realizacje</h2>
+            <p>
+              <Show
+                when={projects.projects.length}
+                fallback="Zbieramy historie mebli szytych na zamówienie: z czym klient przyszedł, jak wyglądał projekt i co z tego wyszło. Pokazujemy tylko te, na które klient się zgodził. Zdjęcia z pracowni są już na Instagramie."
+              >
+                Historie mebli szytych na zamówienie: z czym klient przyszedł, jak wyglądał projekt i co z tego wyszło.
+              </Show>
+            </p>
+          </div>
+          <div class={styles.callActions}>
+            <NavLink href="/realizacje/" class="btn btn-primary">Zobacz realizacje</NavLink>
+            <a class="btn btn-ghost" href={site.instagram} target="_blank" rel="noopener">Instagram @simaxmeble.pl</a>
+          </div>
+        </div>
+      </section>
+
       <section class={`section ${styles.fabrics}`} aria-labelledby="tkaniny">
         <div class="container">
           <div class="section-head">
@@ -164,7 +185,7 @@ export default function Home() {
         <div class={`container ${styles.callInner}`}>
           <div>
             <h2 id="kontakt-skrot">Masz pomysł? Opowiedz nam o nim</h2>
-            <p>Kilka zdań i zdjęcie wystarczą na początek. Oddzwonimy z pytaniami, potem przyślemy rysunek i wycenę.</p>
+            <p>Kilka zdań i zdjęcie wystarczą na początek. Oddzwonimy z pytaniami, razem dopracujemy projekt, a potem podamy wycenę.</p>
           </div>
           <div class={styles.callActions}>
             <NavLink href="/na-zamowienie/#brief" class="btn btn-accent">Opisz pomysł</NavLink>

@@ -71,7 +71,7 @@
 }
 
 .muted a,
-.panel a {
+.panel a:not(:global(.btn)) {
   color: var(--accent-2);
 }
 
@@ -488,6 +488,19 @@
   width: 100%;
   margin-bottom: 0.75rem;
   border-radius: var(--radius-sm);
+}
+
+.example {
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+  width: min(100%, 30rem);
+  justify-self: center;
+}
+
+.example figcaption {
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 /* ---------------------------------------------------------------- designs */

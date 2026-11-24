@@ -232,6 +232,30 @@
   font-size: 0.95rem;
 }
 
+.work {
+  display: grid;
+  gap: 1.5rem 3rem;
+  align-items: center;
+  padding-block: clamp(1.5rem, 3vw, 2.5rem);
+  border-block: var(--border);
+}
+
+@media (min-width: 900px) {
+  .work {
+    grid-template-columns: 1fr auto;
+  }
+}
+
+.work h2 {
+  margin: 0 0 0.4rem;
+}
+
+.work p {
+  margin: 0;
+  max-width: 62ch;
+  color: var(--muted);
+}
+
 .call {
   padding-block: clamp(3rem, 6vw, 5rem);
   background: var(--accent);

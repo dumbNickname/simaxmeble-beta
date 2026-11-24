@@ -20,13 +20,13 @@ const contractFabrics = allFabrics.filter(
 
 const minRubs = Math.min(...contractFabrics.map((f) => f.specs.martindale ?? Infinity));
 
-// Terms the owner has not confirmed yet render as t.b.d. instead of a guess.
-const terms: [string, string | null][] = [
+// "XX" values are placeholders until the owner confirms them (cook/OWNER-QUESTIONS.md).
+const terms: [string, string][] = [
   ["Ceny dla firm", "indywidualnie, zależnie od serii"],
-  ["Minimalna seria", null],
+  ["Minimalna seria", "od XX sztuk"],
   ["Termin realizacji serii", "podajemy razem z wyceną"],
-  ["Montaż na miejscu", null],
-  ["Atesty trudnopalności dla obiektu", null],
+  ["Montaż na miejscu", "XX"],
+  ["Atesty trudnopalności dla obiektu", "XX"],
   ["Faktura", "faktura VAT"],
 ];
 
@@ -146,7 +146,7 @@ export default function ForBusiness() {
               <tbody>
                 <For each={terms}>
                   {([name, value]) => (
-                    <tr><th scope="row">{name}</th><td>{value ?? <span class="tbd">{TBD}</span>}</td></tr>
+                    <tr><th scope="row">{name}</th><td>{value.includes("XX") ? <span class="tbd">{value}</span> : value}</td></tr>
                   )}
                 </For>
               </tbody>
@@ -159,7 +159,7 @@ export default function ForBusiness() {
         <div class={`container ${styles.briefGrid}`}>
           <div>
             <h2 id="zapytanie">Zapytanie od firmy</h2>
-            <p class="lead">Im więcej wiemy na starcie, tym szybciej dostaniesz rysunek i wycenę.</p>
+            <p class="lead">Im więcej wiemy na starcie, tym szybciej dostaniesz propozycję i wycenę.</p>
             <h3 class={styles.small}>Przyda się</h3>
             <ul class={styles.checklist}>
               <For each={b2b.checklist}>{(c) => <li>{c}</li>}</For>

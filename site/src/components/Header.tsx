@@ -10,6 +10,7 @@ const MAIN_CATEGORIES = ["fotele", "sofy", "lozka"];
 const links = [
   { href: "/na-zamowienie/", label: "Na zamówienie" },
   { href: "/dla-firm/", label: "Dla firm" },
+  { href: "/realizacje/", label: "Realizacje" },
   ...allCategories.filter((c) => MAIN_CATEGORIES.includes(c.slug) && c.products.length).map((c) => ({ href: `/${c.slug}/`, label: c.name.split(" ")[0] })),
   { href: "/produkty/", label: "Kolekcja" },
   { href: "/tkaniny/", label: "Tkaniny" },

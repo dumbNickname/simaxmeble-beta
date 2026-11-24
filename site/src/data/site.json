@@ -19,6 +19,7 @@
     "country": "PL"
   },
   "shop": "https://simaxmeble.pl",
+  "instagram": "https://www.instagram.com/simaxmeble.pl/",
   "allegro": "https://allegro.pl",
   "shipping": {
     "_help": "costPLN: null = nie publikuj stawki w schema (t.b.d.)",
