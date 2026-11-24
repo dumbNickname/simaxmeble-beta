@@ -2458,7 +2458,36 @@
     "metaDescription": "Łóżko tapicerowane COMO 160x200 z pojemnikiem na pościel i metalowym stelażem. Tkanina i kolor do wyboru. 2398 zł, produkcja SIMAX.",
     "lead": "Szukasz wygodnego i eleganckiego łóżka do swojej sypialni? COMO to świetny wybór! Pokryte miękką, przyjemną w dotyku tkaniną Quelle typu baranek i obłym kształtom, doskonale wpasuje się w każde wnętrze dzięki swojej prostej, uniwersalnej formie.",
     "descriptionHtml": "<p>Ale to nie wszystko! Łóżko wyposażone jest w <strong>praktyczny pojemnik na pościel</strong>, otwierany od góry, oraz solidny stelaż: wszystko, czego potrzebujesz do komfortowego snu i wygodnego przechowywania.</p><p>Produkt został wykonany <strong>przez polskiego producenta</strong> z wysokiej jakości, ekologicznych materiałów, co gwarantuje trwałość i bezpieczeństwo użytkowania.</p><p>Wszystkie meble wykonujemy na indywidualne zamówienie klienta.</p><ul><li>Długość całkowita łóżka: 225 cm</li><li>Szerokość całkowita łóżka: 213 cm</li><li>Wysokość całkowita łóżka od podłoża: 111 cm</li><li>Wysokość boku łóżka: 32 cm</li><li>Wysokość boku z nogą: 45 cm</li><li>Grubość boku: 13 cm</li><li>Grubość wezgłowia: 13 cm</li></ul><p>Korzyści:</p><ul><li><strong>Wytrzymałość konstrukcja</strong> wykonana z wysokiej jakości płyty meblowej o grubości 16mm + drewno</li><li><strong>Pojemnik na pościel</strong>: znajduje się na całej powierzchni spania. Jest przedzielony listwą środkową na dwie części. Spód pojemnika wykonany jest z twardych płyt HDF.</li><li>Nóżki do łóżka mają wysokość 13 cm.</li><li>Stelaż drewniany: podnoszony na podnośnikach sprężynowych, rama ze sklejki. Stelaż składa się z 48 brzozowych listew sprężynujących, mocowanych do ramy w plastikowych uchwytach. Uchwyt (rączka) do podnoszenia stelaża jest w kolorze losowym. Odstęp między listewkami to około 5,0-5,5cm.</li><li>Maksymalne obciążenie 200 kg</li><li>Łóżko jak i stelaż jest do samodzielnego montażu</li><li><strong>Wysoka jakość wykonania</strong></li><li>Efektowny wygląd</li><li><strong>Wyprodukowane w Polsce</strong></li></ul>",
-    "dimensions": [],
+    "dimensions": [
+      {
+        "name": "Długość całkowita",
+        "value": "225 cm"
+      },
+      {
+        "name": "Szerokość",
+        "value": "213 cm"
+      },
+      {
+        "name": "Wysokość całkowita",
+        "value": "111 cm"
+      },
+      {
+        "name": "Wysokość boku łóżka",
+        "value": "32 cm"
+      },
+      {
+        "name": "Wysokość boku z nogą",
+        "value": "45 cm"
+      },
+      {
+        "name": "Grubość boku",
+        "value": "13 cm"
+      },
+      {
+        "name": "Grubość wezgłowia",
+        "value": "13 cm"
+      }
+    ],
     "dimensionsVary": false,
     "priceMin": 2398.0,
     "priceMax": 2398.0,
@@ -2477,7 +2506,36 @@
         "images": [
           "lozko-como-160x200-379"
         ],
-        "dimensions": [],
+        "dimensions": [
+          {
+            "name": "Długość całkowita",
+            "value": "225 cm"
+          },
+          {
+            "name": "Szerokość",
+            "value": "213 cm"
+          },
+          {
+            "name": "Wysokość całkowita",
+            "value": "111 cm"
+          },
+          {
+            "name": "Wysokość boku łóżka",
+            "value": "32 cm"
+          },
+          {
+            "name": "Wysokość boku z nogą",
+            "value": "45 cm"
+          },
+          {
+            "name": "Grubość boku",
+            "value": "13 cm"
+          },
+          {
+            "name": "Grubość wezgłowia",
+            "value": "13 cm"
+          }
+        ],
         "oldUrl": "https://simaxmeble.pl/glowna/64-lozko-tapicerowane-como-z-pojemnikiem-i-metalowym-stelazem-160x200.html",
         "allegroUrl": null
       }
@@ -2496,7 +2554,32 @@
     "metaDescription": "Łóżko tapicerowane DIA 160x200 z pojemnikiem i metalowym stelażem, z miękkim wezgłowiem. Tkanina do wyboru. 2359 zł, szyte w Polsce.",
     "lead": "Szukasz wygodnego i eleganckiego łóżka do swojej sypialni? DIA to świetny wybór! Pokryte miękką, przyjemną w dotyku tkaniną Quelle typu baranek i obłym kształtom, doskonale wpasuje się w każde wnętrze dzięki swojej prostej, uniwersalnej formie.",
     "descriptionHtml": "<p>Ale to nie wszystko! Łóżko wyposażone jest w <strong>praktyczny pojemnik na pościel</strong>, otwierany od góry, oraz solidny stelaż: wszystko, czego potrzebujesz do komfortowego snu i wygodnego przechowywania.</p><p>Produkt został wykonany <strong>przez polskiego producenta</strong> z wysokiej jakości, ekologicznych materiałów, co gwarantuje trwałość i bezpieczeństwo użytkowania.</p><p>Wszystkie meble wykonujemy na indywidualne zamówienie klienta.</p><ul><li>Długość całkowita łóżka: 225 cm</li><li>Szerokość całkowita łóżka: 173/193/213/233 cm: w zależności od wybranego rozmiaru łóżka</li><li>Wysokość całkowita łóżka od podłoża: 103 cm</li><li>Wysokość boku łóżka: 32 cm</li><li>Wysokość boku z nogą: 37 cm</li><li>Grubość boku: 12 cm</li><li>Grubość wezgłowia: 12 cm</li></ul><p>Specyfikacja:</p><ul><li><strong>Wytrzymałość konstrukcja</strong> wykonana z wysokiej jakości płyty meblowej o grubości 16mm + drewno</li><li><strong>Pojemnik na pościel</strong>: znajduje się na całej powierzchni spania. Jest przedzielony listwą środkową na dwie części. Spód pojemnika wykonany jest z twardych płyt HDF.</li><li>Nóżki do łóżka mają wysokość 13 cm.</li><li>Maksymalne obciążenie 200 kg</li><li>W standardzie stelaż metalowy z 48 listwami sprężynującymi, siłowniki gazowe 1000N</li><li>Łóżko jak i stelaż jest do samodzielnego montażu w 4 paczkach</li><li>Łóżko w zestawie NIE POSIADA materaca </li><li><strong>Wysoka jakość wykonania</strong></li><li>Efektowny wygląd</li><li><strong>Wyprodukowane w Polsce</strong></li></ul><p><strong>Możliwość rozbudowy łóżka o:</strong></p><ul><li><strong>materac</strong>: szeroka oferta materacy dostępna jest <strong>TUTAJ</strong></li><li>tkanina do wyboru</li></ul><p><strong>W skład zestawu wchodzi:</strong></p><ul><li>korpus łóżka</li><li>stelaż: na ramie metalowej z podnośnikiem gazowym</li></ul>",
-    "dimensions": [],
+    "dimensions": [
+      {
+        "name": "Długość całkowita",
+        "value": "225 cm"
+      },
+      {
+        "name": "Wysokość całkowita",
+        "value": "103 cm"
+      },
+      {
+        "name": "Wysokość boku łóżka",
+        "value": "32 cm"
+      },
+      {
+        "name": "Wysokość boku z nogą",
+        "value": "37 cm"
+      },
+      {
+        "name": "Grubość boku",
+        "value": "12 cm"
+      },
+      {
+        "name": "Grubość wezgłowia",
+        "value": "12 cm"
+      }
+    ],
     "dimensionsVary": false,
     "priceMin": 2359.0,
     "priceMax": 2359.0,
@@ -2516,7 +2599,32 @@
           "lozko-dia-160x200-417",
           "lozko-dia-160x200-412"
         ],
-        "dimensions": [],
+        "dimensions": [
+          {
+            "name": "Długość całkowita",
+            "value": "225 cm"
+          },
+          {
+            "name": "Wysokość całkowita",
+            "value": "103 cm"
+          },
+          {
+            "name": "Wysokość boku łóżka",
+            "value": "32 cm"
+          },
+          {
+            "name": "Wysokość boku z nogą",
+            "value": "37 cm"
+          },
+          {
+            "name": "Grubość boku",
+            "value": "12 cm"
+          },
+          {
+            "name": "Grubość wezgłowia",
+            "value": "12 cm"
+          }
+        ],
         "oldUrl": "https://simaxmeble.pl/glowna/66-lozko-tapicerowane-como-z-pojemnikiem-i-metalowym-stelazem-160x200.html",
         "allegroUrl": null
       }

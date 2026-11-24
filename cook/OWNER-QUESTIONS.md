@@ -73,6 +73,12 @@ Gdzie: `site/src/data/projects.json` (format opisany w `_help`), zdjęcia do `si
 - [ ] Brakujące parametry tkanin (ścieralność, skład), oznaczone na stronie jako t.b.d.
 - [ ] Zasady zwrotu: 14 dni dla gotowych modeli, brak zwrotu dla zamówień indywidualnych (art. 38 pkt 3). Proszę potwierdzić.
 - [ ] Zgody klientów na zdjęcia w „Meble u Was”.
+- [ ] Brakujące wymiary w tabelach produktów (klienci porównują je z miejscem w domu):
+  - Wszystkie fotele (GRANDE, CARMO, CARMO GLAMOUR, FIGARO, ETERNO, ALLURE, BOSTON, LITENO, BALTIC): szerokość siedziska i wysokość podłokietnika.
+  - Fotel retro PRL: brak wszystkich wymiarów.
+  - Podnóżek GRANDE: szerokość, wysokość, głębokość.
+  - Kanapy NUVEM i SIMPLE: głębokość całkowita (po złożeniu i po rozłożeniu), wymiar powierzchni spania, szerokość siedziska, wysokość podłokietnika.
+  - Łóżko DIA: szerokość całkowita (COMO ma 213 cm). Dla obu łóżek: wysokość pojemnika i prześwit pod łóżkiem.
 
 ## 8. Płatność, terminy, próbki, usługi (inspiracja: fotelownia.com.pl)
 

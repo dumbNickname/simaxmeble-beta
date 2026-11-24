@@ -352,6 +352,22 @@ def num(v: str) -> str:
     return v if re.search(r"[a-zA-Z]", v) else f"{v} cm"
 
 
+# Beds have no shop features; their sizes are a "<li>Label: N cm</li>" list in the description.
+DESC_DIM_NAMES = {
+    "Długość całkowita łóżka": "Długość całkowita",
+    "Szerokość całkowita łóżka": "Szerokość",
+    "Wysokość całkowita łóżka od podłoża": "Wysokość całkowita",
+}
+
+
+def dims_from_description(src: str) -> list[dict]:
+    out = []
+    for label, value in re.findall(r"<li>\s*([^<:]{3,60}?):\s*(\d+(?:[.,]\d+)?)\s*cm\s*</li>", src):
+        label = html.unescape(label).strip()
+        out.append({"name": DESC_DIM_NAMES.get(label, label), "value": f"{value} cm"})
+    return out
+
+
 # ----------------------------------------------------------------- products
 
 def load_raw():
@@ -380,6 +396,7 @@ def build(raw):
                 images.append({"key": key, "variant": vid})
             dims = [{"name": f["name"], "value": num(f["value"])} for f in p["features"]
                     if f["name"] not in ("Kolor Tkaniny", "Rodzaj podstawy")]
+            dims = dims or dims_from_description(p["descriptionHtml"])
             fabric_id = fabric if fabric in {f[0] for f in FABRICS} else None
             variants.append({
                 "id": vid,

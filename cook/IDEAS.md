@@ -22,13 +22,13 @@ What they do well, mapped to SIMAX:
 | A4 | **Customer's own fabric** ("pracujemy na tkaninie powierzonej"). | A strong option for interior designers and B2B (fabric to match a venue). Add it to "Co możesz zmienić" if SIMAX accepts it. | owner |
 | A5 | **Wood stain palette** shown as photos. | We promise "nogi drewniane w kolorze do wyboru" without showing the colours. Add a stain section to `/tkaniny/` (or `/wykonczenia/`) with photos of real samples. | owner (photos) |
 | A6 | **Renovation service** ("twój mebel, nasze wykonanie"): a preliminary quote from a photo, a delivery note, and old pieces from the 1950s–70s. | A new service page, `/renowacja-mebli/` or `/tapicerowanie/`, would add high-intent local search phrases ("renowacja fotela", "nowe obicie sofy Kępno"). It fits the "your idea → finished piece" story, and before/after photos make the best realizacje. Do it only if SIMAX actually does re-upholstery. | owner |
-| A7 | **Honest caveats**: screen colours differ from the fabric; on patterned fabrics, motifs get cut at seams; no returns on custom orders. | We already state the no-return rule. Add the screen-colour note (it's also in SIMAX's regulamin, section V). Turn the pattern point into a positive dialogue step: "ustalamy razem, jak ułożyć wzór tkaniny". | ready (colour), owner (pattern wording) |
+| A7 | **Honest caveats**: screen colours differ from the fabric; on patterned fabrics, motifs get cut at seams; no returns on custom orders. | We already state the no-return rule. Add the screen-colour note (it's also in SIMAX's regulamin, section V). Turn the pattern point into a positive dialogue step: "ustalamy razem, jak ułożyć wzór tkaniny". | done |
 | A8 | **Per-model customisation notes** on product pages (piping and button colour, which legs are possible, matching footstool). | Add an optional `customNotes` field per product and render it as "W tym modelu możesz zmienić…". Hand-managed file, because `normalize.py` overwrites `products.json`. | owner (per-model data) |
 | A9 | **Scale reference**: "osoba na zdjęciu ma 170 cm". | Cheap trust for armchairs. Only where we know the person's height on a photo. | owner |
-| A10 | **Full dimension table** incl. seat width/depth and armrest height. | We already render `dimensions` from the shop. Some products are missing seat width or armrest height. A small "brakujące wymiary" list for the owner. | ready (audit) |
+| A10 | **Full dimension table** incl. seat width/depth and armrest height. | We already render `dimensions` from the shop. Some products are missing seat width or armrest height. A small "brakujące wymiary" list for the owner. | done: beds now get their sizes from the description; the rest is listed in OWNER-QUESTIONS section 7 |
 | A11 | **Transparent shipping**: price per product class, legs unscrew for a courier, private carrier for big pieces, "kierowca nie wnosi", free pickup at the workshop. | `shipping.costPLN` is `null`. Ask for a price table per category and whether the driver carries the piece inside. Free pickup in Łęka Mroczeńska can go in now, if confirmed. | owner |
 | A12 | **Shipping abroad** (DE, FR, ES, IT, IE) with an example price. | If SIMAX ships to DE, a short German landing page is a later SEO option. | owner, later |
-| A13 | **Order form with model, fabric and leg colour fields.** | Our `BriefForm` has a model but no fabric. Add an optional "Tkanina" select from `fabrics.json`, a "Kolor nóg" field, and support for `?tkanina=` prefill from fabric pages. No backend needed. | ready |
+| A13 | **Order form with model, fabric and leg colour fields.** | Our `BriefForm` has a model but no fabric. Add an optional "Tkanina" select from `fabrics.json`, a "Kolor nóg" field, and support for `?tkanina=` prefill from fabric pages. No backend needed. | done |
 | A14 | **"Na zamówienie" vs "Na stanie"** badges; the stock items are sold off at a discount. | If the owner has ready pieces or showroom models, a small static "Od ręki" list (hand-managed JSON) helps people in a hurry. | owner |
 | A15 | **Support hours** in the trust strip ("pon–pt 8–16"). | Add the phone hours next to the number in the header/contact, and `openingHours` in the LocalBusiness schema. | owner |
 | A16 | **Instagram as proof** ("Instagram jest najlepszym dowodem"). | Done: linked in the footer, contact and realizacje. Next: a static grid of 6–9 photos from the owner's export (no embed, no third-party script). | owner (photos) |
@@ -66,7 +66,7 @@ What to skip or do better:
 ### Product and UX
 
 - **B15 "Przerób model z kolekcji" shortcut** on every collection product page: a prefilled brief (`?model=` already works) plus model-specific options (A8).
-- **B16 Brief form attachments hint.** The mailto flow can't attach files. Add a visible line: "Zdjęcia i szkice dołączysz w mailu, który się otworzy" next to the button (the hint is currently only inside the email body).
+- **B16 (done) Brief form attachments hint.** The mailto flow can't attach files. Add a visible line: "Zdjęcia i szkice dołączysz w mailu, który się otworzy" next to the button (the hint is currently only inside the email body).
 - **B17 Pick a final design** (A–E) and remove the rest before production, including the design switch and the `?v=` handling.
 
 ## C. Bed configurator
@@ -76,4 +76,4 @@ What to skip or do better:
 
 ## Next step suggestion
 
-Build the **ready** items first (A7 colour note, A10 dimension audit, A13 fabric field in the brief form, B16 hint). They're small and need no owner input. Send the owner `cook/OWNER-QUESTIONS.md`: its new section 8 covers the fotelownia-inspired questions (deposit, lead time, free samples, own fabric, wood stains, renovation, shipping, hours).
+The ready items (A7, A10, A13, B16) and the bed configurator placeholder (C1) are done. Send the owner `cook/OWNER-QUESTIONS.md`: its new section 8 covers the fotelownia-inspired questions (deposit, lead time, free samples, own fabric, wood stains, renovation, shipping, hours).

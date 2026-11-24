@@ -47,7 +47,7 @@ function dimensionProps(v: Variant) {
   const find = (name: string) => v.dimensions.find((d) => d.name === name)?.value;
   const width = find("Szerokość");
   const height = find("Wysokość całkowita");
-  const depth = find("Głębokość całkowita");
+  const depth = find("Głębokość całkowita") ?? find("Długość całkowita");
   return {
     ...(width && cm(width) ? { width: cm(width) } : {}),
     ...(height && cm(height) ? { height: cm(height) } : {}),
