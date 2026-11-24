@@ -10,19 +10,22 @@ export default function Footer() {
       <div class={`container ${styles.grid}`}>
         <div class={styles.about}>
           <p class={styles.brand}>SIMAX meble</p>
-          <p>Szyjemy fotele, sofy i łóżka tapicerowane na zamówienie, w Łęce Mroczeńskiej pod Kępnem.</p>
+          <p>Pracownia mebli tapicerowanych na zamówienie w Łęce Mroczeńskiej pod Kępnem. Od pomysłu i projektu do gotowego mebla, dla domów i firm.</p>
           <a class={styles.bigPhone} href={`tel:${site.phoneHref}`}>{site.phone}</a>
         </div>
-        <nav aria-label="Kategorie">
-          <p class={styles.heading}>Meble</p>
+        <nav aria-label="Na zamówienie">
+          <p class={styles.heading}>Na zamówienie</p>
           <ul>
-            <For each={allCategories.filter((c) => c.products.length)}>{(c) => <li><NavLink href={`/${c.slug}/`}>{c.name}</NavLink></li>}</For>
-            <li><NavLink href="/produkty/">Wszystkie produkty</NavLink></li>
+            <li><NavLink href="/na-zamowienie/">Jak powstaje mebel na zamówienie</NavLink></li>
+            <li><NavLink href="/dla-firm/">Meble dla firm i HoReCa</NavLink></li>
+            <li><NavLink href="/realizacje/">Realizacje</NavLink></li>
+            <For each={allCategories.filter((c) => c.products.length)}>{(c) => <li><NavLink href={`/${c.slug}/`}>{c.heading}</NavLink></li>}</For>
           </ul>
         </nav>
         <nav aria-label="Informacje">
           <p class={styles.heading}>Informacje</p>
           <ul>
+            <li><NavLink href="/produkty/">Kolekcja gotowych projektów</NavLink></li>
             <li><NavLink href="/tkaniny/">Tkaniny obiciowe</NavLink></li>
             <li><NavLink href="/dostawa-i-zwroty/">Dostawa i reklamacje</NavLink></li>
             <li><NavLink href="/meble-u-was/">Meble u Was</NavLink></li>
@@ -35,11 +38,12 @@ export default function Footer() {
           <p>{site.legalName}<br />{site.address.street}<br />{site.address.postalCode} {site.address.city}</p>
           <p><a href={`mailto:${site.email}`}>{site.email}</a></p>
           <p><a href={site.maps.place} rel="noopener" target="_blank">Zobacz w Mapach Google</a></p>
+          <p><a href={site.instagram} rel="noopener" target="_blank">Instagram @simaxmeble.pl</a></p>
         </address>
       </div>
       <div class={`container ${styles.bottom}`}>
         <p>© {new Date().getFullYear()} {site.legalName}. Ceny brutto w PLN.</p>
-        <p><a href={site.shop} rel="noopener">Sklep internetowy SIMAX</a></p>
+        <p><a href={site.shop} rel="noopener">Gotowe meble kupisz w sklepie SIMAX</a></p>
       </div>
     </footer>
   );

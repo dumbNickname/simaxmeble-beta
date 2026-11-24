@@ -1,0 +1,320 @@
+/* Three stages in one frame: pencil sketch on squared paper, technical drawing,
+   finished photo. The checked radio picks the stage, no JS needed. */
+
+.stage {
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 800 / 878;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background-color: var(--bg);
+  /* squared notebook paper */
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--accent-2) 16%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--accent-2) 16%, transparent) 1px, transparent 1px);
+  background-size: 22px 22px;
+  box-shadow: var(--shadow);
+  border: var(--border);
+  transition: background-color 0.6s var(--ease);
+}
+
+.sketch,
+.drawing,
+.photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.6s var(--ease), transform 0.8s var(--ease);
+}
+
+.sketch {
+  padding: 5%;
+  color: var(--ink);
+  transform: rotate(-1.5deg);
+}
+
+.lines path,
+.lines circle {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.lines .ghost {
+  stroke-width: 1.6;
+  opacity: 0.4;
+  transform: translate(4px, -3px);
+}
+
+.notes {
+  color: var(--accent-2);
+}
+
+.notes text {
+  fill: currentColor;
+  font-family: "Segoe Print", "Bradley Hand", Noteworthy, "Chalkboard SE", "Comic Sans MS", cursive;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.notes path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-dasharray: 0.04 0.03;
+}
+
+.drawing {
+  padding: 4% 3%;
+  color: var(--on-dark);
+  transform: scale(0.97);
+}
+
+.part path,
+.part rect,
+.part circle {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linejoin: round;
+}
+
+.dims {
+  /* Some designs have a dark accent; lift it so it reads on --dark. */
+  color: color-mix(in srgb, var(--accent) 60%, var(--on-dark));
+}
+
+.dims path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+}
+
+.dims .floor {
+  stroke-dasharray: 14 8;
+  opacity: 0.7;
+}
+
+.dims text,
+.titleBlock text {
+  fill: currentColor;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.titleBlock {
+  color: var(--on-dark);
+}
+
+.titleBlock rect,
+.titleBlock path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+}
+
+.titleBlock text {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.titleBlock .tbName {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.photo {
+  display: grid;
+  place-items: center;
+  padding: 5%;
+  transform: translateY(14px) scale(0.96);
+}
+
+.photo picture,
+.photo img {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.photo img {
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+/* ---------------------------------------------------------------- stages */
+
+.stage:has([value="pomysl"]:checked) .sketch,
+.stage:has([value="projekt"]:checked) .drawing,
+.stage:has([value="mebel"]:checked) .photo {
+  opacity: 1;
+  transform: none;
+}
+
+.stage:has([value="projekt"]:checked) .frame {
+  background-color: var(--dark);
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--on-dark) 9%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--on-dark) 9%, transparent) 1px, transparent 1px);
+}
+
+.stage:has([value="mebel"]:checked) .frame {
+  background-color: var(--surface);
+  background-image: none;
+}
+
+.captions p {
+  display: none;
+  max-width: 38ch;
+  margin: 0;
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.captions a {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.stage:has([value="pomysl"]:checked) [data-etap="pomysl"],
+.stage:has([value="projekt"]:checked) [data-etap="projekt"],
+.stage:has([value="mebel"]:checked) [data-etap="mebel"] {
+  display: block;
+}
+
+/* Browsers without :has() get the finished photo and every caption. */
+@supports not selector(:has(*)) {
+  .photo { opacity: 1; transform: none; }
+  .captions p { display: block; }
+  .tabs { display: none; }
+}
+
+/* Draw the sketch in, stroke by stroke, each time the stage opens. */
+@media (prefers-reduced-motion: no-preference) {
+  .stage:has([value="pomysl"]:checked) .lines > * {
+    stroke-dasharray: 1;
+    animation: draw 1.1s var(--ease) both;
+    animation-delay: calc(var(--i, 0) * 70ms);
+  }
+
+  .stage:has([value="pomysl"]:checked) .notes g {
+    animation: fade 0.5s var(--ease) both;
+    animation-delay: calc(var(--i, 0) * 70ms);
+  }
+
+  .stage:has([value="pomysl"]:checked) .notes path {
+    stroke-dasharray: 1;
+    animation: draw 0.8s var(--ease) both;
+    animation-delay: calc(var(--i, 0) * 70ms + 150ms);
+  }
+
+  .stage:has([value="projekt"]:checked) .dims {
+    animation: fade 0.6s var(--ease) 0.35s both;
+  }
+}
+
+@keyframes draw {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+}
+
+/* ------------------------------------------------------------------ tabs */
+
+.tabs {
+  display: inline-flex;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0.3rem;
+  border: var(--border);
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.tabs label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.tabs input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.tabs span {
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: background 0.3s var(--ease), color 0.3s var(--ease);
+}
+
+.tabs label:hover :not(:checked) + span {
+  background: var(--surface);
+}
+
+.tabs :checked + span {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.tabs :focus-visible + span {
+  outline: 3px solid var(--accent-2);
+  outline-offset: 2px;
+}
+
+/* -------------------------------------------------------------- designs */
+
+:global(html[data-design="b"]) .frame {
+  border-radius: var(--radius);
+}
+
+:global(html[data-design="b"]) .tabs {
+  border-radius: var(--radius);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+:global(html[data-design="b"]) .tabs span {
+  border-radius: var(--radius-sm);
+}
+
+:global(html[data-design="c"]) .frame,
+:global(html[data-design="c"]) .tabs,
+:global(html[data-design="c"]) .tabs span {
+  border-radius: 0;
+}
+
+:global(html[data-design="d"]) .frame {
+  border-radius: 999px 999px var(--radius) var(--radius);
+}
+
+:global(html[data-design="d"]) .sketch {
+  padding-top: 12%;
+}
+
+:global(html[data-design="b"]) .captions p,
+:global(html[data-design="b"]) .captions a {
+  color: rgb(255 255 255 / 0.9);
+}

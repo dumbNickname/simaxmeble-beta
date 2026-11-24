@@ -16,6 +16,8 @@ interface SeoHeadProps {
   description: string;
   /** Path without base, e.g. "/produkty/fotel-grande/". */
   canonical?: string;
+  /** Absolute canonical on another domain (content syndicated from the shop). */
+  canonicalUrl?: string;
   /** Image key from image-sizes.json used for og:image and primaryImageOfPage. */
   image?: string;
   pageType?: "WebPage" | "CollectionPage" | "ItemPage" | "ContactPage" | "AboutPage" | "SearchResultsPage";
@@ -35,7 +37,8 @@ export function organizationNode() {
     "@id": ORG_ID,
     name: site.name,
     legalName: site.legalName,
-    description: "Producent mebli tapicerowanych: fotele, sofy, łóżka i krzesła szyte na zamówienie w Polsce.",
+    description: "Pracownia mebli tapicerowanych na zamówienie: od pomysłu i projektu po gotowy mebel. Fotele, sofy, łóżka i siedziska dla domów i firm, szyte w Polsce.",
+    slogan: site.tagline,
     url: `${site.url}/`,
     logo: { "@type": "ImageObject", url: `${site.url}/img/logo-simax-square.png`, width: 300, height: 300 },
     image: `${site.url}/logo.svg`,
@@ -53,7 +56,8 @@ export function organizationNode() {
     },
     geo: { "@type": "GeoCoordinates", latitude: site.geo.lat, longitude: site.geo.lng },
     hasMap: site.maps.place,
-    sameAs: [site.maps.place],
+    // The stock shop is the same company on its own domain.
+    sameAs: [site.maps.place, site.shop.replace(/\/?$/, "/"), site.instagram],
     contactPoint: {
       "@type": "ContactPoint",
       telephone: site.phone,
@@ -75,7 +79,8 @@ export default function SeoHead(props: SeoHeadProps) {
     basePath ? "noindex, nofollow"
     : props.noindex ? "noindex, follow"
     : "index, follow, max-image-preview:large, max-snippet:-1";
-  const url = () => (props.canonical ? absolute(props.canonical) : undefined);
+  const ownUrl = () => (props.canonical ? absolute(props.canonical) : undefined);
+  const url = () => props.canonicalUrl ?? ownUrl();
   const ogImage = () => (props.image ? absoluteImage(props.image) : `${site.url}/og.jpg`);
   const ogSize = () => {
     if (!props.image) return { w: 1200, h: 630 };
@@ -86,7 +91,7 @@ export default function SeoHead(props: SeoHeadProps) {
   };
 
   const jsonLd = () => {
-    const pageId = url() ?? `${site.url}/`;
+    const pageId = ownUrl() ?? `${site.url}/`;
     const graph: object[] = [
       organizationNode(),
       {

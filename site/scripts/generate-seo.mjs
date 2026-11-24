@@ -9,7 +9,11 @@ const root = resolve(import.meta.dirname, "..");
 const read = (name) => JSON.parse(readFileSync(resolve(root, "src/data", name), "utf8"));
 const site = read("site.json");
 const products = read("products.json");
-const categories = read("categories.json").filter((c) => c.products.length);
+const categoryCopy = read("category-copy.json");
+const categories = read("categories.json")
+  .filter((c) => c.products.length)
+  .map((c) => ({ ...c, ...categoryCopy[c.slug] }));
+const projects = read("projects.json").projects ?? [];
 const fabrics = read("fabrics.json");
 const sizes = read("image-sizes.json");
 const customerPhotos = read("customer-photos.json").photos ?? [];
@@ -28,9 +32,12 @@ const staticPages = readdirSync(resolve(root, "src/routes"), { recursive: true, 
   .map((f) => "/" + f.replace(/\.tsx$/, "").replace(/(^|\/)index$/, ""))
   .map((r) => (r === "/" ? r : r.replace(/\/$/, "") + "/"))
   // Not indexable until customers send photos.
-  .filter((r) => r !== "/meble-u-was/" || customerPhotos.length);
+  .filter((r) => r !== "/meble-u-was/" || customerPhotos.length)
+  .filter((r) => r !== "/realizacje/" || projects.length);
 
-const priority = (path) => (path === "/" ? "1.0" : categories.some((c) => `/${c.slug}/` === path) ? "0.9" : "0.6");
+const KEY_PAGES = ["/na-zamowienie/", "/dla-firm/"];
+const priority = (path) =>
+  path === "/" ? "1.0" : KEY_PAGES.includes(path) || categories.some((c) => `/${c.slug}/` === path) ? "0.9" : "0.6";
 
 const entries = [
   ...staticPages.map((loc) => ({
@@ -38,7 +45,8 @@ const entries = [
     priority: priority(loc),
     images: loc === "/tkaniny/" ? fabrics.map((f) => f.image).filter(Boolean) : [],
   })),
-  ...products.map((p) => ({
+  // Product pages canonicalise to the shop until the collection moves here.
+  ...(site.indexCollection ? products : []).map((p) => ({
     loc: `/produkty/${p.slug}/`,
     priority: "0.8",
     lastmod: p.dateModified?.slice(0, 10),
@@ -100,7 +108,7 @@ console.log("robots.txt: generated");
 const price = (n) => `${n.toLocaleString("pl-PL")} zł`;
 const llms = `# ${site.name}
 
-> ${site.tagline}: fotele, sofy, łóżka i krzesła tapicerowane szyte na zamówienie w Polsce. Zamówienia telefoniczne, ceny brutto w PLN.
+> ${site.tagline}: pracownia tapicerska, która szyje fotele, sofy, łóżka i siedziska według pomysłu klienta, od szkicu przez wspólny projekt z wymiarami do gotowego mebla. Dla domów i dla firm (restauracje, hotele, biura). Gotowe modele z kolekcji są w sklepie SIMAX: ${site.shop}
 
 - Firma: ${site.legalName}
 - Adres: ${site.address.street}, ${site.address.postalCode} ${site.address.city}, woj. ${site.address.region}
@@ -108,13 +116,18 @@ const llms = `# ${site.name}
 - E-mail: ${site.email}
 - Mapa: ${site.maps.place}
 
+## Na zamówienie
+
+- [Meble na zamówienie: jak to działa, co można zmienić, wycena](${url("/na-zamowienie/")})
+- [Meble tapicerowane dla firm: restauracje, hotele, biura](${url("/dla-firm/")})
+${projects.length ? `- [Realizacje: od pomysłu do gotowego mebla](${url("/realizacje/")})\n` : ""}
 ## Kategorie
 
 ${categories.map((c) => `- [${c.name}](${url(`/${c.slug}/`)}): ${c.metaDescription}`).join("\n")}
 
-## Produkty
+## Gotowe projekty z kolekcji (do kupienia w sklepie SIMAX)
 
-${products.map((p) => `- [${p.name}](${url(`/produkty/${p.slug}/`)}): ${p.priceMin === p.priceMax ? price(p.priceMin) : `od ${price(p.priceMin)}`}, ${p.variants.length} wersji. ${esc(p.lead)}`).join("\n")}
+${products.map((p) => `- [${p.name}](${site.indexCollection ? url(`/produkty/${p.slug}/`) : site.shop.replace(/\/$/, "") + new URL(p.oldUrl ?? p.variants[0].oldUrl).pathname}): ${p.priceMin === p.priceMax ? price(p.priceMin) : `od ${price(p.priceMin)}`}, ${p.variants.length} wersji. ${esc(p.lead)}`).join("\n")}
 
 ## Informacje
 

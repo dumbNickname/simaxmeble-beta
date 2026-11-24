@@ -1,0 +1,136 @@
+{
+  "_help": "Treści o meblach na zamówienie i współpracy z firmami (ręcznie, scraper tego pliku nie nadpisuje). Wszystko tutaj to obietnice wobec klienta: zmieniaj tylko to, co pracownia naprawdę robi. Pola 'you' = co robi klient, 'we' = co robi pracownia.",
+  "stages": [
+    {
+      "id": "pomysl",
+      "name": "Pomysł",
+      "short": "Szkic, zdjęcie z internetu, wymiary wnęki albo opis w trzech zdaniach. Wystarczy.",
+      "you": "Opisujesz, czego szukasz i gdzie mebel stanie. Wysyłasz zdjęcia, inspiracje, wymiary.",
+      "we": "Dopytujemy, jak będziesz z mebla korzystać: kto siada, jak długo, czy ma się rozkładać."
+    },
+    {
+      "id": "projekt",
+      "name": "Projekt",
+      "short": "Rozmawiamy, proponujemy, poprawiamy. Ustalamy razem każdy wymiar, tkaninę i wypełnienie, dopóki projekt nie będzie Twój.",
+      "you": "Mówisz, co Ci pasuje, a co nie. Wybierasz tkaninę z próbek (wysyłamy je do paczkomatu) i potwierdzasz komplet ustaleń.",
+      "we": "Zadajemy pytania, proponujemy konstrukcję, wymiary i wypełnienie, zmieniamy projekt po Twoich uwagach. Na koniec podajemy cenę i termin."
+    },
+    {
+      "id": "wykonanie",
+      "name": "Wykonanie",
+      "short": "Rama, pianka, tkanina. Szyjemy ręcznie w pracowni w Łęce Mroczeńskiej.",
+      "you": "Masz czas na resztę wnętrza. Termin znasz od dnia akceptacji projektu.",
+      "we": "Budujemy ramę, klejimy piankę, kroimy i szyjemy tkaninę, montujemy nogi."
+    },
+    {
+      "id": "odbior",
+      "name": "Odbiór",
+      "short": "Dostawa pod drzwi albo odbiór osobisty w pracowni.",
+      "you": "Odbierasz mebel u siebie albo przyjeżdżasz po niego do nas.",
+      "we": "Pakujemy, umawiamy transport i zostajemy na telefon, gdyby coś było nie tak."
+    }
+  ],
+  "options": [
+    {
+      "name": "Wymiary",
+      "text": "Szerokość, głębokość i wysokość siedziska pod Twoje wnętrze i Twój wzrost."
+    },
+    {
+      "name": "Kształt",
+      "text": "Wyższe uszy, niższe oparcie, inne boki. Albo zupełnie nowa bryła z Twojego szkicu."
+    },
+    {
+      "name": "Tkanina",
+      "text": "{fabrics} kolekcji tkanin: velvet, boucle, wełna, szenil. Także dwie różne tkaniny na jednym meblu."
+    },
+    {
+      "name": "Siedzisko",
+      "text": "Twardsze albo miękkie, płytkie do jadalni albo głębokie do czytania."
+    },
+    {
+      "name": "Nogi",
+      "text": "Drewniane w kolorze do wyboru albo metalowe. Wyższe, niższe, inaczej rozstawione."
+    },
+    {
+      "name": "Funkcje",
+      "text": "Pojemnik na pościel, funkcja spania, podnóżek do kompletu."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Ile kosztuje mebel na zamówienie?",
+      "a": "Zależy od wielkości, konstrukcji i tkaniny, więc cenę podajemy, gdy razem ustalimy wymiary i szczegóły. Punkt odniesienia: gotowe modele z naszej kolekcji kosztują od {cheapest}. Przeróbka modelu z kolekcji jest zwykle tańsza niż projekt od zera, bo konstrukcja jest już sprawdzona."
+    },
+    {
+      "q": "Ile trwa realizacja?",
+      "a": "Termin podajemy razem z wyceną, bo zależy od kolejki w pracowni i dostępności tkaniny. Jeśli mebel jest potrzebny na konkretny dzień, na przykład na otwarcie lokalu, powiedz o tym na początku."
+    },
+    {
+      "q": "Czy mogę zmienić wymiar albo tkaninę w modelu z kolekcji?",
+      "a": "Tak, to najprostsza droga do mebla na zamówienie. Wybierz model z kolekcji jako punkt wyjścia i napisz, co chcesz zmienić."
+    },
+    {
+      "q": "Czy mogę zwrócić mebel zrobiony na zamówienie?",
+      "a": "Nie. Mebel wykonany według Twojej specyfikacji (inny wymiar, inna tkanina, modyfikacje) nie podlega zwrotowi w ciągu 14 dni (art. 38 pkt 3 ustawy o prawach konsumenta). Dlatego projekt akceptujesz przed rozpoczęciem szycia, a tkaninę wybierasz z próbek. Reklamacje działają normalnie."
+    },
+    {
+      "q": "Czy zobaczę tkaninę przed zamówieniem?",
+      "a": "Tak. Próbki tkanin wysyłamy do paczkomatu, wystarczy napisać albo zadzwonić."
+    },
+    {
+      "q": "Czy mój projekt trafi później do sprzedaży?",
+      "a": "Tylko za Twoją zgodą. Część projektów przechodzi do naszej kolekcji, bo okazują się dobre dla wielu osób. Jeśli chcesz mieć mebel tylko dla siebie albo tylko dla swojego lokalu, ustalimy to przy wycenie."
+    }
+  ],
+  "b2b": {
+    "sectors": [
+      {
+        "name": "Restauracje i kawiarnie",
+        "text": "Ławy i siedziska pod ścianę, krzesła tapicerowane, fotele do strefy przy kawie. W tkaninach, które znoszą codzienne sprzątanie."
+      },
+      {
+        "name": "Hotele i pensjonaty",
+        "text": "Fotele do pokoi, wezgłowia łóżek, pufy, sofy do lobby. Jeden model w serii albo kilka pasujących do siebie."
+      },
+      {
+        "name": "Biura i poczekalnie",
+        "text": "Sofy i fotele dla gości, siedziska do stref spotkań. W kolorach marki, jeśli trzeba."
+      },
+      {
+        "name": "Gabinety i salony",
+        "text": "Wygodne fotele dla klientów i meble do poczekalni, które nie wyglądają jak z katalogu."
+      }
+    ],
+    "steps": [
+      {
+        "name": "Zapytanie",
+        "text": "Rzut albo zdjęcia lokalu, liczba sztuk, styl wnętrza i termin otwarcia."
+      },
+      {
+        "name": "Projekt i próbki",
+        "text": "Rozmowa o lokalu i gościach, propozycja modeli z wymiarami, próbki tkanin do intensywnego użytku, wycena całej serii."
+      },
+      {
+        "name": "Akceptacja",
+        "text": "Potwierdzasz wymiary, tkaninę z próbki i wycenę całej serii. Dopiero wtedy zaczynamy szyć."
+      },
+      {
+        "name": "Seria i dostawa",
+        "text": "Szyjemy całość, pakujemy i dowozimy w ustalonym terminie."
+      }
+    ],
+    "perks": [
+      "Ceny dla firm przy zamówieniach seryjnych",
+      "Seria według Twojego projektu albo na bazie modelu z kolekcji",
+      "Tkaniny o wysokiej ścieralności, także trudnopalne",
+      "Jeden kontakt od zapytania do dostawy"
+    ],
+    "checklist": [
+      "rzut lub zdjęcia wnętrza z wymiarami",
+      "liczba sztuk każdego mebla",
+      "inspiracje albo identyfikacja wizualna lokalu",
+      "wymagania co do tkaniny (ścieralność, trudnopalność, łatwe czyszczenie)",
+      "termin, na który meble muszą stać na miejscu"
+    ]
+  }
+}

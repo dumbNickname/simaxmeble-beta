@@ -143,7 +143,7 @@
   transform: translateY(-2px) rotate(-1.5deg);
 }
 
-@media (max-width: 979px) {
+@media (max-width: 1279px) {
   .nav {
     position: absolute;
     top: calc(100% + 1px);
@@ -165,7 +165,7 @@
   }
 }
 
-@media (min-width: 980px) {
+@media (min-width: 1280px) {
   .menu {
     display: contents;
   }
@@ -348,7 +348,7 @@
   border-radius: 999px;
 }
 
-@media (max-width: 979px) {
+@media (max-width: 1279px) {
   :global(html[data-design="d"]) .nav {
     z-index: 2;
     top: calc(100% + 0.65rem);

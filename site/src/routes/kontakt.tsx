@@ -22,7 +22,7 @@ export default function Contact() {
         <header class={styles.head}>
           <Breadcrumbs items={crumbs} />
           <h1>Kontakt i dojazd</h1>
-          <p class="lead">Najszybciej telefonicznie. Doradzimy model i tkaninę, podamy termin i przyjmiemy zamówienie.</p>
+          <p class="lead">Najszybciej telefonicznie. Opowiedz o swoim pomyśle albo zapytaj o model z kolekcji, podamy termin i wycenę. Możesz też <NavLink href="/na-zamowienie/#brief">opisać pomysł w formularzu</NavLink>.</p>
         </header>
         <div class={styles.split}>
           <div class={styles.list}>
@@ -35,6 +35,11 @@ export default function Contact() {
               <h2 id="email">E-mail</h2>
               <a class={k.mail} href={`mailto:${site.email}`}>{site.email}</a>
               <p>Wyślij zdjęcie wnętrza albo mebla, który chcesz obić, odpiszemy z propozycją.</p>
+            </section>
+            <section class={styles.panel} aria-labelledby="instagram">
+              <h2 id="instagram">Instagram</h2>
+              <a class={k.mail} href={site.instagram} target="_blank" rel="noopener">@simaxmeble.pl</a>
+              <p>Zdjęcia mebli prosto z naszej pracowni.</p>
             </section>
           </div>
           <section class={styles.panel} aria-labelledby="adres">

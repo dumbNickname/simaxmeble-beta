@@ -8,6 +8,16 @@
   font-size: clamp(2.1rem, 4.8vw, 3.8rem);
 }
 
+.count {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+}
+
+.count a {
+  color: var(--accent-2);
+  font-weight: 600;
+}
+
 .siblings {
   display: flex;
   flex-wrap: wrap;
