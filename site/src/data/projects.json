@@ -1,0 +1,4 @@
+{
+  "_help": "Realizacje na zamówienie: historia od pomysłu do gotowego mebla. Zdjęcia do site/public/img/realizacje/ (jpg, najlepiej ok. 1200 px szerokości). Wpis: {\"slug\": \"fotel-dla-czytelnika\", \"title\": \"Fotel do czytania dla osoby 192 cm\", \"client\": \"dom\" albo \"firma\", \"place\": \"Poznań\", \"date\": \"2026-11\", \"summary\": \"Jedno, dwa zdania.\", \"idea\": {\"text\": \"...\", \"image\": \"plik.jpg\"}, \"project\": {\"text\": \"...\", \"image\": \"rysunek.jpg\"}, \"result\": {\"text\": \"...\", \"images\": [\"efekt-1.jpg\"]}, \"collection\": \"slug-z-products.json albo pomiń\"}. Zgoda klienta wymagana, także na nazwę lokalu.",
+  "projects": []
+}

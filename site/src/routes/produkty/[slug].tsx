@@ -107,6 +107,11 @@ export default function ProductPage() {
           { name: p().name },
         ];
         const allegro = (v: Variant) => v.allegroUrl ?? p().allegroUrl;
+        // The shop owns this content until it moves here (site.json indexCollection).
+        const shopCanonical = () => {
+          const old = p().oldUrl ?? p().variants[0].oldUrl;
+          return !site.indexCollection && old ? shopUrl(old) : undefined;
+        };
         const hasPhotos = () => customerPhotos.some((ph) => ph.product === p().slug);
 
         return (
@@ -115,10 +120,11 @@ export default function ProductPage() {
               title={p().title}
               description={p().metaDescription}
               canonical={`/produkty/${p().slug}/`}
+              canonicalUrl={shopCanonical()}
               image={p().cover!}
               pageType="ItemPage"
               breadcrumbs={crumbs()}
-              graph={productGraph(p())}
+              graph={shopCanonical() ? [] : productGraph(p())}
             />
             <style innerHTML={variantCss(p())} />
 
@@ -177,7 +183,7 @@ export default function ProductPage() {
                       {(v) => (
                         <p class={styles.price} data-v={v.id}>
                           {formatPrice(v.price)}
-                          <span>brutto, szyty na zamówienie{p().priceMin !== p().priceMax ? `. Wersje od ${formatPrice(p().priceMin)} do ${formatPrice(p().priceMax)}` : ""}</span>
+                          <span>brutto, gotowy projekt z kolekcji{p().priceMin !== p().priceMax ? `. Wersje od ${formatPrice(p().priceMin)} do ${formatPrice(p().priceMax)}` : ""}</span>
                         </p>
                       )}
                     </For>
@@ -208,13 +214,13 @@ export default function ProductPage() {
                     {(v) => (
                       <div class={styles.order} data-v={v.id}>
                         <div class={styles.ctas}>
-                          <a class="btn btn-primary" href={`tel:${site.phoneHref}`}>
-                            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z" /></svg>
-                            Zamów telefonicznie: {site.phone.replace("+48 ", "")}
-                          </a>
                           <Show when={v.oldUrl}>
-                            <a class="btn btn-accent" href={shopUrl(v.oldUrl)} rel="noopener">Kup w sklepie SIMAX</a>
+                            <a class="btn btn-primary" href={shopUrl(v.oldUrl)} rel="noopener">Kup w sklepie SIMAX</a>
                           </Show>
+                          <a class="btn btn-ghost" href={`tel:${site.phoneHref}`}>
+                            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z" /></svg>
+                            {site.phone.replace("+48 ", "")}
+                          </a>
                           <Show when={allegro(v)}>
                             <a class="btn btn-ghost" href={allegro(v)!} rel="noopener nofollow" target="_blank">Kup na Allegro</a>
                           </Show>
@@ -233,9 +239,15 @@ export default function ProductPage() {
 
                   <ul class={styles.trust}>
                     <li>Szyty ręcznie w Polsce, w naszej pracowni</li>
-                    <li>Tkaninę i kolor nóg dobierasz sam</li>
+                    <li>Projekt i konstrukcja już sprawdzone, dlatego taniej niż od zera</li>
                     <li>Dostawa pod drzwi albo odbiór osobisty</li>
                   </ul>
+
+                  <aside class={styles.custom} aria-labelledby="po-twojemu">
+                    <h2 id="po-twojemu">{p().name} po Twojemu</h2>
+                    <p>Inna szerokość, wyższe siedzisko, Twoja tkanina, inne nogi. Ten model może być punktem wyjścia do mebla na zamówienie.</p>
+                    <NavLink href={`/na-zamowienie/?model=${p().slug}`} class="btn btn-accent">Zamów w innym wymiarze lub tkaninie</NavLink>
+                  </aside>
                 </div>
               </div>
 
@@ -309,7 +321,7 @@ export default function ProductPage() {
                   <For each={[...related(), ...fill()]}>{(o) => <ProductCard product={o} />}</For>
                 </div>
                 <p class={styles.priceNote}>
-                  {p().name}: {priceLabel(p())}. Ceny brutto w PLN. Mebel jest wykonywany na indywidualne zamówienie, termin podamy przy zamówieniu.
+                  {p().name}: {priceLabel(p())}. Ceny brutto w PLN. Gotowe projekty kupisz w sklepie SIMAX albo telefonicznie. Wersje zmienione pod Ciebie wyceniamy osobno.
                 </p>
               </section>
             </article>

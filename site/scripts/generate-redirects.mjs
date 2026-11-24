@@ -13,6 +13,11 @@ const base = (process.env.BASE_PATH || "").replace(/\/$/, "");
 const site = JSON.parse(readFileSync(resolve(root, "src/data/site.json"), "utf8"));
 const redirects = JSON.parse(readFileSync(resolve(root, "src/data/redirects.json"), "utf8"));
 
+if (!site.legacyRedirects) {
+  console.log("generate-redirects: off (site.json legacyRedirects = false)");
+  process.exit(0);
+}
+
 if (!existsSync(out)) {
   console.warn("generate-redirects: dist/client missing, run after the build");
   process.exit(0);

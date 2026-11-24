@@ -36,8 +36,9 @@ export default function CategoryPage(props: { slug: string }) {
         <header class={styles.head}>
           <Breadcrumbs items={crumbs} />
           <h1>{c.heading}</h1>
-          <p class="lead">
-            {products.length} {products.length === 1 ? "model" : products.length < 5 ? "modele" : "modeli"}, ceny od {formatPrice(from)}. Każdy szyjemy na zamówienie w wybranej tkaninie.
+          <p class="lead">{c.lead}</p>
+          <p class={styles.count}>
+            Gotowe projekty z kolekcji: {products.length} {products.length === 1 ? "model" : products.length < 5 ? "modele" : "modeli"}, od {formatPrice(from)}. <NavLink href="/na-zamowienie/">Chcesz inny wymiar albo kształt?</NavLink>
           </p>
           <nav class={styles.siblings} aria-label="Inne kategorie">
             <For each={allCategories.filter((o) => o.products.length && o.slug !== c.slug)}>
@@ -49,7 +50,7 @@ export default function CategoryPage(props: { slug: string }) {
         <Catalogue products={products} current={c.slug} />
         <Show when={c.introHtml}>
           <section class={styles.intro} aria-labelledby="o-kategorii">
-            <h2 id="o-kategorii">{c.name} SIMAX: co warto wiedzieć</h2>
+            <h2 id="o-kategorii">{c.heading}: co warto wiedzieć</h2>
             <div class="prose" innerHTML={c.introHtml} />
           </section>
         </Show>

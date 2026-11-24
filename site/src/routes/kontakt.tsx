@@ -22,7 +22,7 @@ export default function Contact() {
         <header class={styles.head}>
           <Breadcrumbs items={crumbs} />
           <h1>Kontakt i dojazd</h1>
-          <p class="lead">Najszybciej telefonicznie. Doradzimy model i tkaninę, podamy termin i przyjmiemy zamówienie.</p>
+          <p class="lead">Najszybciej telefonicznie. Opowiedz o swoim pomyśle albo zapytaj o model z kolekcji, podamy termin i wycenę. Możesz też <NavLink href="/na-zamowienie/#brief">opisać pomysł w formularzu</NavLink>.</p>
         </header>
         <div class={styles.split}>
           <div class={styles.list}>

@@ -1,0 +1,38 @@
+{
+  "_help": "Teksty stron kategorii (ręcznie, scraper tego pliku nie nadpisuje). Nadpisują heading/title/metaDescription/introHtml z categories.json, który jest kopią sklepu. Własny tekst = brak duplikatu treści między domenami.",
+  "fotele": {
+    "heading": "Fotele tapicerowane na zamówienie",
+    "title": "Fotele tapicerowane na zamówienie, uszaki i fotele do salonu | SIMAX",
+    "metaDescription": "Fotel na zamówienie z pracowni SIMAX: Twój wymiar, kształt i tkanina. Albo gotowy model z kolekcji, na przykład uszak GRANDE, przerobiony pod Ciebie.",
+    "lead": "Fotel szyty pod Ciebie: wysokość siedziska, głębokość, uszy, tkanina i nogi. Poniżej modele z naszej kolekcji. Każdy może być punktem wyjścia do Twojego.",
+    "introHtml": "<h3>Fotel pod konkretną osobę</h3><p>Fotel z katalogu jest projektowany dla przeciętnego wzrostu. Jeśli masz 190 cm albo 155 cm, różnica kilku centymetrów w wysokości i głębokości siedziska decyduje o tym, czy będziesz w nim czytać godzinę, czy dziesięć minut. Dlatego przy fotelu na zamówienie pytamy najpierw, kto będzie w nim siedział.</p><h3>Uszak, fotel klubowy, fotel do jadalni</h3><p>Wysokie uszy osłaniają głowę i ramiona, dobrze sprawdzają się przy kominku i w czytelni. Niższy fotel z szerokimi bokami lepiej pasuje do salonu, w którym się rozmawia. Fotel do stołu ma płytsze siedzisko i wyższe nogi. Każdy z tych kształtów możemy uszyć od podstaw albo przerobić z modelu, który już mamy.</p><h3>Dwie tkaniny na jednym fotelu</h3><p>Gładki velvet od frontu i wzorzysty żakard z boku i z tyłu, jak w fotelu GRANDE, to prosty sposób na mebel, którego nie ma nikt inny. Tkaniny dobierasz z próbek, zanim zaczniemy szyć.</p>"
+  },
+  "sofy": {
+    "heading": "Sofy i kanapy na zamówienie",
+    "title": "Sofy i kanapy na zamówienie, na wymiar i z funkcją spania | SIMAX",
+    "metaDescription": "Sofa na wymiar z pracowni SIMAX: długość pod Twoją ścianę, głębokość siedziska, funkcja spania, tkanina boucle albo velvet. Gotowe modele NUVEM i SIMPLE jako punkt wyjścia.",
+    "lead": "Sofa dopasowana do ściany, a nie ściana do sofy. Długość, głębokość, oparcie i funkcja spania według Twoich wymiarów.",
+    "introHtml": "<h3>Sofa na wymiar</h3><p>Gotowe sofy mają kilka standardowych długości. Wnęka między oknem a drzwiami zwykle nie ma żadnej z nich. Sofę na zamówienie szyjemy na konkretne centymetry, więc nie zostaje pusta szczelina ani nie trzeba przesuwać grzejnika.</p><h3>Do siedzenia czy do spania</h3><p>Sofa do salonu i sofa dla gości to dwa różne meble. Pierwsza potrzebuje głębokiego, miękkiego siedziska, druga wygodnej powierzchni do spania i miejsca na pościel. Powiedz nam, jak będziesz jej używać, a dobierzemy konstrukcję.</p>"
+  },
+  "lozka": {
+    "heading": "Łóżka tapicerowane na zamówienie",
+    "title": "Łóżka tapicerowane na zamówienie, z pojemnikiem i wezgłowiem | SIMAX",
+    "metaDescription": "Łóżko tapicerowane na zamówienie z pracowni SIMAX: rozmiar materaca, wysokość i kształt wezgłowia, pojemnik na pościel, tkanina do wyboru. Modele COMO i DIA jako punkt wyjścia.",
+    "lead": "Łóżko pod Twój materac i Twoją sypialnię: rozmiar, wysokość wezgłowia, pojemnik na pościel i tkanina.",
+    "introHtml": "<h3>Wezgłowie to połowa sypialni</h3><p>W łóżku tapicerowanym najwięcej widać wezgłowia. Może być wysokie do sufitu pod skosem, szerokie na całą ścianę albo pikowane. Możemy je uszyć osobno, na przykład do istniejącego łóżka albo do pokoi hotelowych.</p><h3>Rozmiar i pojemnik</h3><p>Modele z naszej kolekcji to łóżka 160x200 z pojemnikiem na pościel i metalowym stelażem. Inny rozmiar materaca to dla nas zmiana w projekcie, a nie problem.</p>"
+  },
+  "krzesla": {
+    "heading": "Krzesła tapicerowane na zamówienie",
+    "title": "Krzesła tapicerowane na zamówienie, do jadalni i restauracji | SIMAX",
+    "metaDescription": "Krzesła tapicerowane na zamówienie z pracowni SIMAX: do jadalni, kawiarni i restauracji. Kształt, wysokość, tkanina do intensywnego użytku, seria w jednym kolorze.",
+    "lead": "Krzesła do domu i do lokalu: jedno do biurka albo seria do restauracji, w tkaninie, która zniesie codzienne użytkowanie.",
+    "introHtml": "<h3>Krzesła do jadalni i do lokalu</h3><p>Przy stole siedzi się długo, więc liczy się wysokość siedziska względem blatu i kąt oparcia. W restauracji dochodzi tkanina: wysoka ścieralność, łatwe czyszczenie, czasem atest trudnopalności. Szczegóły współpracy z firmami opisujemy na stronie <a href=\"dla-firm/\">meble dla firm</a>.</p>"
+  },
+  "dodatki": {
+    "heading": "Pufy, podnóżki i dodatki tapicerowane",
+    "title": "Pufy i podnóżki tapicerowane na zamówienie | SIMAX",
+    "metaDescription": "Podnóżki, pufy i dodatki tapicerowane z pracowni SIMAX, w tej samej tkaninie co fotel albo sofa. Na zamówienie, do kompletu z Twoim meblem.",
+    "lead": "Podnóżek do fotela, pufa do przedpokoju, siedzisko pod okno. Najlepiej w tej samej tkaninie co reszta.",
+    "introHtml": "<h3>Do kompletu</h3><p>Dodatek uszyty z tej samej beli tkaniny co fotel ma dokładnie ten sam odcień. Jeśli zamawiasz fotel na zamówienie, zapytaj od razu o podnóżek albo pufę.</p>"
+  }
+}

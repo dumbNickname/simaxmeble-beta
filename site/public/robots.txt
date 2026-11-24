@@ -23,4 +23,4 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://simaxmeble.pl/sitemap.xml
+Sitemap: https://simax-custom.pl/sitemap.xml

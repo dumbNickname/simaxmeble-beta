@@ -5,36 +5,34 @@ import NavLink from "~/components/NavLink";
 import Picture from "~/components/Picture";
 import ProductCard from "~/components/ProductCard";
 import CustomerPhotos from "~/components/CustomerPhotos";
+import IdeaStage from "~/components/IdeaStage";
+import Process from "~/components/Process";
 import bestsellers from "~/data/bestsellers.json";
+import custom from "~/data/custom.json";
 import site from "~/data/site.json";
 import customerPhotos from "~/data/customer-photos.json";
-import { allCategories, allFabrics, allProducts, productBySlug, formatPrice, variantColour, imageInfo, type Product } from "~/utils/catalog";
+import { allCategories, allFabrics, allProducts, productBySlug, formatPrice, type Product } from "~/utils/catalog";
 import styles from "./index.module.css";
 
 const grande = productBySlug("fotel-grande")!;
-const heroVariants = [12, 13, 18, 19, 15].map((id) => grande.variants.find((v) => v.id === id)!);
+// The hero sketch is traced from this packshot (fotel-grande-50).
+const heroVariant = grande.variants.find((v) => v.id === 12)!;
 const picks = bestsellers.products.map((slug) => productBySlug(slug)).filter(Boolean) as Product[];
 const cheapest = Math.min(...allProducts.map((p) => p.priceMin));
-
-const steps = [
-  { title: "Wybierz model", text: "Fotel, sofa, łóżko albo krzesło. Każdy model ma zdjęcia, wymiary i cenę." },
-  { title: "Dobierz tkaninę", text: "Velvet, boucle, wełna, żakard. Kolor nóg też wybierasz Ty, domyślnie buk." },
-  { title: "Zadzwoń i zamów", text: `Pod numerem ${site.phone} ustalimy szczegóły. Szyjemy pod Twoje zamówienie.` },
-];
 
 export default function Home() {
   return (
     <Layout>
       <SeoHead
-        title="SIMAX meble: fotele, sofy i łóżka tapicerowane na zamówienie"
-        description={`Producent mebli tapicerowanych z Wielkopolski. Skandynawskie fotele GRANDE, CARMO, ETERNO, sofy boucle i łóżka 160x200 od ${formatPrice(cheapest)}. Tkanina i kolor na zamówienie.`}
+        title="Meble tapicerowane na zamówienie: od pomysłu do gotowego mebla | SIMAX"
+        description="Pracownia SIMAX z Wielkopolski szyje fotele, sofy i łóżka tapicerowane na zamówienie: Twój pomysł, rysunek z wymiarami, tkanina z próbek i gotowy mebel. Także serie dla restauracji i hoteli."
         canonical="/"
-        image={grande.cover!}
+        image={heroVariant.images[0]}
         graph={[
           {
             "@type": "ItemList",
-            "@id": `${absolute("/")}#bestsellery`,
-            name: "Najchętniej wybierane meble SIMAX",
+            "@id": `${absolute("/")}#gotowe-projekty`,
+            name: "Gotowe projekty SIMAX",
             itemListElement: picks.map((p, i) => ({ "@type": "ListItem", position: i + 1, url: absolute(`/produkty/${p.slug}/`), name: p.name })),
           },
         ]}
@@ -44,103 +42,46 @@ export default function Home() {
         <div class={`container ${styles.heroGrid}`}>
           <div class={styles.heroText}>
             <h1>
-              Fotele, sofy i łóżka <span class={styles.hl}>szyte dla Ciebie</span>
+              Meble tapicerowane <span class={styles.hl}>na zamówienie</span>
             </h1>
             <p class="lead">
-              Jesteśmy pracownią tapicerską z Wielkopolski. Każdy mebel powstaje na zamówienie: wybierasz model, tkaninę i kolor nóg, a my go szyjemy.
+              Przynieś szkic, zdjęcie albo wymiary wnęki. Zrobimy rysunek, dobierzemy tkaninę i uszyjemy mebel w naszej pracowni w Wielkopolsce. Od pomysłu do fotela, który stanie u Ciebie.
             </p>
             <div class={styles.ctas}>
-              <NavLink href="/fotele/" class="btn btn-primary">Zobacz fotele</NavLink>
-              <a class="btn btn-ghost" href={`tel:${site.phoneHref}`}>Zadzwoń: {site.phone.replace("+48 ", "")}</a>
+              <NavLink href="/na-zamowienie/#brief" class="btn btn-primary">Opisz swój pomysł</NavLink>
+              <NavLink href="/na-zamowienie/" class="btn btn-ghost">Jak to działa</NavLink>
             </div>
+            <p class={styles.heroNote}>
+              Dla firm: <NavLink href="/dla-firm/">restauracje, hotele, biura</NavLink>. Wolisz gotowy model? <a href={site.shop} rel="noopener">Sklep SIMAX</a>.
+            </p>
           </div>
-
-          <div class={styles.stage}>
-            <fieldset class={styles.picker}>
-              <legend>Fotel GRANDE w kolorze:</legend>
-              <For each={heroVariants}>
-                {(v, i) => (
-                  <label style={{ "--sw": variantColour(v) }} title={v.label}>
-                    <input type="radio" name="hero-variant" value={String(i())} checked={i() === 0} />
-                    <span class="sr-only">{v.label}</span>
-                  </label>
-                )}
-              </For>
-            </fieldset>
-            <div class={styles.photos}>
-              <For each={heroVariants}>
-                {(v, i) => (
-                  <Picture
-                    image={v.images[0]}
-                    alt={`Fotel GRANDE, ${v.label.toLowerCase()}`}
-                    class={styles.photo}
-                    sizes="(min-width: 1000px) 560px, 90vw"
-                    priority={i() === 0}
-                    deferred={i() > 0}
-                  />
-                )}
-              </For>
-              <div class={styles.tag}>
-                <NavLink href="/produkty/fotel-grande/">
-                  <span>Fotel GRANDE</span>
-                  <strong>od {formatPrice(grande.priceMin)}</strong>
-                </NavLink>
-              </div>
-            </div>
-          </div>
+          <IdeaStage product={grande} variant={heroVariant} />
         </div>
       </section>
 
-      <section class="section" aria-labelledby="bestsellery">
+      <section class="section" aria-labelledby="jak-powstaje">
         <div class="container">
           <div class="section-head">
-            <h2 id="bestsellery">Najchętniej wybierane</h2>
-            <p>Modele, o które pytacie najczęściej. Każdy uszyjemy w innej tkaninie niż na zdjęciu.</p>
+            <h2 id="jak-powstaje">Jak powstaje mebel na zamówienie</h2>
+            <p>Bez katalogu i bez koszyka. Zaczynamy od rozmowy o tym, czego potrzebujesz.</p>
           </div>
-          <div class={styles.products}>
-            <For each={picks}>{(p) => <ProductCard product={p} />}</For>
-          </div>
-          <p class={styles.more}><NavLink href="/produkty/" class="btn btn-ghost">Wszystkie meble i wyszukiwarka</NavLink></p>
+          <Process />
+          <p class={styles.more}><NavLink href="/na-zamowienie/" class="btn btn-ghost">Szczegóły, wycena i pytania</NavLink></p>
         </div>
       </section>
 
-      <section class={`section ${styles.cats}`} aria-labelledby="kategorie">
+      <section class={`section ${styles.options}`} aria-labelledby="co-zmienic">
         <div class="container">
           <div class="section-head">
-            <h2 id="kategorie">Czego szukasz?</h2>
+            <h2 id="co-zmienic">Co możesz zmienić</h2>
+            <p>Wszystko, co da się zmierzyć, i większość tego, co da się narysować.</p>
           </div>
-          <ul class={styles.catGrid}>
-            <For each={allCategories.filter((c) => c.products.length)}>
-              {(c) => {
-                // Prefer a packshot so the tiles share one look.
-                const p = c.products.map((s) => productBySlug(s)!).find((o) => imageInfo(o.cover!)?.cutout) ?? productBySlug(c.products.at(-1)!)!;
-                return (
-                  <li class="reveal">
-                    <NavLink href={`/${c.slug}/`} class={styles.cat}>
-                      <Picture image={p.cover!} alt="" class={styles.catPic} sizes="(min-width: 1000px) 240px, 45vw" />
-                      <span class={styles.catName}>{c.name}</span>
-                      <span class={styles.catCount}>{c.products.length} {c.products.length === 1 ? "model" : c.products.length < 5 ? "modele" : "modeli"}</span>
-                    </NavLink>
-                  </li>
-                );
-              }}
-            </For>
-          </ul>
-        </div>
-      </section>
-
-      <section class="section" aria-labelledby="jak-zamowic">
-        <div class={`container ${styles.how}`}>
-          <div>
-            <h2 id="jak-zamowic">Jak zamówić mebel SIMAX</h2>
-            <p class="lead">Nie mamy koszyka, mamy telefon i ludzi, którzy znają każdy szew. Zamówienie zajmuje jedną rozmowę.</p>
-          </div>
-          <ul class={styles.steps}>
-            <For each={steps}>
-              {(s) => (
+          <ul class={styles.optionList}>
+            <For each={custom.options}>
+              {(o) => (
                 <li class="reveal">
-                  <h3>{s.title}</h3>
-                  <p>{s.text}</p>
+                  <h3>{o.name}</h3>
+                  <p>{o.text.replace("{fabrics}", String(allFabrics.length))}</p>
                 </li>
               )}
             </For>
@@ -148,11 +89,47 @@ export default function Home() {
         </div>
       </section>
 
+      <section class="section" aria-labelledby="gotowe-projekty">
+        <div class="container">
+          <div class="section-head">
+            <h2 id="gotowe-projekty">Gotowe projekty</h2>
+            <p>
+              Modele, które już zaprojektowaliśmy i szyjemy seryjnie. Konstrukcja jest sprawdzona, więc są tańsze i szybsze niż mebel od zera: od {formatPrice(cheapest)} w sklepie SIMAX. Każdy może też być punktem wyjścia do Twojego projektu.
+            </p>
+          </div>
+          <div class={styles.products}>
+            <For each={picks}>{(p) => <ProductCard product={p} />}</For>
+          </div>
+          <nav class={styles.chips} aria-label="Gotowe projekty według rodzaju">
+            <For each={allCategories.filter((c) => c.products.length)}>
+              {(c) => <NavLink href={`/${c.slug}/`}>{c.name}</NavLink>}
+            </For>
+            <NavLink href="/produkty/">Cała kolekcja</NavLink>
+          </nav>
+        </div>
+      </section>
+
+      <section class={styles.b2b} aria-labelledby="dla-firm">
+        <div class={`container ${styles.b2bGrid}`}>
+          <div class={styles.b2bPhoto}>
+            <Picture image="o-nas-2" alt="Turkusowe fotele i sofa tapicerowana w kawiarni" sizes="(min-width: 960px) 520px, 92vw" />
+          </div>
+          <div>
+            <h2 id="dla-firm">Meble dla restauracji, hoteli i biur</h2>
+            <p>Ławy pod ścianę, krzesła do sali, fotele do pokoi, wezgłowia, sofy do lobby. Szyjemy serie według projektu, w tkaninach do intensywnego użytku.</p>
+            <ul class={styles.b2bList}>
+              <For each={custom.b2b.sectors}>{(s) => <li>{s.name}</li>}</For>
+            </ul>
+            <NavLink href="/dla-firm/" class="btn btn-accent">Współpraca dla firm</NavLink>
+          </div>
+        </div>
+      </section>
+
       <section class={`section ${styles.fabrics}`} aria-labelledby="tkaniny">
         <div class="container">
           <div class="section-head">
-            <h2 id="tkaniny">Tkaniny, w których szyjemy</h2>
-            <p>Od velvetu po wełnę z recyklingu. Przy każdej kolekcji podajemy ścieralność, skład i gramaturę.</p>
+            <h2 id="tkaniny">Tkaniny do Twojego projektu</h2>
+            <p>Od velvetu po wełnę. Przy każdej kolekcji podajemy ścieralność, skład i gramaturę, a próbki wysyłamy do paczkomatu.</p>
           </div>
           <ul class={styles.swatches}>
             <For each={allFabrics.slice(0, 8)}>
@@ -186,12 +163,12 @@ export default function Home() {
       <section class={styles.call} aria-labelledby="kontakt-skrot">
         <div class={`container ${styles.callInner}`}>
           <div>
-            <h2 id="kontakt-skrot">Porozmawiajmy o Twoim fotelu</h2>
-            <p>Doradzimy tkaninę, podamy termin i wycenę wersji spoza katalogu. Odbiór osobisty w Łęce Mroczeńskiej albo dostawa pod drzwi.</p>
+            <h2 id="kontakt-skrot">Masz pomysł? Opowiedz nam o nim</h2>
+            <p>Kilka zdań i zdjęcie wystarczą na początek. Oddzwonimy z pytaniami, potem przyślemy rysunek i wycenę.</p>
           </div>
           <div class={styles.callActions}>
-            <a class="btn btn-accent" href={`tel:${site.phoneHref}`}>{site.phone}</a>
-            <a class="btn btn-ghost" href={`mailto:${site.email}`}>{site.email}</a>
+            <NavLink href="/na-zamowienie/#brief" class="btn btn-accent">Opisz pomysł</NavLink>
+            <a class="btn btn-ghost" href={`tel:${site.phoneHref}`}>{site.phone}</a>
           </div>
         </div>
       </section>

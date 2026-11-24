@@ -1,6 +1,7 @@
 import { For } from "solid-js";
 import NavLink from "./NavLink";
 import site from "~/data/site.json";
+import projects from "~/data/projects.json";
 import { allCategories } from "~/utils/catalog";
 import styles from "./Footer.module.css";
 
@@ -10,19 +11,22 @@ export default function Footer() {
       <div class={`container ${styles.grid}`}>
         <div class={styles.about}>
           <p class={styles.brand}>SIMAX meble</p>
-          <p>Szyjemy fotele, sofy i łóżka tapicerowane na zamówienie, w Łęce Mroczeńskiej pod Kępnem.</p>
+          <p>Pracownia mebli tapicerowanych na zamówienie w Łęce Mroczeńskiej pod Kępnem. Od pomysłu i projektu do gotowego mebla, dla domów i firm.</p>
           <a class={styles.bigPhone} href={`tel:${site.phoneHref}`}>{site.phone}</a>
         </div>
-        <nav aria-label="Kategorie">
-          <p class={styles.heading}>Meble</p>
+        <nav aria-label="Na zamówienie">
+          <p class={styles.heading}>Na zamówienie</p>
           <ul>
-            <For each={allCategories.filter((c) => c.products.length)}>{(c) => <li><NavLink href={`/${c.slug}/`}>{c.name}</NavLink></li>}</For>
-            <li><NavLink href="/produkty/">Wszystkie produkty</NavLink></li>
+            <li><NavLink href="/na-zamowienie/">Jak powstaje mebel na zamówienie</NavLink></li>
+            <li><NavLink href="/dla-firm/">Meble dla firm i HoReCa</NavLink></li>
+            {projects.projects.length > 0 && <li><NavLink href="/realizacje/">Realizacje</NavLink></li>}
+            <For each={allCategories.filter((c) => c.products.length)}>{(c) => <li><NavLink href={`/${c.slug}/`}>{c.heading}</NavLink></li>}</For>
           </ul>
         </nav>
         <nav aria-label="Informacje">
           <p class={styles.heading}>Informacje</p>
           <ul>
+            <li><NavLink href="/produkty/">Kolekcja gotowych projektów</NavLink></li>
             <li><NavLink href="/tkaniny/">Tkaniny obiciowe</NavLink></li>
             <li><NavLink href="/dostawa-i-zwroty/">Dostawa i reklamacje</NavLink></li>
             <li><NavLink href="/meble-u-was/">Meble u Was</NavLink></li>
@@ -39,7 +43,7 @@ export default function Footer() {
       </div>
       <div class={`container ${styles.bottom}`}>
         <p>© {new Date().getFullYear()} {site.legalName}. Ceny brutto w PLN.</p>
-        <p><a href={site.shop} rel="noopener">Sklep internetowy SIMAX</a></p>
+        <p><a href={site.shop} rel="noopener">Gotowe meble kupisz w sklepie SIMAX</a></p>
       </div>
     </footer>
   );

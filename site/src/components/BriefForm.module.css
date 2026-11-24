@@ -1,0 +1,84 @@
+.wrap {
+  scroll-margin-top: 6rem;
+}
+
+.form {
+  display: grid;
+  gap: 1rem 1.25rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  box-shadow: var(--shadow);
+}
+
+@media (min-width: 720px) {
+  .form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .wide {
+    grid-column: 1 / -1;
+  }
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.field span {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: 2.9rem;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid color-mix(in srgb, var(--ink) 30%, transparent);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--ink);
+  font: inherit;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.field input:focus-visible,
+.field select:focus-visible,
+.field textarea:focus-visible {
+  outline: 3px solid var(--accent-2);
+  outline-offset: 1px;
+}
+
+.submit {
+  display: grid;
+  gap: 0.75rem;
+  justify-items: start;
+}
+
+.submit p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.submit a {
+  color: var(--accent-2);
+}
+
+.sent {
+  font-weight: 700;
+}
+
+:global(html[data-design="c"]) .form,
+:global(html[data-design="c"]) .field input,
+:global(html[data-design="c"]) .field select,
+:global(html[data-design="c"]) .field textarea {
+  border-radius: 0;
+}

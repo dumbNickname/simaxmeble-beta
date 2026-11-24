@@ -2,10 +2,11 @@ import products from "~/data/products.json";
 import categories from "~/data/categories.json";
 import fabrics from "~/data/fabrics.json";
 import imageSizes from "~/data/image-sizes.json";
+import categoryCopy from "~/data/category-copy.json";
 
 export type Product = (typeof products)[number];
 export type Variant = Product["variants"][number];
-export type Category = (typeof categories)[number];
+export type Category = (typeof categories)[number] & { lead?: string };
 export type Fabric = (typeof fabrics)[number];
 
 export interface ImageInfo {
@@ -20,7 +21,9 @@ export interface ImageInfo {
 export const TBD = "t.b.d.";
 
 export const allProducts = products as Product[];
-export const allCategories = categories as Category[];
+// category-copy.json (hand-written) overrides the text copied from the shop.
+const copy = categoryCopy as unknown as Record<string, Partial<Category>>;
+export const allCategories = (categories as Category[]).map((c) => ({ ...c, ...copy[c.slug] }));
 export const allFabrics = fabrics as Fabric[];
 
 export const productBySlug = (slug: string) => allProducts.find((p) => p.slug === slug);

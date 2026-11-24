@@ -4,9 +4,14 @@ import site from "~/data/site.json";
 import { allCategories } from "~/utils/catalog";
 import styles from "./Header.module.css";
 
+// Short labels keep the bar to one line; full names are in the footer and the H1s.
+// Only the bigger categories fit here; all of them are in the footer.
+const MAIN_CATEGORIES = ["fotele", "sofy", "lozka"];
 const links = [
-  // Short labels keep the bar to one line; full names are in the footer and the H1s.
-  ...allCategories.filter((c) => c.products.length).map((c) => ({ href: `/${c.slug}/`, label: c.name.split(" ")[0] })),
+  { href: "/na-zamowienie/", label: "Na zamówienie" },
+  { href: "/dla-firm/", label: "Dla firm" },
+  ...allCategories.filter((c) => MAIN_CATEGORIES.includes(c.slug) && c.products.length).map((c) => ({ href: `/${c.slug}/`, label: c.name.split(" ")[0] })),
+  { href: "/produkty/", label: "Kolekcja" },
   { href: "/tkaniny/", label: "Tkaniny" },
   { href: "/kontakt/", label: "Kontakt" },
 ];
@@ -30,7 +35,7 @@ export default function Header() {
           </nav>
         </details>
         <div class={styles.actions}>
-          <NavLink href="/produkty/" class={styles.search} aria-label="Szukaj mebli">
+          <NavLink href="/produkty/" class={styles.search} aria-label="Szukaj w kolekcji">
             <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2" /><path d="m15.5 15.5 5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" /></svg>
             <span>Szukaj</span>
           </NavLink>
