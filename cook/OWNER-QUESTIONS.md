@@ -79,6 +79,7 @@ Gdzie: `site/src/data/projects.json` (format opisany w `_help`), zdjęcia do `si
   - Podnóżek GRANDE: szerokość, wysokość, głębokość.
   - Kanapy NUVEM i SIMPLE: głębokość całkowita (po złożeniu i po rozłożeniu), wymiar powierzchni spania, szerokość siedziska, wysokość podłokietnika.
   - Łóżko DIA: szerokość całkowita (COMO ma 213 cm). Dla obu łóżek: wysokość pojemnika i prześwit pod łóżkiem.
+- [ ] Kanapa NUVEM w tkaninie Catch Me (nowe wizualizacje, kolory 02, 05, 07 i dwa szare): jaka jest cena? Teraz pokazujemy 2199 zł jak za boucle. Który z dwóch szarych to Catch Me 01, a który 22?
 
 ## 8. Płatność, terminy, próbki, usługi (inspiracja: fotelownia.com.pl)
 

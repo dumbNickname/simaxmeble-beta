@@ -63,6 +63,11 @@ const COLOURS: Record<string, string> = {
   "butelkowa zieleń": "#1c4836",
   oliwkowy: "#77773a",
   "kość słoniowa": "#ece6d6",
+  kremowy: "#e6d8c6",
+  piaskowy: "#c4a786",
+  rudy: "#b4532f",
+  jasnoszary: "#cfcac2",
+  szarobeżowy: "#b9ada0",
 };
 
 export function variantColour(v: Variant) {

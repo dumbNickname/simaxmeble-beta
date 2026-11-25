@@ -1821,6 +1821,61 @@
   "color": "#e6e3df",
   "cutout": true
  },
+ "kanapa-nuvem-boucle-catch-me-02": {
+  "w": 1376,
+  "h": 768,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#a49885",
+  "cutout": false
+ },
+ "kanapa-nuvem-boucle-catch-me-05": {
+  "w": 1376,
+  "h": 768,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#9b8d79",
+  "cutout": false
+ },
+ "kanapa-nuvem-boucle-catch-me-07": {
+  "w": 1376,
+  "h": 768,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#a0836e",
+  "cutout": false
+ },
+ "kanapa-nuvem-boucle-catch-me-jasnoszary": {
+  "w": 1376,
+  "h": 768,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#a39a8b",
+  "cutout": false
+ },
+ "kanapa-nuvem-boucle-catch-me-szarobezowy": {
+  "w": 1376,
+  "h": 768,
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "color": "#9c9383",
+  "cutout": false
+ },
  "kanapa-simple-boucle-436": {
   "w": 960,
   "h": 960,

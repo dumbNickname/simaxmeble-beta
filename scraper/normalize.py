@@ -194,6 +194,15 @@ PRODUCTS = [
         "description": "Rozkładana kanapa NUVEM w tkaninie boucle z funkcją spania, szerokość 211 cm. Miękka, zaokrąglona forma do salonu. 2199 zł, polska produkcja.",
         "descriptionFrom": 63,
         "variants": [(63, "Boucle", None, None, None, "boucle")],
+        # AI-generated renders (not in the old shop): file in cache/img/generated/<key>.jpg.
+        # Two greys are still unmatched to a Catch Me number (01 or 22).
+        "extraVariants": [
+            (6302, "Kremowy, Catch Me 02", "kremowy", "catch-me", "02"),
+            (6305, "Piaskowy, Catch Me 05", "piaskowy", "catch-me", "05"),
+            (6307, "Rudy, Catch Me 07", "rudy", "catch-me", "07"),
+            (6390, "Jasnoszary, Catch Me", "jasnoszary", "catch-me", "jasnoszary"),
+            (6391, "Szarobeżowy, Catch Me", "szarobeżowy", "catch-me", "szarobezowy"),
+        ],
     },
     {
         "slug": "kanapa-simple-boucle",
@@ -416,6 +425,23 @@ def build(raw):
             })
             path = urllib.parse.urlparse(p["url"]).path
             redirects[path] = f"/produkty/{slug}/" + (f"#wariant-{vid}" if len(spec["variants"]) > 1 else "")
+        base_variant = next(v for v in variants if v["id"] == spec["descriptionFrom"])
+        for vid, label, colour, fabric, suffix in spec.get("extraVariants", []):
+            key = f"{slug}-{fabric}-{suffix}"
+            manifest[key] = f"generated/{key}.jpg"
+            # Price and dimensions come from the base variant until the owner confirms them.
+            variants.append({
+                **base_variant,
+                "id": vid,
+                "sku": f"SIMAX-{base_variant['id']}-{suffix.upper()}",
+                "label": label,
+                "fullName": f"{base_variant['fullName']}, {label}",
+                "colour": colour,
+                "fabricId": fabric,
+                "fabricName": None,
+                "images": [key],
+                "oldUrl": None,
+            })
         prices = [v["price"] for v in variants]
         first_dims = variants[0]["dimensions"]
         same_dims = all(v["dimensions"] == first_dims for v in variants)

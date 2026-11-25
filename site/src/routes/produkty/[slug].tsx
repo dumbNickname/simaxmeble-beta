@@ -215,7 +215,7 @@ export default function ProductPage() {
                       <div class={styles.order} data-v={v.id}>
                         <div class={styles.ctas}>
                           <Show when={v.oldUrl}>
-                            <a class="btn btn-primary" href={shopUrl(v.oldUrl)} rel="noopener">Kup w sklepie SIMAX</a>
+                            <a class="btn btn-primary" href={shopUrl(v.oldUrl!)} rel="noopener">Kup w sklepie SIMAX</a>
                           </Show>
                           <a class="btn btn-ghost" href={`tel:${site.phoneHref}`}>
                             <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z" /></svg>

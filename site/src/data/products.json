@@ -2360,6 +2360,201 @@
         ],
         "oldUrl": "https://simaxmeble.pl/glowna/63-rozkladana-kanapa-z-funkcja-spania-nuvem-boucle.html",
         "allegroUrl": null
+      },
+      {
+        "id": 6302,
+        "sku": "SIMAX-63-02",
+        "label": "Kremowy, Catch Me 02",
+        "fullName": "Rozkładana Kanapa z funkcją spania Nuvem boucle, Kremowy, Catch Me 02",
+        "colour": "kremowy",
+        "pattern": null,
+        "base": null,
+        "fabricId": "catch-me",
+        "fabricName": null,
+        "price": 2199.0,
+        "images": [
+          "kanapa-nuvem-boucle-catch-me-02"
+        ],
+        "dimensions": [
+          {
+            "name": "Głębokość siedziska",
+            "value": "75 cm"
+          },
+          {
+            "name": "Szerokość",
+            "value": "211 cm"
+          },
+          {
+            "name": "Wysokość całkowita",
+            "value": "96 cm"
+          },
+          {
+            "name": "Wysokość siedziska",
+            "value": "40 cm"
+          },
+          {
+            "name": "Wysokość oparcia",
+            "value": "96 cm"
+          }
+        ],
+        "oldUrl": null,
+        "allegroUrl": null
+      },
+      {
+        "id": 6305,
+        "sku": "SIMAX-63-05",
+        "label": "Piaskowy, Catch Me 05",
+        "fullName": "Rozkładana Kanapa z funkcją spania Nuvem boucle, Piaskowy, Catch Me 05",
+        "colour": "piaskowy",
+        "pattern": null,
+        "base": null,
+        "fabricId": "catch-me",
+        "fabricName": null,
+        "price": 2199.0,
+        "images": [
+          "kanapa-nuvem-boucle-catch-me-05"
+        ],
+        "dimensions": [
+          {
+            "name": "Głębokość siedziska",
+            "value": "75 cm"
+          },
+          {
+            "name": "Szerokość",
+            "value": "211 cm"
+          },
+          {
+            "name": "Wysokość całkowita",
+            "value": "96 cm"
+          },
+          {
+            "name": "Wysokość siedziska",
+            "value": "40 cm"
+          },
+          {
+            "name": "Wysokość oparcia",
+            "value": "96 cm"
+          }
+        ],
+        "oldUrl": null,
+        "allegroUrl": null
+      },
+      {
+        "id": 6307,
+        "sku": "SIMAX-63-07",
+        "label": "Rudy, Catch Me 07",
+        "fullName": "Rozkładana Kanapa z funkcją spania Nuvem boucle, Rudy, Catch Me 07",
+        "colour": "rudy",
+        "pattern": null,
+        "base": null,
+        "fabricId": "catch-me",
+        "fabricName": null,
+        "price": 2199.0,
+        "images": [
+          "kanapa-nuvem-boucle-catch-me-07"
+        ],
+        "dimensions": [
+          {
+            "name": "Głębokość siedziska",
+            "value": "75 cm"
+          },
+          {
+            "name": "Szerokość",
+            "value": "211 cm"
+          },
+          {
+            "name": "Wysokość całkowita",
+            "value": "96 cm"
+          },
+          {
+            "name": "Wysokość siedziska",
+            "value": "40 cm"
+          },
+          {
+            "name": "Wysokość oparcia",
+            "value": "96 cm"
+          }
+        ],
+        "oldUrl": null,
+        "allegroUrl": null
+      },
+      {
+        "id": 6390,
+        "sku": "SIMAX-63-JASNOSZARY",
+        "label": "Jasnoszary, Catch Me",
+        "fullName": "Rozkładana Kanapa z funkcją spania Nuvem boucle, Jasnoszary, Catch Me",
+        "colour": "jasnoszary",
+        "pattern": null,
+        "base": null,
+        "fabricId": "catch-me",
+        "fabricName": null,
+        "price": 2199.0,
+        "images": [
+          "kanapa-nuvem-boucle-catch-me-jasnoszary"
+        ],
+        "dimensions": [
+          {
+            "name": "Głębokość siedziska",
+            "value": "75 cm"
+          },
+          {
+            "name": "Szerokość",
+            "value": "211 cm"
+          },
+          {
+            "name": "Wysokość całkowita",
+            "value": "96 cm"
+          },
+          {
+            "name": "Wysokość siedziska",
+            "value": "40 cm"
+          },
+          {
+            "name": "Wysokość oparcia",
+            "value": "96 cm"
+          }
+        ],
+        "oldUrl": null,
+        "allegroUrl": null
+      },
+      {
+        "id": 6391,
+        "sku": "SIMAX-63-SZAROBEZOWY",
+        "label": "Szarobeżowy, Catch Me",
+        "fullName": "Rozkładana Kanapa z funkcją spania Nuvem boucle, Szarobeżowy, Catch Me",
+        "colour": "szarobeżowy",
+        "pattern": null,
+        "base": null,
+        "fabricId": "catch-me",
+        "fabricName": null,
+        "price": 2199.0,
+        "images": [
+          "kanapa-nuvem-boucle-catch-me-szarobezowy"
+        ],
+        "dimensions": [
+          {
+            "name": "Głębokość siedziska",
+            "value": "75 cm"
+          },
+          {
+            "name": "Szerokość",
+            "value": "211 cm"
+          },
+          {
+            "name": "Wysokość całkowita",
+            "value": "96 cm"
+          },
+          {
+            "name": "Wysokość siedziska",
+            "value": "40 cm"
+          },
+          {
+            "name": "Wysokość oparcia",
+            "value": "96 cm"
+          }
+        ],
+        "oldUrl": null,
+        "allegroUrl": null
       }
     ],
     "cover": "kanapa-nuvem-boucle-341",
