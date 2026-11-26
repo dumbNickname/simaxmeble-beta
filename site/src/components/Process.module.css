@@ -116,12 +116,7 @@
   margin: 0;
 }
 
+:global(html[data-design="b"]) .mark,
 :global(html[data-design="b"]) .detailed .stage {
-  background: #fff;
-  box-shadow: var(--shadow);
-}
-
-:global(html[data-design="c"]) .mark,
-:global(html[data-design="c"]) .detailed .stage {
   border-radius: 0;
 }

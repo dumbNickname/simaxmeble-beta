@@ -24,7 +24,7 @@ Static, SEO-first catalogue site for SIMAX (upholstered furniture, Łęka Mrocze
 
 ## Gotchas
 
-- **Designs**: one DOM, several proposals (A to E). `Document.tsx` sets `data-design` on `<html>` from `?v=a..e`, saved in `localStorage("simax_design")`. Without JS, the default is A. All design styling lives in `[data-design="x"]` selectors spread across the CSS modules and `global.css`. If you add or remove a design, update `Document.tsx` (`designInit`), `DesignSwitch.tsx` and `cook/stills.mjs`. The switch shows only on beta (`basePath` non-empty).
+- **Designs**: one DOM, two proposals: A ("Próbnik") and B ("Lagom", called C until 2026-11-26). The old B "Salon", D "Riviera" and E "Bottega" are archived in `cook/archive/designs-b-d-e/` (full CSS copies from commit 402e297, plus `removed-rules.css` with only the dropped rules; `prune-designs.mjs` is the script that removed them). `Document.tsx` sets `data-design` on `<html>` from `?v=a|b`, saved in `localStorage("simax_design2")`. Without JS, the default is A. All design styling lives in `[data-design="x"]` selectors spread across the CSS modules and `global.css`. If you add or remove a design, update `Document.tsx` (`designInit`), `DesignSwitch.tsx` and `cook/stills.mjs`. The switch shows only on beta (`basePath` non-empty).
 - **Categories are static route files** (`fotele.tsx`, `sofy.tsx`, … each renders `<CategoryPage slug>`). A new category in `categories.json` also needs its own route file.
 - **Full-reload navigation is intentional**: `src/client-setup.ts` intercepts internal clicks and sets `location.href`, and reloads on popstate. It also handles `#hash` links (bare `#id` would resolve to the homepage because of `<base href>`), `?wariant=ID` variant switching on product pages, and gallery slide anchors. Don't switch to router links.
 - **Base path**: `BASE_PATH` is `""` in production and `/simaxmeble-beta` on beta. It feeds Vite `base`, the `<base href>`, `NavLink` and the redirect stubs. On beta, `SeoHead` emits `noindex, nofollow`. Keep the robots meta in `SeoHead`, because Meta 2 dedupes by name and last one wins.
@@ -39,4 +39,4 @@ Static, SEO-first catalogue site for SIMAX (upholstered furniture, Łęka Mrocze
 
 - Only the `beta` remote exists (`dumbNickname/simaxmeble-beta`, `master` tracks `beta/master`). `git push` deploys the GitHub Pages preview. No production remote is configured yet, so don't add one without asking.
 - CI (`.github/workflows/deploy.yml`) builds on `master` and `experiment/*`. In the beta repo, experiment branches deploy too. Production deploys only from `master`.
-- Commit messages are in English. For design work, prefix with the design letter (`D: ...`).
+- Commit messages are in English. For design work, prefix with the design letter (`B: ...`). Older commits use the pre-2026-11-26 letters (their `C:` is today's B).

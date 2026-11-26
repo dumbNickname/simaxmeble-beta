@@ -596,12 +596,12 @@
   font-weight: 700;
 }
 
-:global(html[data-design="c"]) .preview,
-:global(html[data-design="c"]) .mini span,
-:global(html[data-design="c"]) .choices span,
-:global(html[data-design="c"]) .field input,
-:global(html[data-design="c"]) .field select,
-:global(html[data-design="c"]) .field textarea {
+:global(html[data-design="b"]) .preview,
+:global(html[data-design="b"]) .mini span,
+:global(html[data-design="b"]) .choices span,
+:global(html[data-design="b"]) .field input,
+:global(html[data-design="b"]) .field select,
+:global(html[data-design="b"]) .field textarea {
   border-radius: 0;
 }
 

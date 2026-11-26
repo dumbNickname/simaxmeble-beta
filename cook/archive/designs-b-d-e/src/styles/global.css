@@ -1,0 +1,580 @@
+/* Two design proposals share one DOM; html[data-design] swaps the tokens
+   (and a few layouts in the component modules). A = "Próbnik", B = "Salon", C = "Lagom", D = "Riviera", E = "Bottega". */
+
+:root,
+html[data-design="a"] {
+  --bg: #ffffff;
+  --surface: #f2f3f1;
+  --surface-2: #e8eae6;
+  --ink: #16181d;
+  --muted: #474d56;
+  --line: #dfe1dd;
+  --accent: #d9a21b;
+  --accent-ink: #16181d;
+  --accent-soft: #d6eeea;
+  --accent-2: #11706f;
+  --on-dark: #ffffff;
+  --dark: #16181d;
+
+  /* Named system fonts first: on some Linux setups system-ui resolves to a monospace face. */
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI Variable Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Liberation Sans", system-ui, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Liberation Sans", system-ui, sans-serif;
+  --display-weight: 800;
+  --display-tracking: -0.035em;
+  --display-style: normal;
+
+  --radius: 22px;
+  --radius-sm: 12px;
+  --border: 1px solid var(--line);
+  --shadow: 0 18px 40px -22px rgb(22 24 29 / 0.35);
+  --shadow-hover: 0 28px 50px -24px rgb(22 24 29 / 0.45);
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --container: 1240px;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+  --section: clamp(3.5rem, 8vw, 6.5rem);
+  color-scheme: light;
+}
+
+html[data-design="b"] {
+  --bg: #ffffff;
+  --surface: #e7f1ee;
+  --surface-2: #cfe5de;
+  --ink: #121212;
+  --muted: #3d3a36;
+  --line: #121212;
+  --accent: #f2b134;
+  --accent-ink: #121212;
+  --accent-soft: #fde3a7;
+  --accent-2: #0f5c58;
+  --dark: #0f5c58;
+
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Times New Roman", serif;
+  --display-weight: 600;
+  --display-tracking: -0.02em;
+
+  --radius: 6px;
+  --radius-sm: 4px;
+  --border: 2px solid var(--ink);
+  --shadow: 6px 6px 0 var(--ink);
+  --shadow-hover: 10px 10px 0 var(--ink);
+}
+
+/* D = "Riviera": 1960s Italian seaside. Striped awnings, arched windows,
+   ticket-style labels; sun yellow, terracotta and sea blue around (never
+   behind) the furniture photos. */
+html[data-design="d"] {
+  --bg: #ffffff;
+  --surface: #f1f5fa;
+  --surface-2: #dfe8f3;
+  --ink: #13294b;
+  --muted: #44597a;
+  --line: #d3ddea;
+  --accent: #f2c14e;
+  --accent-ink: #13294b;
+  --accent-soft: #fdefc8;
+  --accent-2: #c8553d;
+  --dark: #13294b;
+  --sea: #1f6fb2;
+  --terra: #c8553d;
+  --sun: #f2c14e;
+  /* height of the arch top: a shallow arch keeps the whole photo in view */
+  --arch: 18%;
+
+  --font-display: Futura, "Futura PT", "Century Gothic", "Avenir Next", "Trebuchet MS", "Segoe UI", Roboto, "Liberation Sans", sans-serif;
+  --display-weight: 800;
+  --display-tracking: -0.015em;
+
+  --radius: 26px;
+  --radius-sm: 14px;
+  --shadow: 0 18px 36px -22px rgb(19 41 75 / 0.45);
+  --shadow-hover: 0 26px 44px -22px rgb(19 41 75 / 0.5);
+  /* ticket: two half-circle notches cut from the short sides */
+  --ticket: radial-gradient(circle at 0 50%, #0000 0.42rem, #000 0.45rem) left / 51% 100% no-repeat, radial-gradient(circle at 100% 50%, #0000 0.42rem, #000 0.45rem) right / 51% 100% no-repeat;
+}
+
+/* E = "Bottega": an Italian upholsterer's workshop. Leather, saddle
+   stitching, brass rivets, tailor's tape and pinked fabric edges. */
+html[data-design="e"] {
+  --bg: #ffffff;
+  --surface: #f2f3ef;
+  --surface-2: #e4e6de;
+  --ink: #2a1d14;
+  --muted: #5a4a3e;
+  --line: #ddd6cd;
+  --accent: #7a4527;
+  --accent-ink: #ffffff;
+  --accent-soft: #e6ead9;
+  --accent-2: #56642f;
+  --dark: #34221a;
+  --on-dark: #f6ecdc;
+  --tan: #b27a48;
+  --thread: #e8cf9f;
+  --brass: radial-gradient(circle at 35% 35%, #fff3c4, #d4a744 45%, #8a6418 100%);
+  --leather:
+    radial-gradient(rgb(255 255 255 / 0.05) 1px, transparent 1.6px) 0 0 / 5px 5px,
+    radial-gradient(rgb(0 0 0 / 0.14) 1px, transparent 1.6px) 2px 3px / 7px 7px,
+    linear-gradient(160deg, #3f291d, #2d1d14);
+  --tape:
+    repeating-linear-gradient(90deg, rgb(42 29 20 / 0.55) 0 1px, transparent 1px 0.5rem) top / 100% 0.55rem no-repeat,
+    repeating-linear-gradient(90deg, rgb(42 29 20 / 0.85) 0 2px, transparent 2px 2.5rem) top / 100% 0.9rem no-repeat,
+    linear-gradient(#f1c94f, #e9bd3c) top / 100% 1.3rem no-repeat;
+
+  --font-display: Optima, Candara, "Segoe UI", "Gill Sans", "Gill Sans MT", Roboto, "Liberation Sans", sans-serif;
+  --display-weight: 650;
+  --display-tracking: -0.01em;
+
+  --radius: 10px;
+  --radius-sm: 8px;
+  --shadow: 0 16px 30px -20px rgb(42 29 20 / 0.5);
+  --shadow-hover: 0 22px 38px -20px rgb(42 29 20 / 0.55);
+}
+
+/* C = "Lagom": strict Scandinavian. White and cool grey, one pine accent,
+   light Helvetica-style headings, square corners, hairlines, no shadows. */
+html[data-design="c"] {
+  --bg: #ffffff;
+  --surface: #f1f2f0;
+  --surface-2: #e4e6e2;
+  --ink: #1c2023;
+  --muted: #565d62;
+  --line: #d9dcd8;
+  --accent: #2c4a40;
+  --accent-ink: #ffffff;
+  --accent-soft: #e5ebe7;
+  --accent-2: #2c4a40;
+  --dark: #1c2023;
+
+  --font: "Helvetica Neue", Helvetica, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Liberation Sans", sans-serif;
+  --font-display: "Helvetica Neue", Helvetica, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Liberation Sans", sans-serif;
+  --display-weight: 300;
+  --display-tracking: -0.03em;
+
+  --radius: 0px;
+  --radius-sm: 0px;
+  --border: 1px solid var(--line);
+  --shadow: none;
+  --shadow-hover: none;
+  --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --spring: cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  --container: 1280px;
+  --section: clamp(4.5rem, 10vw, 8.5rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 1rem/1.6 var(--font);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+picture {
+  display: block;
+  background: var(--ph, var(--surface));
+}
+
+/* Room photos never get the multiply blend meant for packshots on white. */
+picture[data-fit="photo"] img {
+  mix-blend-mode: normal !important;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 0.6em;
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  letter-spacing: var(--display-tracking);
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(2.3rem, 5.6vw, 4.6rem);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3.4vw, 2.75rem);
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0 0 1em;
+  text-wrap: pretty;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 0.2em;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent-2);
+  outline-offset: 3px;
+}
+
+.container {
+  width: min(100% - 2 * var(--gutter), var(--container));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--section);
+}
+
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.section-head h2 {
+  margin: 0;
+  max-width: 24ch;
+}
+
+.section-head p {
+  margin: 0;
+  max-width: 46ch;
+  color: var(--muted);
+}
+
+.lead {
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  color: var(--muted);
+  max-width: 56ch;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  padding: 0.6rem 1rem;
+  background: var(--ink);
+  color: var(--bg);
+  border-radius: 8px;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ------------------------------------------------------------- buttons */
+
+.btn {
+  --btn-bg: var(--surface);
+  --btn-fg: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 3rem;
+  padding: 0.75rem 1.35rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  font: 600 1rem/1.2 var(--font);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.35s var(--spring), box-shadow 0.25s var(--ease), background 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.btn svg {
+  flex: none;
+}
+
+.btn-primary {
+  --btn-bg: var(--ink);
+  --btn-fg: var(--bg);
+}
+
+.btn-accent {
+  --btn-bg: var(--accent);
+  --btn-fg: var(--accent-ink);
+}
+
+.btn-ghost {
+  --btn-bg: transparent;
+  box-shadow: inset 0 0 0 1.5px currentColor;
+}
+
+html[data-design="b"] .btn {
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+html[data-design="b"] .btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 var(--ink);
+}
+
+html[data-design="b"] .btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 var(--ink);
+}
+
+html[data-design="b"] .btn-primary {
+  --btn-bg: var(--accent-2);
+  --btn-fg: #fff;
+}
+
+html[data-design="b"] .btn-ghost {
+  --btn-bg: #fff;
+}
+
+/* -------------------------------------------------------------- prose */
+
+.prose {
+  max-width: 68ch;
+  font-size: 1.0625rem;
+}
+
+.prose h3 {
+  margin-top: 1.8em;
+  font-size: 1.3rem;
+}
+
+.prose ul {
+  padding-left: 1.2em;
+}
+
+.prose li + li {
+  margin-top: 0.35em;
+}
+
+.prose strong {
+  font-weight: 650;
+}
+
+/* --------------------------------------------------------- spec tables */
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.spec-table th,
+.spec-table td {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.spec-table th {
+  width: 48%;
+  padding-right: 1rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.tbd {
+  color: var(--muted);
+  font-style: italic;
+}
+
+html[data-design="c"] h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1.02;
+}
+
+html[data-design="c"] h3 {
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+html[data-design="c"] .btn {
+  border-radius: 0;
+  font-weight: 500;
+  transition: background 0.3s var(--ease), color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+
+html[data-design="c"] .btn:hover,
+html[data-design="c"] .btn:active {
+  transform: none;
+}
+
+html[data-design="c"] .btn-primary:hover {
+  --btn-bg: var(--accent);
+}
+
+html[data-design="c"] .btn-accent {
+  --btn-bg: var(--accent);
+  --btn-fg: #fff;
+}
+
+html[data-design="c"] .btn-accent:hover {
+  --btn-bg: var(--ink);
+}
+
+html[data-design="c"] .btn-ghost {
+  box-shadow: inset 0 0 0 1px currentColor;
+}
+
+html[data-design="c"] .btn-ghost:hover {
+  --btn-bg: var(--surface);
+}
+
+/* D buttons: pills; E buttons: stitched leather. */
+html[data-design="d"] .btn-primary:hover {
+  --btn-bg: var(--sea);
+  --btn-fg: #fff;
+}
+
+html[data-design="d"] .btn-accent {
+  --btn-bg: var(--terra);
+  --btn-fg: #fff;
+}
+
+html[data-design="d"] .btn-ghost {
+  --btn-bg: #fff;
+  box-shadow: inset 0 0 0 2px var(--ink);
+}
+
+html[data-design="d"] .btn-ghost:hover {
+  --btn-bg: var(--sun);
+}
+
+html[data-design="e"] .btn {
+  border-radius: var(--radius-sm);
+}
+
+html[data-design="e"] .btn-primary,
+html[data-design="e"] .btn-accent {
+  --btn-bg: var(--accent);
+  --btn-fg: #fff;
+  outline: 1.5px dashed var(--thread);
+  outline-offset: -5px;
+}
+
+html[data-design="e"] .btn-primary:hover,
+html[data-design="e"] .btn-accent:hover {
+  --btn-bg: var(--dark);
+}
+
+html[data-design="e"] .btn-ghost {
+  box-shadow: inset 0 0 0 1.5px var(--tan);
+}
+
+html[data-design="e"] .btn-ghost:hover {
+  --btn-bg: var(--accent-soft);
+}
+
+/* D: the awning header is taller and its valance hangs below it, so keep
+   content and anchor targets clear of both. */
+html[data-design="d"] {
+  scroll-padding-top: 9rem;
+}
+
+html[data-design="d"] main {
+  padding-top: 1.9rem;
+}
+
+/* -------------------------------------------------------------- motion */
+/* Content is visible by default; the hidden start state only applies once
+   motion.ts sets html.motion (JS on, reduced motion off). */
+
+html.motion .reveal:not(.is-in) {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+.reveal {
+  transition: opacity 0.7s var(--ease) var(--reveal-delay, 0ms), transform 0.8s var(--ease) var(--reveal-delay, 0ms);
+}
+
+html[data-design="c"].motion .reveal:not(.is-in) {
+  transform: translateY(12px);
+}
+
+html[data-design="c"] .reveal {
+  transition-duration: 1.1s, 1.1s;
+}
+
+html[data-design="b"].motion .reveal:not(.is-in) {
+  transform: translateY(36px) rotate(-1.5deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------------------------------------------ view transitions */
+/* Cross-document (MPA) transitions: the product card photo morphs into the
+   product page gallery, the header stays put, the rest crossfades. No JS. */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+
+  ::view-transition-group(*) {
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 0.28s;
+  }
+
+  ::view-transition-old(site-header),
+  ::view-transition-new(site-header) {
+    animation: none;
+  }
+}

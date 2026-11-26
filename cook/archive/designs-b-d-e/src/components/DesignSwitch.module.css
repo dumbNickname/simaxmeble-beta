@@ -1,0 +1,33 @@
+.switch {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.3rem 0.35rem 0.3rem 0.8rem;
+  border-radius: 999px;
+  background: #16181d;
+  color: #fff;
+  font-size: 0.8rem;
+  box-shadow: 0 8px 24px -8px rgb(0 0 0 / 0.4);
+}
+.switch a {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+:global(html[data-design="a"]) .switch a[data-design-link="a"],
+:global(html[data-design="b"]) .switch a[data-design-link="b"],
+:global(html[data-design="c"]) .switch a[data-design-link="c"],
+:global(html[data-design="d"]) .switch a[data-design-link="d"],
+:global(html[data-design="e"]) .switch a[data-design-link="e"] {
+  background: #fff;
+  color: #16181d;
+}

@@ -1,5 +1,6 @@
 /* Two design proposals share one DOM; html[data-design] swaps the tokens
-   (and a few layouts in the component modules). A = "Próbnik", B = "Salon", C = "Lagom", D = "Riviera", E = "Bottega". */
+   (and a few layouts in the component modules). A = "Próbnik", B = "Lagom".
+   Archived proposals (old B Salon, D Riviera, E Bottega): cook/archive/designs-b-d-e/. */
 
 :root,
 html[data-design="a"] {
@@ -37,103 +38,9 @@ html[data-design="a"] {
   color-scheme: light;
 }
 
-html[data-design="b"] {
-  --bg: #ffffff;
-  --surface: #e7f1ee;
-  --surface-2: #cfe5de;
-  --ink: #121212;
-  --muted: #3d3a36;
-  --line: #121212;
-  --accent: #f2b134;
-  --accent-ink: #121212;
-  --accent-soft: #fde3a7;
-  --accent-2: #0f5c58;
-  --dark: #0f5c58;
-
-  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Times New Roman", serif;
-  --display-weight: 600;
-  --display-tracking: -0.02em;
-
-  --radius: 6px;
-  --radius-sm: 4px;
-  --border: 2px solid var(--ink);
-  --shadow: 6px 6px 0 var(--ink);
-  --shadow-hover: 10px 10px 0 var(--ink);
-}
-
-/* D = "Riviera": 1960s Italian seaside. Striped awnings, arched windows,
-   ticket-style labels; sun yellow, terracotta and sea blue around (never
-   behind) the furniture photos. */
-html[data-design="d"] {
-  --bg: #ffffff;
-  --surface: #f1f5fa;
-  --surface-2: #dfe8f3;
-  --ink: #13294b;
-  --muted: #44597a;
-  --line: #d3ddea;
-  --accent: #f2c14e;
-  --accent-ink: #13294b;
-  --accent-soft: #fdefc8;
-  --accent-2: #c8553d;
-  --dark: #13294b;
-  --sea: #1f6fb2;
-  --terra: #c8553d;
-  --sun: #f2c14e;
-  /* height of the arch top: a shallow arch keeps the whole photo in view */
-  --arch: 18%;
-
-  --font-display: Futura, "Futura PT", "Century Gothic", "Avenir Next", "Trebuchet MS", "Segoe UI", Roboto, "Liberation Sans", sans-serif;
-  --display-weight: 800;
-  --display-tracking: -0.015em;
-
-  --radius: 26px;
-  --radius-sm: 14px;
-  --shadow: 0 18px 36px -22px rgb(19 41 75 / 0.45);
-  --shadow-hover: 0 26px 44px -22px rgb(19 41 75 / 0.5);
-  /* ticket: two half-circle notches cut from the short sides */
-  --ticket: radial-gradient(circle at 0 50%, #0000 0.42rem, #000 0.45rem) left / 51% 100% no-repeat, radial-gradient(circle at 100% 50%, #0000 0.42rem, #000 0.45rem) right / 51% 100% no-repeat;
-}
-
-/* E = "Bottega": an Italian upholsterer's workshop. Leather, saddle
-   stitching, brass rivets, tailor's tape and pinked fabric edges. */
-html[data-design="e"] {
-  --bg: #ffffff;
-  --surface: #f2f3ef;
-  --surface-2: #e4e6de;
-  --ink: #2a1d14;
-  --muted: #5a4a3e;
-  --line: #ddd6cd;
-  --accent: #7a4527;
-  --accent-ink: #ffffff;
-  --accent-soft: #e6ead9;
-  --accent-2: #56642f;
-  --dark: #34221a;
-  --on-dark: #f6ecdc;
-  --tan: #b27a48;
-  --thread: #e8cf9f;
-  --brass: radial-gradient(circle at 35% 35%, #fff3c4, #d4a744 45%, #8a6418 100%);
-  --leather:
-    radial-gradient(rgb(255 255 255 / 0.05) 1px, transparent 1.6px) 0 0 / 5px 5px,
-    radial-gradient(rgb(0 0 0 / 0.14) 1px, transparent 1.6px) 2px 3px / 7px 7px,
-    linear-gradient(160deg, #3f291d, #2d1d14);
-  --tape:
-    repeating-linear-gradient(90deg, rgb(42 29 20 / 0.55) 0 1px, transparent 1px 0.5rem) top / 100% 0.55rem no-repeat,
-    repeating-linear-gradient(90deg, rgb(42 29 20 / 0.85) 0 2px, transparent 2px 2.5rem) top / 100% 0.9rem no-repeat,
-    linear-gradient(#f1c94f, #e9bd3c) top / 100% 1.3rem no-repeat;
-
-  --font-display: Optima, Candara, "Segoe UI", "Gill Sans", "Gill Sans MT", Roboto, "Liberation Sans", sans-serif;
-  --display-weight: 650;
-  --display-tracking: -0.01em;
-
-  --radius: 10px;
-  --radius-sm: 8px;
-  --shadow: 0 16px 30px -20px rgb(42 29 20 / 0.5);
-  --shadow-hover: 0 22px 38px -20px rgb(42 29 20 / 0.55);
-}
-
-/* C = "Lagom": strict Scandinavian. White and cool grey, one pine accent,
+/* B = "Lagom" (was C): strict Scandinavian. White and cool grey, one pine accent,
    light Helvetica-style headings, square corners, hairlines, no shadows. */
-html[data-design="c"] {
+html[data-design="b"] {
   --bg: #ffffff;
   --surface: #f1f2f0;
   --surface-2: #e4e6e2;
@@ -345,31 +252,6 @@ a {
   box-shadow: inset 0 0 0 1.5px currentColor;
 }
 
-html[data-design="b"] .btn {
-  border-radius: var(--radius-sm);
-  border: 2px solid var(--ink);
-  box-shadow: 3px 3px 0 var(--ink);
-}
-
-html[data-design="b"] .btn:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 5px 5px 0 var(--ink);
-}
-
-html[data-design="b"] .btn:active {
-  transform: translate(2px, 2px);
-  box-shadow: 0 0 0 var(--ink);
-}
-
-html[data-design="b"] .btn-primary {
-  --btn-bg: var(--accent-2);
-  --btn-fg: #fff;
-}
-
-html[data-design="b"] .btn-ghost {
-  --btn-bg: #fff;
-}
-
 /* -------------------------------------------------------------- prose */
 
 .prose {
@@ -422,101 +304,46 @@ html[data-design="b"] .btn-ghost {
   font-style: italic;
 }
 
-html[data-design="c"] h1 {
+html[data-design="b"] h1 {
   font-size: clamp(2.5rem, 6vw, 5rem);
   line-height: 1.02;
 }
 
-html[data-design="c"] h3 {
+html[data-design="b"] h3 {
   font-weight: 500;
   letter-spacing: -0.01em;
 }
 
-html[data-design="c"] .btn {
+html[data-design="b"] .btn {
   border-radius: 0;
   font-weight: 500;
   transition: background 0.3s var(--ease), color 0.3s var(--ease), box-shadow 0.3s var(--ease);
 }
 
-html[data-design="c"] .btn:hover,
-html[data-design="c"] .btn:active {
+html[data-design="b"] .btn:hover,
+html[data-design="b"] .btn:active {
   transform: none;
 }
 
-html[data-design="c"] .btn-primary:hover {
+html[data-design="b"] .btn-primary:hover {
   --btn-bg: var(--accent);
 }
 
-html[data-design="c"] .btn-accent {
+html[data-design="b"] .btn-accent {
   --btn-bg: var(--accent);
   --btn-fg: #fff;
 }
 
-html[data-design="c"] .btn-accent:hover {
+html[data-design="b"] .btn-accent:hover {
   --btn-bg: var(--ink);
 }
 
-html[data-design="c"] .btn-ghost {
+html[data-design="b"] .btn-ghost {
   box-shadow: inset 0 0 0 1px currentColor;
 }
 
-html[data-design="c"] .btn-ghost:hover {
+html[data-design="b"] .btn-ghost:hover {
   --btn-bg: var(--surface);
-}
-
-/* D buttons: pills; E buttons: stitched leather. */
-html[data-design="d"] .btn-primary:hover {
-  --btn-bg: var(--sea);
-  --btn-fg: #fff;
-}
-
-html[data-design="d"] .btn-accent {
-  --btn-bg: var(--terra);
-  --btn-fg: #fff;
-}
-
-html[data-design="d"] .btn-ghost {
-  --btn-bg: #fff;
-  box-shadow: inset 0 0 0 2px var(--ink);
-}
-
-html[data-design="d"] .btn-ghost:hover {
-  --btn-bg: var(--sun);
-}
-
-html[data-design="e"] .btn {
-  border-radius: var(--radius-sm);
-}
-
-html[data-design="e"] .btn-primary,
-html[data-design="e"] .btn-accent {
-  --btn-bg: var(--accent);
-  --btn-fg: #fff;
-  outline: 1.5px dashed var(--thread);
-  outline-offset: -5px;
-}
-
-html[data-design="e"] .btn-primary:hover,
-html[data-design="e"] .btn-accent:hover {
-  --btn-bg: var(--dark);
-}
-
-html[data-design="e"] .btn-ghost {
-  box-shadow: inset 0 0 0 1.5px var(--tan);
-}
-
-html[data-design="e"] .btn-ghost:hover {
-  --btn-bg: var(--accent-soft);
-}
-
-/* D: the awning header is taller and its valance hangs below it, so keep
-   content and anchor targets clear of both. */
-html[data-design="d"] {
-  scroll-padding-top: 9rem;
-}
-
-html[data-design="d"] main {
-  padding-top: 1.9rem;
 }
 
 /* -------------------------------------------------------------- motion */
@@ -532,16 +359,12 @@ html.motion .reveal:not(.is-in) {
   transition: opacity 0.7s var(--ease) var(--reveal-delay, 0ms), transform 0.8s var(--ease) var(--reveal-delay, 0ms);
 }
 
-html[data-design="c"].motion .reveal:not(.is-in) {
+html[data-design="b"].motion .reveal:not(.is-in) {
   transform: translateY(12px);
 }
 
-html[data-design="c"] .reveal {
+html[data-design="b"] .reveal {
   transition-duration: 1.1s, 1.1s;
-}
-
-html[data-design="b"].motion .reveal:not(.is-in) {
-  transform: translateY(36px) rotate(-1.5deg);
 }
 
 @media (prefers-reduced-motion: reduce) {

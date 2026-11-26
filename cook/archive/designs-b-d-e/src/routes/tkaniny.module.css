@@ -1,0 +1,182 @@
+.head {
+  padding-block: 1.25rem clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.head h1 {
+  margin-top: 1rem;
+  max-width: 16ch;
+}
+
+.jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1.5rem;
+}
+
+.jump a {
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  background: var(--surface);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.35s var(--spring);
+}
+
+.jump a:hover {
+  transform: translateY(-2px) rotate(-2deg);
+}
+
+.group {
+  margin-top: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.list {
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.fabric {
+  display: grid;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+  border-radius: var(--radius);
+  background: var(--surface);
+  scroll-margin-top: 6rem;
+}
+
+@media (min-width: 860px) {
+  .fabric {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+.fabric:target {
+  box-shadow: 0 0 0 3px var(--accent);
+}
+
+.swatch {
+  overflow: hidden;
+  border-radius: calc(var(--radius) - 6px);
+}
+
+.swatch img {
+  width: 100%;
+  transition: transform 1.2s var(--ease);
+}
+
+.fabric:hover .swatch img {
+  transform: scale(1.04);
+}
+
+.body h3 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.wear {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.3rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.wear strong {
+  justify-self: end;
+}
+
+.wear::after {
+  content: "";
+  grid-column: 1 / -1;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent) var(--w), var(--line) var(--w));
+}
+
+.used {
+  margin: 1rem 0 0;
+  font-size: 0.9rem;
+}
+
+.wood {
+  display: grid;
+  gap: 2rem;
+  margin-top: var(--section);
+  scroll-margin-top: 6rem;
+}
+
+@media (min-width: 900px) {
+  .wood {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+.wood picture {
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.samples {
+  margin-top: var(--section);
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+:global(html[data-design="b"]) .jump a {
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-sm);
+  background: #fff;
+}
+
+:global(html[data-design="b"]) .fabric,
+:global(html[data-design="b"]) .samples {
+  border: var(--border);
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+:global(html[data-design="b"]) .fabric:nth-child(even) {
+  background: var(--surface);
+}
+
+:global(html[data-design="b"]) .swatch,
+:global(html[data-design="b"]) .wood picture {
+  border: var(--border);
+}
+
+:global(html[data-design="b"]) .wear::after {
+  height: 0.8rem;
+  border: 2px solid var(--ink);
+  border-radius: 0;
+}
+
+/* ============================================================== C: Lagom */
+
+:global(html[data-design="c"]) .jump a,
+:global(html[data-design="c"]) .fabric,
+:global(html[data-design="c"]) .samples,
+:global(html[data-design="c"]) .swatch,
+:global(html[data-design="c"]) .wood picture {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+:global(html[data-design="c"]) .fabric {
+  background: #fff;
+  border-top: 1px solid var(--line);
+}
+
+:global(html[data-design="d"]) [id] {
+  scroll-margin-top: 0;
+}

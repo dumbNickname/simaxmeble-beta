@@ -68,18 +68,14 @@
   animation-duration: 0.5s;
 }
 
+/* ============================================================== B: Lagom */
+
 :global(html[data-design="b"]) .map {
-  border: var(--border);
-}
-
-/* ============================================================== C: Lagom */
-
-:global(html[data-design="c"]) .map {
   border-radius: 0;
   box-shadow: none;
 }
 
-:global(html[data-design="c"]) .phone {
+:global(html[data-design="b"]) .phone {
   background: var(--surface);
   color: var(--ink);
 }

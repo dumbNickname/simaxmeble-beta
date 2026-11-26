@@ -1,0 +1,127 @@
+/* Idea to finished piece as a path: a line runs through the stage marks,
+   each mark a different shape (pencil dot, set square, needle, box). */
+
+.process {
+  --gap: clamp(1rem, 2.5vw, 2rem);
+  position: relative;
+  display: grid;
+  gap: var(--gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 860px) {
+  .process {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .process::before {
+    content: "";
+    position: absolute;
+    top: 1.05rem;
+    left: 1rem;
+    right: 1rem;
+    border-top: 2px dashed color-mix(in srgb, var(--ink) 30%, transparent);
+  }
+}
+
+.stage {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 0.4rem;
+}
+
+.mark {
+  position: relative;
+  width: 2.1rem;
+  height: 2.1rem;
+  margin-bottom: 0.6rem;
+  border: 3px solid var(--bg);
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 2px var(--ink);
+}
+
+.mark[data-stage="projekt"] {
+  border-radius: 4px;
+  background: var(--accent-2);
+  transform: rotate(45deg) scale(0.86);
+}
+
+.mark[data-stage="wykonanie"] {
+  border-radius: 50% 50% 50% 0;
+  background: var(--ink);
+}
+
+.mark[data-stage="odbior"] {
+  border-radius: 6px;
+  background: var(--bg);
+}
+
+.mark[data-stage="odbior"]::after {
+  content: "";
+  position: absolute;
+  inset: 22% 18%;
+  border-bottom: 3px solid var(--ink);
+  border-left: 3px solid var(--ink);
+  transform: rotate(-45deg) translate(1px, -2px);
+}
+
+.stage h2,
+.stage h3 {
+  margin: 0;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+}
+
+.short {
+  margin: 0;
+  color: var(--muted);
+}
+
+.detailed .stage {
+  padding: clamp(1.1rem, 2vw, 1.5rem);
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+@media (min-width: 860px) {
+  .detailed::before {
+    top: calc(clamp(1.1rem, 2vw, 1.5rem) + 1.05rem);
+  }
+}
+
+.roles {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0.8rem 0 0;
+  padding-top: 0.8rem;
+  border-top: var(--border);
+  font-size: 0.95rem;
+}
+
+.roles div {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 0.5rem;
+}
+
+.roles dt {
+  font-weight: 800;
+}
+
+.roles dd {
+  margin: 0;
+}
+
+:global(html[data-design="b"]) .detailed .stage {
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+:global(html[data-design="c"]) .mark,
+:global(html[data-design="c"]) .detailed .stage {
+  border-radius: 0;
+}

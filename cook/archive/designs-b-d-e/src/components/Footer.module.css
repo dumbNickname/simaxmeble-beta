@@ -1,0 +1,132 @@
+.footer {
+  margin-top: var(--section);
+  padding-top: clamp(3rem, 6vw, 5rem);
+  background: var(--dark);
+  color: color-mix(in srgb, var(--on-dark, #fff) 78%, transparent);
+  font-size: 0.95rem;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.grid {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.about {
+  grid-column: span 2;
+  max-width: 32rem;
+}
+
+@media (max-width: 520px) {
+  .about {
+    grid-column: auto;
+  }
+}
+
+.brand {
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: 0.04em;
+}
+
+.bigPhone {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  letter-spacing: var(--display-tracking);
+}
+
+.heading {
+  margin-bottom: 0.75rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.grid ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.grid li + li {
+  margin-top: 0.45rem;
+}
+
+.address {
+  font-style: normal;
+}
+
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+  margin-top: 3rem;
+  padding-block: 1.5rem 5rem;
+  border-top: 1px solid rgb(255 255 255 / 0.14);
+  font-size: 0.85rem;
+}
+
+.bottom p {
+  margin: 0;
+}
+
+:global(html[data-design="b"]) .footer {
+  border-top: 2px solid var(--ink);
+}
+
+:global(html[data-design="b"]) .brand {
+  font-family: var(--font-display);
+}
+
+/* ============================================================ D: Riviera */
+
+/* A second awning, sun-yellow, hangs over the footer. */
+:global(html[data-design="d"]) .footer {
+  position: relative;
+  padding-top: calc(clamp(3rem, 6vw, 5rem) + 2.5rem);
+  background: var(--dark);
+}
+
+:global(html[data-design="d"]) .footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2.9rem;
+  background:
+    linear-gradient(180deg, rgb(10 30 60 / 0.25), transparent 1rem),
+    repeating-linear-gradient(90deg, var(--sun) 0 3rem, #fff 3rem 6rem);
+  -webkit-mask:
+    linear-gradient(#000 0 0) top / 100% 1rem no-repeat,
+    radial-gradient(farthest-side at 50% 0, #000 97%, #0000) 0 1rem / 3rem calc(100% - 1rem) repeat-x;
+  mask:
+    linear-gradient(#000 0 0) top / 100% 1rem no-repeat,
+    radial-gradient(farthest-side at 50% 0, #000 97%, #0000) 0 1rem / 3rem calc(100% - 1rem) repeat-x;
+  pointer-events: none;
+}
+
+/* ============================================================ E: Bottega */
+
+:global(html[data-design="e"]) .footer {
+  position: relative;
+  background: var(--tape), var(--leather);
+  padding-top: calc(clamp(3rem, 6vw, 5rem) + 1rem);
+}
+
+:global(html[data-design="e"]) .brand {
+  color: var(--thread);
+}

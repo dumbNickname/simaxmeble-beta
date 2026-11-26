@@ -203,54 +203,31 @@
   }
 }
 
-/* ---- B */
+/* ============================================================== B: Lagom */
+
 :global(html[data-design="b"]) .header {
-  background: var(--accent);
-  backdrop-filter: none;
-  border-bottom: 2px solid var(--ink);
-}
-
-:global(html[data-design="b"]) .nav a:hover {
-  background: #fff;
-}
-
-:global(html[data-design="b"]) .toggle {
-  background: #fff;
-  border: 2px solid var(--ink);
-  border-radius: var(--radius-sm);
-}
-
-:global(html[data-design="b"]) .phone {
-  background: var(--ink);
-  color: #fff;
-  border-radius: var(--radius-sm);
-}
-
-/* ============================================================== C: Lagom */
-
-:global(html[data-design="c"]) .header {
   background: #fff;
   backdrop-filter: none;
   border-bottom: 1px solid var(--line);
 }
 
-:global(html[data-design="c"]) .nav a {
+:global(html[data-design="b"]) .nav a {
   border-radius: 0;
   font-weight: 400;
 }
 
-:global(html[data-design="c"]) .nav a:hover {
+:global(html[data-design="b"]) .nav a:hover {
   background: transparent;
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
 
-:global(html[data-design="c"]) .toggle,
-:global(html[data-design="c"]) .phone {
+:global(html[data-design="b"]) .toggle,
+:global(html[data-design="b"]) .phone {
   border-radius: 0;
 }
 
-:global(html[data-design="c"]) .phone {
+:global(html[data-design="b"]) .phone {
   background: var(--ink);
   color: #fff;
   font-weight: 500;
@@ -268,7 +245,7 @@
   mask: url("/img/logo-simax.png") center / contain no-repeat;
 }
 
-:global(html[data-design="c"]) .logo {
+:global(html[data-design="b"]) .logo {
   display: block;
 }
 
@@ -276,151 +253,4 @@
   .logo {
     width: 7.5rem;
   }
-}
-
-/* ============================================================ D: Riviera */
-
-/* The header is a striped beach awning: canvas stripes shaded towards the
-   top, a scalloped valance hanging over the page, and a white sign board
-   carrying the logo and the menu. */
-:global(html[data-design="d"]) .header {
-  --stripe: 3rem;
-  --valance: 1.9rem;
-  padding-block: 1rem 0.75rem;
-  background:
-    linear-gradient(180deg, rgb(10 30 60 / 0.28), rgb(10 30 60 / 0) 70%),
-    repeating-linear-gradient(90deg, var(--sea) 0 var(--stripe), #fff var(--stripe) calc(2 * var(--stripe)));
-  backdrop-filter: none;
-  border-bottom: 0;
-}
-
-:global(html[data-design="d"]) .header::before,
-:global(html[data-design="d"]) .header::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 100%;
-  pointer-events: none;
-}
-
-/* rim under the white flaps */
-:global(html[data-design="d"]) .header::before {
-  height: calc(var(--valance) + 2px);
-  background: var(--sea);
-  -webkit-mask: radial-gradient(farthest-side at 50% 0, #000 97%, #0000) 0 0 / var(--stripe) 100% repeat-x;
-  mask: radial-gradient(farthest-side at 50% 0, #000 97%, #0000) 0 0 / var(--stripe) 100% repeat-x;
-}
-
-:global(html[data-design="d"]) .header::after {
-  height: var(--valance);
-  background:
-    linear-gradient(180deg, rgb(10 30 60 / 0.12), transparent 60%),
-    repeating-linear-gradient(90deg, var(--sea) 0 var(--stripe), #fff var(--stripe) calc(2 * var(--stripe)));
-  -webkit-mask: radial-gradient(farthest-side at 50% 0, #000 97%, #0000) 0 0 / var(--stripe) 100% repeat-x;
-  mask: radial-gradient(farthest-side at 50% 0, #000 97%, #0000) 0 0 / var(--stripe) 100% repeat-x;
-}
-
-:global(html[data-design="d"]) .bar {
-  min-height: 3.6rem;
-  padding: 0 0.5rem 0 1.25rem;
-  border-radius: 999px;
-  background: #fff;
-  box-shadow: 0 0 0 3px var(--ink), 0 10px 18px -8px rgb(10 30 60 / 0.55);
-}
-
-:global(html[data-design="d"]) .logo {
-  display: block;
-  color: var(--ink);
-}
-
-:global(html[data-design="d"]) .nav a:hover {
-  background: var(--accent-soft);
-}
-
-:global(html[data-design="d"]) .toggle {
-  border-radius: 999px;
-}
-
-:global(html[data-design="d"]) .phone {
-  background: var(--terra);
-  color: #fff;
-  border-radius: 999px;
-}
-
-@media (max-width: 1279px) {
-  :global(html[data-design="d"]) .nav {
-    z-index: 2;
-    top: calc(100% + 0.65rem);
-    border-radius: var(--radius);
-    margin-inline: var(--gutter);
-  }
-
-  :global(html[data-design="d"]) .header {
-    padding-block: 0.7rem 0.55rem;
-  }
-
-  :global(html[data-design="d"]) .bar {
-    gap: 0.35rem;
-    padding: 0 0.35rem 0 0.9rem;
-    min-height: 3.3rem;
-  }
-
-  :global(html[data-design="d"]) .phone {
-    padding-inline: 0.8rem;
-  }
-}
-
-/* ============================================================ E: Bottega */
-
-/* Dark leather band with a saddle-stitched seam. */
-:global(html[data-design="e"]) .header {
-  background: var(--leather);
-  backdrop-filter: none;
-  border-bottom: 0;
-  color: var(--on-dark);
-  box-shadow: 0 10px 18px -12px rgb(0 0 0 / 0.6);
-}
-
-:global(html[data-design="e"]) .header::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 6px;
-  border-top: 2px dashed var(--thread);
-  opacity: 0.8;
-  pointer-events: none;
-}
-
-:global(html[data-design="e"]) .logo {
-  display: block;
-  color: var(--on-dark);
-}
-
-:global(html[data-design="e"]) .nav a,
-:global(html[data-design="e"]) .search {
-  color: var(--on-dark);
-}
-
-:global(html[data-design="e"]) .nav a:hover {
-  background: rgb(255 255 255 / 0.1);
-}
-
-:global(html[data-design="e"]) .toggle {
-  background: rgb(255 255 255 / 0.1);
-  color: var(--on-dark);
-  border-radius: var(--radius-sm);
-}
-
-:global(html[data-design="e"]) .burger,
-:global(html[data-design="e"]) .burger::before,
-:global(html[data-design="e"]) .burger::after {
-  background: var(--on-dark);
-}
-
-:global(html[data-design="e"]) .phone {
-  background: var(--thread);
-  color: var(--ink);
-  border-radius: var(--radius-sm);
 }

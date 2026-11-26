@@ -24,10 +24,7 @@
   text-decoration: none;
 }
 :global(html[data-design="a"]) .switch a[data-design-link="a"],
-:global(html[data-design="b"]) .switch a[data-design-link="b"],
-:global(html[data-design="c"]) .switch a[data-design-link="c"],
-:global(html[data-design="d"]) .switch a[data-design-link="d"],
-:global(html[data-design="e"]) .switch a[data-design-link="e"] {
+:global(html[data-design="b"]) .switch a[data-design-link="b"] {
   background: #fff;
   color: #16181d;
 }

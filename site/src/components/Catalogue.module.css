@@ -211,95 +211,26 @@
   display: none;
 }
 
-:global(html[data-design="b"]) .searchBar {
-  border: var(--border);
-  border-radius: var(--radius);
-  background: var(--accent);
-  box-shadow: var(--shadow);
-}
+/* ============================================================== B: Lagom */
 
-:global(html[data-design="b"]) .searchBar input {
-  border-radius: var(--radius-sm);
-  border: 2px solid var(--ink);
-}
-
+:global(html[data-design="b"]) .searchBar,
+:global(html[data-design="b"]) .searchBar input,
 :global(html[data-design="b"]) .chip,
-:global(html[data-design="b"]) .toggle {
-  border: 2px solid var(--ink);
-  border-radius: var(--radius-sm);
-  background: #fff;
-}
-
-:global(html[data-design="b"]) .chip[aria-pressed="true"] {
-  background: var(--accent-2);
-  color: #fff;
-}
-
+:global(html[data-design="b"]) .toggle,
 :global(html[data-design="b"]) .toggle label {
-  border-radius: var(--radius-sm);
-}
-
-:global(html[data-design="b"]) .toggle label:has(:checked) {
-  background: var(--accent);
-  box-shadow: none;
-}
-
-:global(html[data-design="b"]) .gallery a {
-  border: var(--border);
-}
-
-/* ============================================================== C: Lagom */
-
-:global(html[data-design="c"]) .searchBar,
-:global(html[data-design="c"]) .searchBar input,
-:global(html[data-design="c"]) .chip,
-:global(html[data-design="c"]) .toggle,
-:global(html[data-design="c"]) .toggle label {
   border-radius: 0;
   box-shadow: none;
 }
 
-:global(html[data-design="c"]) .chip {
+:global(html[data-design="b"]) .chip {
   background: #fff;
   border: 1px solid var(--line);
   font-weight: 400;
 }
 
-:global(html[data-design="c"]) .chip[aria-pressed="true"] {
+:global(html[data-design="b"]) .chip[aria-pressed="true"] {
   background: var(--ink);
   border-color: var(--ink);
   color: #fff;
 }
 
-/* ============================================================ D: Riviera */
-
-:global(html[data-design="d"]) .chip[aria-pressed="true"] {
-  background: var(--ink);
-  color: #fff;
-}
-
-:global(html[data-design="d"]) .gallery a {
-  border-radius: 50% 50% var(--radius-sm) var(--radius-sm) / var(--arch) var(--arch) var(--radius-sm) var(--radius-sm);
-}
-
-/* ============================================================ E: Bottega */
-
-:global(html[data-design="e"]) .searchBar,
-:global(html[data-design="e"]) .chip,
-:global(html[data-design="e"]) .toggle,
-:global(html[data-design="e"]) .toggle label {
-  border-radius: var(--radius-sm);
-}
-
-:global(html[data-design="e"]) .chip {
-  background: #fff;
-  box-shadow: inset 0 0 0 1px var(--line);
-}
-
-:global(html[data-design="e"]) .chip[aria-pressed="true"] {
-  background: var(--accent);
-  color: #fff;
-  box-shadow: none;
-  outline: 1.5px dashed var(--thread);
-  outline-offset: -4px;
-}

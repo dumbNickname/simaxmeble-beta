@@ -14,7 +14,7 @@ const browser = await chromium.launch({ args: ["--disable-dev-shm-usage"] });
 for (const [vp, size] of [["desk", { width: 1440, height: 900 }], ["mob", { width: 390, height: 844 }]]) {
   const ctx = await browser.newContext({ viewport: size, deviceScaleFactor: 1, reducedMotion: "reduce" });
   const page = await ctx.newPage();
-  for (const design of (process.env.DESIGNS || "a,b,c").split(",")) {
+  for (const design of (process.env.DESIGNS || "a,b").split(",")) {
     for (const path of pages) {
       await page.goto(`${BASE}${path}?v=${design}`, { waitUntil: "networkidle" });
       const name = path === "/" ? "home" : path.replace(/^\/|\/$/g, "").replace(/\//g, "_");

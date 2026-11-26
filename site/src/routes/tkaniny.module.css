@@ -133,50 +133,18 @@
   gap: 0.75rem;
 }
 
-:global(html[data-design="b"]) .jump a {
-  border: 2px solid var(--ink);
-  border-radius: var(--radius-sm);
-  background: #fff;
-}
+/* ============================================================== B: Lagom */
 
+:global(html[data-design="b"]) .jump a,
 :global(html[data-design="b"]) .fabric,
-:global(html[data-design="b"]) .samples {
-  border: var(--border);
-  background: #fff;
-  box-shadow: var(--shadow);
-}
-
-:global(html[data-design="b"]) .fabric:nth-child(even) {
-  background: var(--surface);
-}
-
+:global(html[data-design="b"]) .samples,
 :global(html[data-design="b"]) .swatch,
 :global(html[data-design="b"]) .wood picture {
-  border: var(--border);
-}
-
-:global(html[data-design="b"]) .wear::after {
-  height: 0.8rem;
-  border: 2px solid var(--ink);
-  border-radius: 0;
-}
-
-/* ============================================================== C: Lagom */
-
-:global(html[data-design="c"]) .jump a,
-:global(html[data-design="c"]) .fabric,
-:global(html[data-design="c"]) .samples,
-:global(html[data-design="c"]) .swatch,
-:global(html[data-design="c"]) .wood picture {
   border-radius: 0;
   box-shadow: none;
 }
 
-:global(html[data-design="c"]) .fabric {
+:global(html[data-design="b"]) .fabric {
   background: #fff;
   border-top: 1px solid var(--line);
-}
-
-:global(html[data-design="d"]) [id] {
-  scroll-margin-top: 0;
 }

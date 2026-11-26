@@ -76,9 +76,9 @@
   font-weight: 700;
 }
 
-:global(html[data-design="c"]) .form,
-:global(html[data-design="c"]) .field input,
-:global(html[data-design="c"]) .field select,
-:global(html[data-design="c"]) .field textarea {
+:global(html[data-design="b"]) .form,
+:global(html[data-design="b"]) .field input,
+:global(html[data-design="b"]) .field select,
+:global(html[data-design="b"]) .field textarea {
   border-radius: 0;
 }

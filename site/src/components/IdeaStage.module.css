@@ -287,34 +287,8 @@
 
 /* -------------------------------------------------------------- designs */
 
-:global(html[data-design="b"]) .frame {
-  border-radius: var(--radius);
-}
-
-:global(html[data-design="b"]) .tabs {
-  border-radius: var(--radius);
-  box-shadow: 4px 4px 0 var(--ink);
-}
-
+:global(html[data-design="b"]) .frame,
+:global(html[data-design="b"]) .tabs,
 :global(html[data-design="b"]) .tabs span {
-  border-radius: var(--radius-sm);
-}
-
-:global(html[data-design="c"]) .frame,
-:global(html[data-design="c"]) .tabs,
-:global(html[data-design="c"]) .tabs span {
   border-radius: 0;
-}
-
-:global(html[data-design="d"]) .frame {
-  border-radius: 999px 999px var(--radius) var(--radius);
-}
-
-:global(html[data-design="d"]) .sketch {
-  padding-top: 12%;
-}
-
-:global(html[data-design="b"]) .captions p,
-:global(html[data-design="b"]) .captions a {
-  color: rgb(255 255 255 / 0.9);
 }
