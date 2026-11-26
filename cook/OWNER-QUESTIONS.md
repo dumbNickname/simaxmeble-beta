@@ -19,16 +19,33 @@ Gdzie: `site/src/data/custom.json` → `stages`, `faq`.
 
 ## 2. Co da się zmienić (sekcja „Co możesz zmienić”)
 
-Proszę potwierdzić albo skreślić każdą pozycję:
+Po rozmowie z właścicielem (26.11) strona mówi teraz: **fotele i sofy składamy ze sprawdzonych modeli i elementów**, a tkaninę, kolor, wzór, przeszycia, nogi (z naszych wzorów) i twardość pianki dobiera klient. **Łóżka** robimy w całości u siebie, więc tam zmienić można najwięcej (rozmiar, wezgłowie, pojemnik). Zupełnie nowa bryła jest opisana jako możliwa, ale rzadka, droższa i dłuższa. Proszę potwierdzić albo poprawić każdą pozycję:
 
-- [ ] wymiary (szerokość, głębokość, wysokość siedziska)
-- [ ] kształt (wyższe uszy, niższe oparcie, inne boki, nowa bryła ze szkicu)
-- [ ] dwie różne tkaniny na jednym meblu
-- [ ] twardość / głębokość siedziska
-- [ ] nogi: drewniane w kolorze do wyboru, metalowe, inna wysokość
-- [ ] funkcje: pojemnik na pościel, funkcja spania, podnóżek do kompletu
+- [ ] Model jako baza: czy w fotelu da się łączyć elementy z różnych modeli (np. bryła GRANDE z bokami lub nogami z innego modelu)? Jakie są „klocki”: korpus, oparcie, boki, siedzisko, nogi?
+- [ ] Nogi: jakie rodzaje nóg są do wyboru (ile wzorów, drewniane / metalowe, wysokości)? Czy są zdjęcia? Paleta kolorów drewna (bejce)?
+- [ ] Przeszycia: które faktycznie robicie w fotelach i sofach? Pikowanie guzikami, przeszycia pionowe, poziome, karo, lamówka (także w innym kolorze)? Czy wszystkie w każdym modelu?
+- [ ] Wzór: dwie tkaniny na jednym meblu, czy w każdym modelu? Czy ustalacie z klientem ułożenie wzoru?
+- [ ] Wypełnienie: czy klient może wybrać twardość siedziska? Ile wariantów (np. miękkie / średnie / twarde)? Czy oparcie też?
+- [ ] Wymiar foteli i sof: czy w ogóle zmieniacie wymiar (szerokość, wysokość siedziska, długość sofy)? Jeśli tak, w jakim zakresie i w których modelach? Teraz strona pisze „wymiar zależy od modelu, zapytaj”. Strona kategorii **sofy** nadal obiecuje „sofę na konkretne centymetry”: czy to zostaje?
+- [ ] Mebel nietypowy (nowa bryła): czy przyjmujecie takie zamówienia? Orientacyjnie o ile drożej i dłużej niż model z kolekcji?
+- [ ] Które elementy robicie sami, a które kupujecie (ramy foteli, nogi, stelaże łóżek)? Na stronie piszemy ogólnie „przygotowujemy konstrukcję”.
+- [ ] Strona „O nas” i `/dla-firm/` wspominają o projekcie od zera dla firm (np. ławy pod ścianę). Czy dla firm robicie nietypowe bryły częściej niż dla klientów domowych?
+- [ ] Funkcje: pojemnik na pościel, funkcja spania, podnóżek do kompletu. Przy których modelach?
 
-Gdzie: `site/src/data/custom.json` → `options`.
+Gdzie: `site/src/data/custom.json` → `options`, `optionsLead`; strona foteli: `site/src/data/category-copy.json` → `fotele` (`parts`, `introHtml`).
+
+## 2a. Doradztwo i materiały (pianki Pionier)
+
+Strona ma nową sekcję „Doradzamy przy wyborze materiałów” (pianka, tkanina, przeszycia) i pisze, że pianki są od **Pionier Pianki z Baranowa**, z linkiem do pionier-pianki.pl.
+
+- [ ] Czy możemy wymieniać Pionier Pianki z nazwy i linkować do ich strony? Czy oni linkują do Was (np. lista partnerów)? Czy można użyć ich logo?
+- [ ] Jakie pianki stosujecie w siedziskach i oparciach (gęstość, np. T25, T30, T35, HR, pianka wysokoelastyczna, nakładki)? Czy klient może wybrać lepszą piankę za dopłatą?
+- [ ] Czy są inne materiały do wyboru (sprężyny, pierze / puch w poduchach, włóknina)?
+- [ ] Jak wygląda doradztwo w praktyce: telefon, wizyta w pracowni, próbki pianki do wypróbowania?
+- [ ] Gwarancja na piankę (czy siedzisko nie siada) i na konstrukcję: ile lat?
+- [ ] Inni stali dostawcy, których warto pokazać (tkaniny, np. producenci kolekcji)?
+
+Gdzie: `site/src/data/custom.json` → `advice`, `faq`.
 
 ## 3. Współpraca z firmami (HoReCa)
 
@@ -94,7 +111,7 @@ Gdzie: `site/src/data/projects.json` (format opisany w `_help`), zdjęcia do `si
 - [ ] Wysyłka za granicę (np. Niemcy)?
 - [ ] Godziny, w których odbieracie telefon (np. pon–pt 8–16)?
 - [ ] Czy są meble gotowe od ręki (ekspozycja, nadwyżki), które można pokazać osobno?
-- [ ] Dla każdego modelu z kolekcji: co konkretnie da się w nim zmienić (lamówka, guziki, nogi, podnóżek do kompletu)?
+- [ ] Dla każdego modelu z kolekcji: co konkretnie da się w nim zmienić (lamówka, guziki, nogi, podnóżek do kompletu)? Patrz też punkt 2.
 - [ ] Na zdjęciach z osobą siedzącą w fotelu: ile ta osoba ma wzrostu (dla skali)?
 
 ## 9. Konfigurator łóżka (wersja wstępna na /lozko-na-zamowienie/)

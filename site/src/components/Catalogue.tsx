@@ -74,7 +74,7 @@ export default function Catalogue(props: Props) {
       </ul>
 
       <p class={styles.empty} data-empty hidden>
-        Nic nie pasuje do wyszukiwania. Zadzwoń, uszyjemy też model spoza katalogu.
+        Nic nie pasuje do wyszukiwania. Zadzwoń i zapytaj, czy uszyjemy mebel nietypowy.
       </p>
       <Show when={props.search}>
         <script innerHTML={searchScript} />

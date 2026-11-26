@@ -245,8 +245,18 @@ export default function ProductPage() {
 
                   <aside class={styles.custom} aria-labelledby="po-twojemu">
                     <h2 id="po-twojemu">{p().name} po Twojemu</h2>
-                    <p>Inna szerokość, wyższe siedzisko, Twoja tkanina, inne nogi. Ten model może być punktem wyjścia do mebla na zamówienie.</p>
-                    <NavLink href={`/na-zamowienie/?model=${p().slug}`} class="btn btn-accent">Zamów w innym wymiarze lub tkaninie</NavLink>
+                    <Show
+                      when={p().category === "lozka"}
+                      fallback={
+                        <>
+                          <p>Twoja tkanina, kolor i wzór, inne przeszycia, nogi spośród naszych wzorów, twardsze albo miększe siedzisko. Ten model może być bazą Twojego mebla na zamówienie.</p>
+                          <NavLink href={`/na-zamowienie/?model=${p().slug}`} class="btn btn-accent">Zamów w swojej tkaninie i kolorze</NavLink>
+                        </>
+                      }
+                    >
+                      <p>Inny rozmiar materaca, wyższe wezgłowie, Twoja tkanina, inne nogi. Ten model może być punktem wyjścia do łóżka na wymiar.</p>
+                      <NavLink href="/lozko-na-zamowienie/" class="btn btn-accent">Skonfiguruj łóżko na wymiar</NavLink>
+                    </Show>
                   </aside>
                 </div>
               </div>

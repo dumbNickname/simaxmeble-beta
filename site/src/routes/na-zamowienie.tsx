@@ -17,9 +17,9 @@ const fill = (text: string) => text.replace("{cheapest}", formatPrice(cheapest))
 const faq = custom.faq.map((f) => ({ q: f.q, a: fill(f.a) }));
 
 const prepare = [
-  "zdjęcie albo szkic, nawet krzywy",
+  "model z kolekcji, który Ci się podoba, albo zdjęcie z internetu",
   "wymiary miejsca, w którym mebel stanie",
-  "kto będzie z niego korzystał i jak długo się siedzi",
+  "kto będzie z niego korzystał, jak długo się siedzi, czy są zwierzęta",
   "tkanina albo kolor, jeśli już wiesz",
   "termin i budżet, jeśli są sztywne",
 ];
@@ -29,7 +29,7 @@ export default function MadeToOrder() {
     <Layout>
       <SeoHead
         title="Meble tapicerowane na zamówienie: fotele, sofy, łóżka na wymiar | SIMAX"
-        description="Fotel, sofa albo łóżko tapicerowane na zamówienie: od Twojego pomysłu, przez wspólny projekt z wymiarami i dobór tkaniny, do gotowego mebla z pracowni SIMAX w Wielkopolsce."
+        description="Fotel, sofa albo łóżko tapicerowane na zamówienie: sprawdzony model z kolekcji, a do tego Twoja tkanina, kolor, wzór, przeszycia i nogi. Doradzamy piankę i materiały, szyjemy w pracowni SIMAX w Wielkopolsce."
         canonical="/na-zamowienie/"
         image="b2b-1"
         breadcrumbs={crumbs}
@@ -41,7 +41,7 @@ export default function MadeToOrder() {
             serviceType: "Produkcja mebli tapicerowanych na zamówienie",
             provider: { "@id": `${site.url}/#organization` },
             areaServed: { "@type": "Country", name: "Polska" },
-            description: "Projekt i wykonanie foteli, sof, łóżek i siedzisk tapicerowanych według pomysłu klienta: wymiary, kształt, tkanina, nogi.",
+            description: "Fotele, sofy, łóżka i siedziska tapicerowane na zamówienie na bazie sprawdzonych modeli: tkanina, kolor, wzór, przeszycia, nogi i wypełnienie według wyboru klienta, łóżka także na wymiar. Doradztwo przy doborze pianki i tkaniny.",
           },
           {
             "@type": "FAQPage",
@@ -56,7 +56,7 @@ export default function MadeToOrder() {
           <Breadcrumbs items={crumbs} />
           <h1>Meble tapicerowane na zamówienie</h1>
           <p class="lead">
-            Masz pomysł na fotel, sofę albo łóżko, którego nie ma w żadnym sklepie? Razem z Tobą zamienimy go w projekt z wymiarami, dobierzemy tkaninę i uszyjemy mebel w naszej pracowni w Łęce Mroczeńskiej.
+            Fotel, sofa albo łóżko, które pasuje do Ciebie. Bazą jest sprawdzony model z naszej kolekcji, a tkaninę, kolor, wzór, przeszycia i nogi dobierasz z nami. Doradzimy piankę i materiały, a mebel uszyjemy w pracowni w Łęce Mroczeńskiej.
           </p>
           <div class={styles.ctas}>
             <NavLink href="/na-zamowienie/#brief" class="btn btn-primary">Opisz swój pomysł</NavLink>
@@ -79,7 +79,7 @@ export default function MadeToOrder() {
         <div class={`container ${styles.split}`}>
           <div>
             <h2 id="co-zmienic">Co możesz zmienić</h2>
-            <p class="lead">Wszystko, co da się zmierzyć, i większość tego, co da się narysować.</p>
+            <p class="lead">{custom.optionsLead}</p>
             <ul class={styles.options}>
               <For each={custom.options}>
                 {(o) => (
@@ -91,7 +91,7 @@ export default function MadeToOrder() {
               </For>
             </ul>
             <p class={styles.muted}>
-              Planujesz łóżko? Zacznij od <NavLink href="/lozko-na-zamowienie/">konfiguratora łóżka</NavLink>: rozmiar, wezgłowie, pojemnik i nogi z podglądem.
+              Planujesz łóżko? Zacznij od <NavLink href="/lozko-na-zamowienie/">konfiguratora łóżka</NavLink>: rozmiar, wezgłowie, pojemnik i nogi z podglądem. Fotel? Zobacz, <NavLink href="/fotele/">z czego go składasz</NavLink>.
             </p>
           </div>
           <div class={styles.photoStack}>
@@ -101,29 +101,39 @@ export default function MadeToOrder() {
         </div>
       </section>
 
-      <section class="section" aria-labelledby="dwie-drogi">
+      <section class="section" aria-labelledby="drogi">
         <div class="container">
           <div class="section-head">
-            <h2 id="dwie-drogi">Dwie drogi do mebla na zamówienie</h2>
-            <p>Nie każdy pomysł wymaga projektu od zera. Często wystarczy zmienić model, który już mamy.</p>
+            <h2 id="drogi">Trzy drogi do mebla na zamówienie</h2>
+            <p>Najczęściej wystarcza pierwsza: sprawdzony model, a reszta po Twojemu.</p>
           </div>
-          <div class={styles.paths}>
+          <div class={`${styles.paths} ${styles.paths3}`}>
             <article class={styles.path}>
-              <h3>Przeróbka modelu z kolekcji</h3>
-              <p>Bierzesz fotel GRANDE, sofę NUVEM albo inny model i zmieniasz to, co trzeba: wymiar, tkaninę, nogi, wysokość oparcia.</p>
+              <h3>Model z kolekcji po Twojemu</h3>
+              <p>Bierzesz fotel GRANDE, sofę NUVEM albo inny model i dobierasz tkaninę, kolor, wzór, przeszycia i nogi z naszych wzorów.</p>
               <ul>
-                <li>szybciej, bo konstrukcja jest sprawdzona</li>
-                <li>taniej niż projekt od zera</li>
+                <li>konstrukcja i wygoda są sprawdzone</li>
+                <li>szybciej i taniej niż nietypowy projekt</li>
                 <li>widzisz zdjęcia podobnego mebla przed zamówieniem</li>
               </ul>
               <NavLink href="/produkty/" class="btn btn-ghost">Wybierz model z kolekcji</NavLink>
             </article>
             <article class={styles.path}>
-              <h3>Projekt od zera</h3>
-              <p>Przynosisz szkic, zdjęcie albo opis, a my projektujemy bryłę, konstrukcję i wypełnienie pod Twoje potrzeby.</p>
+              <h3>Łóżko na wymiar</h3>
+              <p>Łóżka robimy w całości u siebie, więc zmienisz w nich najwięcej: rozmiar pod materac, kształt i wysokość wezgłowia, pojemnik, nogi.</p>
               <ul>
-                <li>mebel, którego nie ma nikt inny</li>
-                <li>pod nietypowe wnętrze, wzrost albo zastosowanie</li>
+                <li>rozmiar pod Twój materac</li>
+                <li>wezgłowie pod Twoją ścianę</li>
+                <li>podgląd w konfiguratorze</li>
+              </ul>
+              <NavLink href="/lozko-na-zamowienie/" class="btn btn-ghost">Skonfiguruj łóżko</NavLink>
+            </article>
+            <article class={styles.path}>
+              <h3>Mebel nietypowy</h3>
+              <p>Zupełnie nowy kształt albo nietypowy wymiar też czasem szyjemy. To osobny projekt i konstrukcja, więc rzadsza droga.</p>
+              <ul>
+                <li>pod nietypowe wnętrze albo zastosowanie</li>
+                <li>wycena indywidualna, zwykle wyższa</li>
                 <li>więcej czasu na projekt i poprawki</li>
               </ul>
               <NavLink href="/na-zamowienie/#brief" class="btn btn-ghost">Opisz swój pomysł</NavLink>
@@ -132,12 +142,31 @@ export default function MadeToOrder() {
           <aside class={styles.loop} aria-labelledby="do-kolekcji">
             <svg viewBox="0 0 120 120" aria-hidden="true"><path d="M60 14a46 46 0 1 1-40.6 24.4" /><path d="M10 26l9.4 12.4L33 32" /></svg>
             <div>
-              <h3 id="do-kolekcji">Dobry projekt wraca do kolekcji</h3>
+              <h3 id="do-kolekcji">Czasem projekt wraca do kolekcji</h3>
               <p>
-                Część mebli zrobionych na zamówienie trafia później do naszej kolekcji jako gotowy projekt. Kolejna osoba kupuje go taniej i szybciej, bo projekt, konstrukcja i doświadczenie z szycia już są. Gotowe projekty kupisz w <a href={site.shop} rel="noopener">sklepie SIMAX</a>. Twój projekt trafi tam tylko za Twoją zgodą.
+                Czasem nietypowy projekt trafia później do naszej kolekcji jako gotowy model. Kolejna osoba kupuje go taniej i szybciej, bo projekt, konstrukcja i doświadczenie z szycia już są. Gotowe projekty kupisz w <a href={site.shop} rel="noopener">sklepie SIMAX</a>. Twój projekt trafi tam tylko za Twoją zgodą.
               </p>
             </div>
           </aside>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="doradzamy">
+        <div class="container">
+          <div class="section-head">
+            <h2 id="doradzamy">Doradzamy przy wyborze materiałów</h2>
+            <p>Dobra rada przy zamówieniu jest tak samo ważna jak szycie. Pytamy, jak będziesz z mebla korzystać, i proponujemy materiały, które to wytrzymają.</p>
+          </div>
+          <ul class={`${styles.options} ${styles.advice}`}>
+            <For each={custom.advice}>
+              {(a) => (
+                <li class="reveal">
+                  <h3>{a.name}</h3>
+                  <p innerHTML={a.html} />
+                </li>
+              )}
+            </For>
+          </ul>
         </div>
       </section>
 
@@ -145,7 +174,7 @@ export default function MadeToOrder() {
         <div class={`container ${styles.briefGrid}`}>
           <div>
             <h2 id="napisz">Opisz swój pomysł</h2>
-            <p class="lead">Na początek wystarczy kilka zdań. Odezwiemy się z pytaniami, razem dopracujemy projekt, a potem podamy wycenę.</p>
+            <p class="lead">Na początek wystarczy kilka zdań. Odezwiemy się z pytaniami, doradzimy materiały, a potem podamy wycenę.</p>
             <h3 class={styles.small}>Co warto przygotować</h3>
             <ul class={styles.checklist}>
               <For each={prepare}>{(item) => <li>{item}</li>}</For>

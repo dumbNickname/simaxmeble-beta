@@ -49,8 +49,9 @@ export default function BriefForm(props: Props) {
         <label class={styles.field}>
           <span>Punkt wyjścia (opcjonalnie)</span>
           <select name="Punkt wyjścia">
-            <option value="">Nowy projekt, bez modelu z kolekcji</option>
+            <option value="">Jeszcze nie wiem, proszę o podpowiedź</option>
             <For each={allProducts}>{(p) => <option data-slug={p.slug}>{p.name}</option>}</For>
+            <option>Nietypowy projekt, bez modelu z kolekcji</option>
           </select>
         </label>
         <label class={styles.field}>
@@ -65,19 +66,27 @@ export default function BriefForm(props: Props) {
           <span>Nogi (opcjonalnie)</span>
           <input name="Nogi" placeholder="np. drewniane, orzech" />
         </label>
-        <Show when={props.b2b}>
+        <Show
+          when={props.b2b}
+          fallback={
+            <label class={styles.field}>
+              <span>Przeszycia (opcjonalnie)</span>
+              <input name="Przeszycia" placeholder="np. pikowanie guzikami, lamówka" />
+            </label>
+          }
+        >
           <label class={styles.field}>
             <span>Liczba sztuk</span>
             <input name="Liczba sztuk" inputmode="numeric" placeholder="np. 24 krzesła, 3 ławy" />
           </label>
         </Show>
-        <label class={props.b2b ? styles.field : `${styles.field} ${styles.wide}`}>
+        <label class={styles.field}>
           <span>Wymiary albo miejsce</span>
-          <input name="Wymiary" placeholder="np. wnęka 210 cm, siedzisko wyżej niż zwykle" />
+          <input name="Wymiary" placeholder="np. wnęka 210 cm, materac 180x200" />
         </label>
         <label class={`${styles.field} ${styles.wide}`}>
           <span>Opisz pomysł</span>
-          <textarea name="Opis" rows="5" required placeholder={props.b2b ? "Styl wnętrza, kolory marki, jak intensywnie meble będą używane." : "Kto będzie siedział, jaki styl, jaka tkanina. Link do zdjęcia z internetu też wystarczy."} />
+          <textarea name="Opis" rows="5" required placeholder={props.b2b ? "Styl wnętrza, kolory marki, jak intensywnie meble będą używane." : "Kto będzie siedział, jaki styl, jaka tkanina, czy są zwierzęta. Link do zdjęcia z internetu też wystarczy."} />
         </label>
         <label class={styles.field}>
           <span>{props.b2b ? "Termin (np. otwarcie lokalu)" : "Kiedy mebel jest potrzebny?"}</span>

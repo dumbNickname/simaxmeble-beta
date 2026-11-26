@@ -25,7 +25,7 @@ export default function About() {
         <header class={styles.head}>
           <Breadcrumbs items={crumbs} />
           <h1>Pracownia mebli tapicerowanych SIMAX</h1>
-          <p class="lead">Szyjemy fotele, sofy, narożniki i łóżka w Łęce Mroczeńskiej, między Kępnem a Ostrzeszowem. Według Twojego pomysłu albo na bazie modeli z naszej kolekcji.</p>
+          <p class="lead">Szyjemy fotele, sofy, narożniki i łóżka w Łęce Mroczeńskiej, między Kępnem a Ostrzeszowem. Na bazie modeli z naszej kolekcji albo, rzadziej, według Twojego pomysłu.</p>
         </header>
         <div class={styles.split}>
           <div class="prose">

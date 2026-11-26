@@ -26,7 +26,7 @@ export default function Home() {
     <Layout>
       <SeoHead
         title="Meble tapicerowane na zamówienie: od pomysłu do gotowego mebla | SIMAX"
-        description="Pracownia SIMAX z Wielkopolski szyje fotele, sofy i łóżka tapicerowane na zamówienie: Twój pomysł, wspólny projekt z wymiarami, tkanina z próbek i gotowy mebel. Także serie dla restauracji i hoteli."
+        description="Pracownia SIMAX z Wielkopolski szyje fotele, sofy i łóżka tapicerowane na zamówienie: sprawdzony model, Twoja tkanina, kolor, przeszycia i nogi, doradztwo przy wyborze pianki. Także serie dla restauracji i hoteli."
         canonical="/"
         image={heroVariant.images[0]}
         graph={[
@@ -46,7 +46,7 @@ export default function Home() {
               Meble tapicerowane <span class={styles.hl}>na zamówienie</span>
             </h1>
             <p class="lead">
-              Przynieś szkic, zdjęcie albo wymiary wnęki. Razem dopracujemy projekt i wymiary, dobierzemy tkaninę i uszyjemy mebel w naszej pracowni w Wielkopolsce. Od pomysłu do fotela, który stanie u Ciebie.
+              Wybierz sprawdzony model, a tkaninę, kolor, wzór, przeszycia i nogi dobierz z nami. Doradzimy piankę i materiały, a mebel uszyjemy w naszej pracowni w Wielkopolsce. Od pomysłu do fotela, który stanie u Ciebie.
             </p>
             <div class={styles.ctas}>
               <NavLink href="/na-zamowienie/#brief" class="btn btn-primary">Opisz swój pomysł</NavLink>
@@ -75,7 +75,7 @@ export default function Home() {
         <div class="container">
           <div class="section-head">
             <h2 id="co-zmienic">Co możesz zmienić</h2>
-            <p>Wszystko, co da się zmierzyć, i większość tego, co da się narysować.</p>
+            <p>{custom.optionsLead}</p>
           </div>
           <ul class={styles.optionList}>
             <For each={custom.options}>

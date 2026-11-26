@@ -3,16 +3,46 @@
   "fotele": {
     "heading": "Fotele tapicerowane na zamówienie",
     "title": "Fotele tapicerowane na zamówienie, uszaki i fotele do salonu | SIMAX",
-    "metaDescription": "Fotel na zamówienie z pracowni SIMAX: Twój wymiar, kształt i tkanina. Albo gotowy model z kolekcji, na przykład uszak GRANDE, przerobiony pod Ciebie.",
-    "lead": "Fotel szyty pod Ciebie: wysokość siedziska, głębokość, uszy, tkanina i nogi. Poniżej modele z naszej kolekcji. Każdy może być punktem wyjścia do Twojego.",
-    "introHtml": "<h3>Fotel pod konkretną osobę</h3><p>Fotel z katalogu jest projektowany dla przeciętnego wzrostu. Jeśli masz 190 cm albo 155 cm, różnica kilku centymetrów w wysokości i głębokości siedziska decyduje o tym, czy będziesz w nim czytać godzinę, czy dziesięć minut. Dlatego przy fotelu na zamówienie pytamy najpierw, kto będzie w nim siedział.</p><h3>Uszak, fotel klubowy, fotel do jadalni</h3><p>Wysokie uszy osłaniają głowę i ramiona, dobrze sprawdzają się przy kominku i w czytelni. Niższy fotel z szerokimi bokami lepiej pasuje do salonu, w którym się rozmawia. Fotel do stołu ma płytsze siedzisko i wyższe nogi. Każdy z tych kształtów możemy uszyć od podstaw albo przerobić z modelu, który już mamy.</p><h3>Dwie tkaniny na jednym fotelu</h3><p>Gładki velvet od frontu i wzorzysty żakard z boku i z tyłu, jak w fotelu GRANDE, to prosty sposób na mebel, którego nie ma nikt inny. Tkaniny dobierasz z próbek, zanim zaczniemy szyć.</p>"
+    "metaDescription": "Fotel na zamówienie z pracowni SIMAX: sprawdzony model, na przykład uszak GRANDE, a do tego Twoja tkanina, kolor, wzór, przeszycia i nogi. Doradzamy piankę i materiały.",
+    "lead": "Fotel na bazie sprawdzonego modelu: wybierasz model i nogi, a tkaninę, kolor, wzór i przeszycia dobierasz po swojemu. Poniżej modele z kolekcji, każdy może być bazą Twojego fotela.",
+    "introHtml": "<h3>Jak powstaje fotel na zamówienie</h3><p>Nie projektujemy każdego fotela od zera. Bazą jest model, który już szyjemy, ze sprawdzoną konstrukcją i wygodą. Do niego dobierasz nogi, tkaninę, kolor, wzór i przeszycia. Fotel jest Twój, a powstaje szybciej i kosztuje mniej niż projekt od podstaw.</p><h3>Uszak czy fotel klubowy</h3><p>Wysokie uszy osłaniają głowę i ramiona, dobrze sprawdzają się przy kominku i w czytelni. Niższy fotel z szerokimi bokami lepiej pasuje do salonu, w którym się rozmawia. Powiedz nam, kto będzie siedział i gdzie fotel stanie, a podpowiemy, który model będzie najlepszą bazą.</p><h3>Dwie tkaniny na jednym fotelu</h3><p>Gładki velvet od frontu i wzorzysty żakard z boku i z tyłu, jak w fotelu GRANDE, to prosty sposób na mebel, którego nie ma nikt inny. Tkaniny dobierasz z próbek, zanim zaczniemy szyć.</p><h3>Doradzimy piankę i tkaninę</h3><p>Od pianki zależy, czy siedzisko po latach trzyma kształt. Pianki bierzemy od <a href=\"https://pionier-pianki.pl/\" rel=\"noopener\">Pionier Pianki</a> z Baranowa, z sąsiedztwa naszej pracowni, i dobieramy twardość do tego, kto siada i jak często. Przy zwierzętach i dzieciach podpowiemy tkaninę o wyższej ścieralności.</p><h3>Fotel nietypowy</h3><p>Zupełnie nowy kształt albo nietypowy wymiar też czasem szyjemy. To osobny projekt i konstrukcja, więc trwa dłużej i kosztuje więcej. <a href=\"na-zamowienie/#brief\">Opisz pomysł</a>, a powiemy szczerze, czy da się go zrobić.</p>",
+    "customLink": "Chcesz inną tkaninę, nogi albo przeszycia?",
+    "partsHeading": "Co dobierasz w fotelu",
+    "parts": [
+      {
+        "name": "Model",
+        "text": "Bazą jest fotel z kolekcji: uszak, fotel klubowy albo niższy fotel do salonu. Konstrukcja i wygoda są sprawdzone."
+      },
+      {
+        "name": "Nogi",
+        "text": "Kilka wzorów nóg: drewniane w wybranym kolorze albo metalowe."
+      },
+      {
+        "name": "Tkanina i kolor",
+        "text": "Velvet, boucle, wełna, szenil. Próbki wysyłamy do paczkomatu."
+      },
+      {
+        "name": "Wzór",
+        "text": "Tkanina gładka albo we wzór. Także dwie tkaniny: gładka od frontu, żakard na bokach i z tyłu."
+      },
+      {
+        "name": "Przeszycia",
+        "text": "Pikowanie guzikami, przeszycia pionowe albo poziome, lamówka w kontrastowym kolorze."
+      },
+      {
+        "name": "Wypełnienie",
+        "text": "Twardsze albo bardziej miękkie siedzisko. Doradzimy, jaka pianka sprawdzi się u Ciebie."
+      }
+    ],
+    "partsCta": "Opisz swój fotel"
   },
   "sofy": {
     "heading": "Sofy i kanapy na zamówienie",
-    "title": "Sofy i kanapy na zamówienie, na wymiar i z funkcją spania | SIMAX",
-    "metaDescription": "Sofa na wymiar z pracowni SIMAX: długość pod Twoją ścianę, głębokość siedziska, funkcja spania, tkanina boucle albo velvet. Gotowe modele NUVEM i SIMPLE jako punkt wyjścia.",
-    "lead": "Sofa dopasowana do ściany, a nie ściana do sofy. Długość, głębokość, oparcie i funkcja spania według Twoich wymiarów.",
-    "introHtml": "<h3>Sofa na wymiar</h3><p>Gotowe sofy mają kilka standardowych długości. Wnęka między oknem a drzwiami zwykle nie ma żadnej z nich. Sofę na zamówienie szyjemy na konkretne centymetry, więc nie zostaje pusta szczelina ani nie trzeba przesuwać grzejnika.</p><h3>Do siedzenia czy do spania</h3><p>Sofa do salonu i sofa dla gości to dwa różne meble. Pierwsza potrzebuje głębokiego, miękkiego siedziska, druga wygodnej powierzchni do spania i miejsca na pościel. Powiedz nam, jak będziesz jej używać, a dobierzemy konstrukcję.</p>"
+    "title": "Sofy i kanapy na zamówienie, z funkcją spania i w Twojej tkaninie | SIMAX",
+    "metaDescription": "Sofa na zamówienie z pracowni SIMAX: sprawdzony model NUVEM albo SIMPLE, funkcja spania, tkanina boucle albo velvet, kolor, przeszycia i nogi do wyboru.",
+    "lead": "Sofa do salonu albo dla gości, z funkcją spania lub bez. Tkaninę, kolor, przeszycia i nogi dobierasz z nami, a o długość pod Twoją ścianę zapytaj przy konkretnym modelu.",
+    "introHtml": "<h3>Sofa pod Twoją ścianę</h3><p>Gotowe sofy mają kilka standardowych długości. Wnęka między oknem a drzwiami zwykle nie ma żadnej z nich. Jeśli liczy się każdy centymetr, zapytaj, czy wybrany model możemy wydłużyć albo skrócić.</p><h3>Do siedzenia czy do spania</h3><p>Sofa do salonu i sofa dla gości to dwa różne meble. Pierwsza potrzebuje głębokiego, miękkiego siedziska, druga wygodnej powierzchni do spania i miejsca na pościel. Powiedz nam, jak będziesz jej używać, a dobierzemy konstrukcję.</p>",
+    "customLink": "Chcesz inną tkaninę, nogi albo przeszycia?"
   },
   "lozka": {
     "heading": "Łóżka tapicerowane na zamówienie",
@@ -24,15 +54,17 @@
   "krzesla": {
     "heading": "Krzesła tapicerowane na zamówienie",
     "title": "Krzesła tapicerowane na zamówienie, do jadalni i restauracji | SIMAX",
-    "metaDescription": "Krzesła tapicerowane na zamówienie z pracowni SIMAX: do jadalni, kawiarni i restauracji. Kształt, wysokość, tkanina do intensywnego użytku, seria w jednym kolorze.",
+    "metaDescription": "Krzesła tapicerowane na zamówienie z pracowni SIMAX: do jadalni, kawiarni i restauracji. Sprawdzony model, a do tego tkanina do intensywnego użytku, kolor, przeszycia i seria w jednym kolorze.",
     "lead": "Krzesła do domu i do lokalu: jedno do biurka albo seria do restauracji, w tkaninie, która zniesie codzienne użytkowanie.",
-    "introHtml": "<h3>Krzesła do jadalni i do lokalu</h3><p>Przy stole siedzi się długo, więc liczy się wysokość siedziska względem blatu i kąt oparcia. W restauracji dochodzi tkanina: wysoka ścieralność, łatwe czyszczenie, czasem atest trudnopalności. Szczegóły współpracy z firmami opisujemy na stronie <a href=\"dla-firm/\">meble dla firm</a>.</p>"
+    "introHtml": "<h3>Krzesła do jadalni i do lokalu</h3><p>Przy stole siedzi się długo, więc liczy się wysokość siedziska względem blatu i kąt oparcia. W restauracji dochodzi tkanina: wysoka ścieralność, łatwe czyszczenie, czasem atest trudnopalności. Szczegóły współpracy z firmami opisujemy na stronie <a href=\"dla-firm/\">meble dla firm</a>.</p>",
+    "customLink": "Chcesz inną tkaninę, kolor albo przeszycia?"
   },
   "dodatki": {
     "heading": "Pufy, podnóżki i dodatki tapicerowane",
     "title": "Pufy i podnóżki tapicerowane na zamówienie | SIMAX",
     "metaDescription": "Podnóżki, pufy i dodatki tapicerowane z pracowni SIMAX, w tej samej tkaninie co fotel albo sofa. Na zamówienie, do kompletu z Twoim meblem.",
     "lead": "Podnóżek do fotela, pufa do przedpokoju, siedzisko pod okno. Najlepiej w tej samej tkaninie co reszta.",
-    "introHtml": "<h3>Do kompletu</h3><p>Dodatek uszyty z tej samej beli tkaniny co fotel ma dokładnie ten sam odcień. Jeśli zamawiasz fotel na zamówienie, zapytaj od razu o podnóżek albo pufę.</p>"
+    "introHtml": "<h3>Do kompletu</h3><p>Dodatek uszyty z tej samej beli tkaniny co fotel ma dokładnie ten sam odcień. Jeśli zamawiasz fotel na zamówienie, zapytaj od razu o podnóżek albo pufę.</p>",
+    "customLink": "Chcesz podnóżek do kompletu z fotelem?"
   }
 }

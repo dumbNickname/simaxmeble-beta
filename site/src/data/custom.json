@@ -4,23 +4,23 @@
     {
       "id": "pomysl",
       "name": "Pomysł",
-      "short": "Szkic, zdjęcie z internetu, wymiary wnęki albo opis w trzech zdaniach. Wystarczy.",
-      "you": "Opisujesz, czego szukasz i gdzie mebel stanie. Wysyłasz zdjęcia, inspiracje, wymiary.",
-      "we": "Dopytujemy, jak będziesz z mebla korzystać: kto siada, jak długo, czy ma się rozkładać."
+      "short": "Model z kolekcji, który Ci się podoba, zdjęcie z internetu albo opis w trzech zdaniach. Wystarczy.",
+      "you": "Opisujesz, czego szukasz i gdzie mebel stanie. Wysyłasz zdjęcia, inspiracje, wymiary miejsca.",
+      "we": "Dopytujemy, jak będziesz z mebla korzystać: kto siada, jak długo, czy w domu są dzieci albo zwierzęta."
     },
     {
       "id": "projekt",
       "name": "Projekt",
-      "short": "Rozmawiamy, proponujemy, poprawiamy. Ustalamy razem każdy wymiar, tkaninę i wypełnienie, dopóki projekt nie będzie Twój.",
+      "short": "Rozmawiamy i doradzamy. Razem dobieramy model, nogi, tkaninę, wzór, przeszycia i wypełnienie, dopóki mebel nie będzie Twój.",
       "you": "Mówisz, co Ci pasuje, a co nie. Wybierasz tkaninę z próbek (wysyłamy je do paczkomatu) i potwierdzasz komplet ustaleń.",
-      "we": "Zadajemy pytania, proponujemy konstrukcję, wymiary i wypełnienie, zmieniamy projekt po Twoich uwagach. Na koniec podajemy cenę i termin."
+      "we": "Podpowiadamy, co sprawdzi się u Ciebie: twardość pianki, tkaninę odporną na pazury albo łatwą do czyszczenia, przeszycia pasujące do bryły. Na koniec podajemy cenę i termin."
     },
     {
       "id": "wykonanie",
       "name": "Wykonanie",
-      "short": "Rama, pianka, tkanina. Szyjemy ręcznie w pracowni w Łęce Mroczeńskiej.",
+      "short": "Konstrukcja, pianka, tkanina. Szyjemy ręcznie w pracowni w Łęce Mroczeńskiej.",
       "you": "Masz czas na resztę wnętrza. Termin znasz od dnia akceptacji projektu.",
-      "we": "Budujemy ramę, klejimy piankę, kroimy i szyjemy tkaninę, montujemy nogi."
+      "we": "Przygotowujemy konstrukcję, klejimy piankę, kroimy i szyjemy tkaninę, montujemy nogi."
     },
     {
       "id": "odbior",
@@ -32,42 +32,54 @@
   ],
   "options": [
     {
-      "name": "Wymiary",
-      "text": "Szerokość, głębokość i wysokość siedziska pod Twoje wnętrze i Twój wzrost."
-    },
-    {
-      "name": "Kształt",
-      "text": "Wyższe uszy, niższe oparcie, inne boki. Albo zupełnie nowa bryła z Twojego szkicu."
-    },
-    {
-      "name": "Tkanina",
-      "text": "{fabrics} kolekcji tkanin: velvet, boucle, wełna, szenil. Także dwie różne tkaniny na jednym meblu."
-    },
-    {
-      "name": "Siedzisko",
-      "text": "Twardsze albo miękkie, płytkie do jadalni albo głębokie do czytania."
+      "name": "Model",
+      "text": "Bazą jest model, który już szyjemy: uszak, fotel klubowy, sofa, łóżko. Konstrukcja i wygoda są sprawdzone."
     },
     {
       "name": "Nogi",
-      "text": "Drewniane w kolorze do wyboru albo metalowe. Wyższe, niższe, inaczej rozstawione."
+      "text": "Kilka wzorów nóg: drewniane w wybranym kolorze albo metalowe."
     },
     {
-      "name": "Funkcje",
-      "text": "Pojemnik na pościel, funkcja spania, podnóżek do kompletu."
+      "name": "Tkanina i kolor",
+      "text": "{fabrics} kolekcji tkanin: velvet, boucle, wełna, szenil, każda w wielu kolorach."
+    },
+    {
+      "name": "Wzór",
+      "text": "Tkanina gładka albo wzorzysta. Także dwie tkaniny na jednym meblu: gładka od frontu, żakard na bokach i z tyłu."
+    },
+    {
+      "name": "Przeszycia",
+      "text": "Pikowanie guzikami, przeszycia pionowe albo poziome, lamówka w kontrastowym kolorze."
+    },
+    {
+      "name": "Wypełnienie",
+      "text": "Twardsze albo bardziej miękkie siedzisko. Doradzimy rodzaj i twardość pianki."
+    },
+    {
+      "name": "Łóżka na wymiar",
+      "text": "Rozmiar pod Twój materac, kształt i wysokość wezgłowia, pojemnik na pościel. W fotelach i sofach wymiar zależy od modelu, zapytaj."
     }
   ],
   "faq": [
     {
       "q": "Ile kosztuje mebel na zamówienie?",
-      "a": "Zależy od wielkości, konstrukcji i tkaniny, więc cenę podajemy, gdy razem ustalimy wymiary i szczegóły. Punkt odniesienia: gotowe modele z naszej kolekcji kosztują od {cheapest}. Przeróbka modelu z kolekcji jest zwykle tańsza niż projekt od zera, bo konstrukcja jest już sprawdzona."
+      "a": "Zależy od modelu, tkaniny i dodatków, więc cenę podajemy, gdy razem ustalimy szczegóły. Punkt odniesienia: gotowe modele z naszej kolekcji kosztują od {cheapest}. Mebel z naszych modeli i elementów jest tańszy niż nietypowy projekt, bo konstrukcja jest już sprawdzona."
     },
     {
       "q": "Ile trwa realizacja?",
       "a": "Termin podajemy razem z wyceną, bo zależy od kolejki w pracowni i dostępności tkaniny. Jeśli mebel jest potrzebny na konkretny dzień, na przykład na otwarcie lokalu, powiedz o tym na początku."
     },
     {
-      "q": "Czy mogę zmienić wymiar albo tkaninę w modelu z kolekcji?",
-      "a": "Tak, to najprostsza droga do mebla na zamówienie. Wybierz model z kolekcji jako punkt wyjścia i napisz, co chcesz zmienić."
+      "q": "Co mogę zmienić w modelu z kolekcji?",
+      "a": "Tkaninę, kolor i wzór, przeszycia, nogi spośród naszych wzorów i twardość siedziska. W łóżkach także rozmiar, wezgłowie i pojemnik. Wymiar fotela albo sofy zależy od modelu, więc zapytaj o konkretny. Napisz, który model Ci się podoba i co chcesz w nim zmienić."
+    },
+    {
+      "q": "Pomożecie wybrać piankę i tkaninę?",
+      "a": "Tak, to część rozmowy przy każdym zamówieniu. Pytamy, kto będzie siedział, jak długo i czy w domu są zwierzęta, i na tej podstawie proponujemy twardość pianki i tkaninę. Pianki kupujemy od Pionier Pianki z Baranowa, a twardość dobieramy razem z Tobą."
+    },
+    {
+      "q": "Czy uszyjecie fotel o zupełnie nowym kształcie?",
+      "a": "Czasem tak, ale to rzadsza droga. Nowa bryła wymaga osobnego projektu i konstrukcji, więc trwa dłużej i kosztuje więcej niż mebel z naszych modeli i elementów. Opisz pomysł, a powiemy szczerze, czy da się go zrobić."
     },
     {
       "q": "Czy mogę zwrócić mebel zrobiony na zamówienie?",
@@ -132,5 +144,20 @@
       "wymagania co do tkaniny (ścieralność, trudnopalność, łatwe czyszczenie)",
       "termin, na który meble muszą stać na miejscu"
     ]
-  }
+  },
+  "optionsLead": "Fotele i sofy szyjemy na bazie sprawdzonych modeli. Tkaninę, kolor, wzór i przeszycia dobierasz z nami. Łóżka robimy w całości u siebie, więc w nich zmienisz najwięcej.",
+  "advice": [
+    {
+      "name": "Pianka",
+      "html": "Od pianki zależy, czy siedzisko po latach nadal trzyma kształt. Pianki bierzemy od <a href=\"https://pionier-pianki.pl/\" rel=\"noopener\">Pionier Pianki</a> z Baranowa, z sąsiedztwa naszej pracowni, i dobieramy gęstość i twardość do tego, kto będzie siedział i jak często."
+    },
+    {
+      "name": "Tkanina",
+      "html": "Pies, kot, małe dzieci albo lokal z dużym ruchem? Podpowiemy tkaninę o wyższej ścieralności, łatwą do czyszczenia. Kolor sprawdzisz na próbce, nie na ekranie."
+    },
+    {
+      "name": "Wzór i przeszycia",
+      "html": "Nie każde przeszycie pasuje do każdej bryły i tkaniny. Pikowanie na gładkim velvecie wygląda inaczej niż na boucle. Pokażemy, co do siebie pasuje, zanim zaczniemy szyć."
+    }
+  ]
 }

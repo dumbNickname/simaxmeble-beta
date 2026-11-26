@@ -38,7 +38,7 @@ export default function CategoryPage(props: { slug: string }) {
           <h1>{c.heading}</h1>
           <p class="lead">{c.lead}</p>
           <p class={styles.count}>
-            Gotowe projekty z kolekcji: {products.length} {products.length === 1 ? "model" : products.length < 5 ? "modele" : "modeli"}, od {formatPrice(from)}. <NavLink href="/na-zamowienie/">Chcesz inny wymiar albo kształt?</NavLink>
+            Gotowe projekty z kolekcji: {products.length} {products.length === 1 ? "model" : products.length < 5 ? "modele" : "modeli"}, od {formatPrice(from)}. <NavLink href="/na-zamowienie/">{c.customLink ?? "Chcesz inny wymiar albo kształt?"}</NavLink>
           </p>
           <Show when={c.slug === "lozka"}>
             <p class={styles.configure}>
@@ -54,6 +54,24 @@ export default function CategoryPage(props: { slug: string }) {
           </nav>
         </header>
         <Catalogue products={products} current={c.slug} />
+        <Show when={c.parts?.length}>
+          <section class={styles.parts} aria-labelledby="elementy">
+            <h2 id="elementy">{c.partsHeading}</h2>
+            <ul>
+              <For each={c.parts}>
+                {(part) => (
+                  <li class="reveal">
+                    <h3>{part.name}</h3>
+                    <p>{part.text}</p>
+                  </li>
+                )}
+              </For>
+            </ul>
+            <p>
+              <NavLink href="/na-zamowienie/#brief" class="btn btn-primary">{c.partsCta ?? "Opisz swój pomysł"}</NavLink>
+            </p>
+          </section>
+        </Show>
         <Show when={c.introHtml}>
           <section class={styles.intro} aria-labelledby="o-kategorii">
             <h2 id="o-kategorii">{c.heading}: co warto wiedzieć</h2>

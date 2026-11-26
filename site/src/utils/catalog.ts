@@ -6,7 +6,14 @@ import categoryCopy from "~/data/category-copy.json";
 
 export type Product = (typeof products)[number];
 export type Variant = Product["variants"][number];
-export type Category = (typeof categories)[number] & { lead?: string };
+export type Category = (typeof categories)[number] & {
+  lead?: string;
+  /** Link text from the category header to /na-zamowienie/. */
+  customLink?: string;
+  partsHeading?: string;
+  partsCta?: string;
+  parts?: { name: string; text: string }[];
+};
 export type Fabric = (typeof fabrics)[number];
 
 export interface ImageInfo {

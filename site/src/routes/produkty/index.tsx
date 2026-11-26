@@ -14,7 +14,7 @@ export default function Products() {
     <Layout>
       <SeoHead
         title="Kolekcja SIMAX: gotowe projekty foteli, sof i łóżek tapicerowanych"
-        description={`${allProducts.length} gotowych projektów z pracowni SIMAX: fotele uszaki, fotele bujane, sofy boucle, łóżka 160x200 i krzesła. Kup w sklepie albo zamów w swoim wymiarze i tkaninie.`}
+        description={`${allProducts.length} gotowych projektów z pracowni SIMAX: fotele uszaki, fotele bujane, sofy boucle, łóżka 160x200 i krzesła. Kup w sklepie albo zamów w swojej tkaninie i kolorze.`}
         canonical="/produkty/"
         image={allProducts[0].cover!}
         pageType="CollectionPage"

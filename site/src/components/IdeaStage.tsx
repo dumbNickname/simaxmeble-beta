@@ -33,8 +33,8 @@ const SKETCH = [
 ];
 const BUTTONS: [number, number][] = [[483, 183], [562, 196], [635, 183], [498, 280], [574, 288]];
 const NOTES: { x: number; y: number; text: string; arrow: string }[] = [
-  { x: 470, y: 24, text: "wyższe uszy?", arrow: "M640 20C690 12 720 18 744 34" },
-  { x: 20, y: 200, text: "siedzisko 46 cm", arrow: "M120 214C150 260 160 330 166 396" },
+  { x: 470, y: 24, text: "pikowanie guzikami?", arrow: "M560 62C576 100 572 140 562 178" },
+  { x: 20, y: 200, text: "pianka: twardsza", arrow: "M120 214C150 260 160 330 166 396" },
   { x: 560, y: 800, text: "boki: żakard", arrow: "M610 770C600 700 580 620 560 560" },
   { x: 40, y: 820, text: "nogi: orzech", arrow: "M90 790C80 770 70 760 74 712" },
 ];
@@ -61,7 +61,7 @@ export default function IdeaStage(props: Props) {
   return (
     <div class={styles.stage}>
       <div class={styles.frame}>
-        <svg class={styles.sketch} viewBox="0 0 800 878" role="img" aria-label="Szkic fotela z notatkami klienta: wyższe uszy, siedzisko 46 cm, boki z żakardu, nogi w kolorze orzecha">
+        <svg class={styles.sketch} viewBox="0 0 800 878" role="img" aria-label="Szkic fotela z notatkami klienta: pikowanie guzikami, twardsza pianka, boki z żakardu, nogi w kolorze orzecha">
           <g class={styles.lines}>
             <For each={SKETCH}>{(d, i) => <path d={d} pathLength="1" style={{ "--i": i() }} />}</For>
             <For each={SKETCH}>{(d, i) => <path class={styles.ghost} d={d} pathLength="1" style={{ "--i": i() + 2 }} />}</For>
@@ -138,8 +138,8 @@ export default function IdeaStage(props: Props) {
       </fieldset>
 
       <div class={styles.captions} aria-live="polite">
-        <p data-etap="pomysl">Szkic na kartce, zdjęcie z internetu albo kilka zdań. Od tego zaczynamy.</p>
-        <p data-etap="projekt">Każdy wymiar ustalamy razem z Tobą. Tu wymiary prawdziwego modelu {p().name.replace(/^Fotel\s+/i, "")}.</p>
+        <p data-etap="pomysl">Model z kolekcji, zdjęcie z internetu albo kilka zdań. Od tego zaczynamy.</p>
+        <p data-etap="projekt">Tkaninę, nogi, przeszycia i piankę dobieramy razem z Tobą. Tu wymiary prawdziwego modelu {p().name.replace(/^Fotel\s+/i, "")}.</p>
         <p data-etap="mebel">
           <NavLink href={`/produkty/${p().slug}/`}>{p().name}</NavLink>, dziś gotowy projekt z kolekcji, od {formatPrice(p().priceMin)}.
         </p>

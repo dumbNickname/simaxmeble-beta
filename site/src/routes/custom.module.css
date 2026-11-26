@@ -100,6 +100,14 @@
   background: var(--bg);
 }
 
+.options:not(.advice) li:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+.advice {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+}
+
 .options h3 {
   margin: 0 0 0.25rem;
   font-size: 1.15rem;
@@ -151,6 +159,12 @@
 @media (min-width: 820px) {
   .paths {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1100px) {
+  .paths3 {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -518,24 +532,9 @@
 
 :global(html[data-design="b"]) .path,
 :global(html[data-design="b"]) .sectors li,
-:global(html[data-design="b"]) .panel {
-  background: #fff;
-  box-shadow: var(--shadow);
-}
-
-:global(html[data-design="c"]) .path,
-:global(html[data-design="c"]) .sectors li,
-:global(html[data-design="c"]) .panel,
-:global(html[data-design="c"]) .loop,
-:global(html[data-design="c"]) .tableWrap,
-:global(html[data-design="c"]) .photoStack picture {
+:global(html[data-design="b"]) .panel,
+:global(html[data-design="b"]) .loop,
+:global(html[data-design="b"]) .tableWrap,
+:global(html[data-design="b"]) .photoStack picture {
   border-radius: 0;
-}
-
-:global(html[data-design="d"]) .headPhoto picture {
-  border-radius: 999px 999px var(--radius) var(--radius);
-}
-
-:global(html[data-design="e"]) .options li {
-  border-left-color: var(--accent-2);
 }
