@@ -57,3 +57,16 @@ window.addEventListener("popstate", () => {
   currentPage = page;
   window.location.reload();
 });
+
+// Bed configurator: the 3D preview (three.js, own chunk) loads only on that page, once the page is idle and the preview is near the viewport.
+const bed3d = document.querySelector<HTMLElement>("[data-bed3d]");
+if (bed3d && "IntersectionObserver" in window) {
+  const io = new IntersectionObserver((entries) => {
+    if (!entries.some((e) => e.isIntersecting)) return;
+    io.disconnect();
+    const load = () => import("./bed3d").then((m) => m.mount(bed3d)).catch(() => {});
+    if ("requestIdleCallback" in window) requestIdleCallback(load, { timeout: 2500 });
+    else setTimeout(load, 600);
+  }, { rootMargin: "300px" });
+  addEventListener("load", () => io.observe(bed3d), { once: true });
+}

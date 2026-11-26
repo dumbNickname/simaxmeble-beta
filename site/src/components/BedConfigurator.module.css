@@ -27,18 +27,170 @@
   gap: 0.85rem;
 }
 
+/* One column on phones: the preview stays pinned under the header while the options scroll past. */
+@media (max-width: 959px) and (min-height: 640px) {
+  .previewCol {
+    display: contents;
+  }
+
+  .previewCol .preview {
+    position: sticky;
+    top: calc(4.25rem + 0.5rem);
+    z-index: 2;
+  }
+}
+
 .preview {
+  position: relative;
+  aspect-ratio: 8 / 5;
   border: var(--border);
   border-radius: var(--radius);
-  background: var(--surface);
+  background-color: var(--bg);
+  /* squared notebook paper, same as the sketch on /realizacje/ */
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--accent-2) 14%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--accent-2) 14%, transparent) 1px, transparent 1px);
+  background-size: 22px 22px;
   box-shadow: var(--shadow);
   overflow: hidden;
 }
 
-.preview svg {
+.flat,
+.canvas,
+.dims {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  transition: opacity 0.9s var(--ease);
+}
+
+/* The 3D view (bed3d.ts) sets data-ready once its first frame is drawn. */
+.canvas,
+.dims {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.preview[data-ready] .flat {
+  opacity: 0;
+}
+
+.preview[data-ready] .canvas,
+.preview[data-ready] .dims {
+  opacity: 1;
+}
+
+.dims {
+  color: var(--accent-2);
+  overflow: visible;
+}
+
+.dims path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+}
+
+.dims text {
+  fill: currentColor;
+  font-family: "Segoe Print", "Bradley Hand", Noteworthy, "Chalkboard SE", "Comic Sans MS", cursive;
+  font-size: 15px;
+  font-weight: 700;
+  paint-order: stroke;
+  stroke: var(--bg);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+/* preview-only controls: pointless without the 3D view */
+.previewOpts {
+  display: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem 1.25rem;
+}
+
+.preview[data-ready] + .previewOpts {
+  display: flex;
+}
+
+.mini {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.mini legend {
+  float: left;
+  margin-right: 0.4rem;
+  padding: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.mini label,
+.cat {
+  position: relative;
+  cursor: pointer;
+}
+
+.mini input,
+.cat input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.mini span {
+  display: grid;
+  place-items: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 1px solid color-mix(in srgb, var(--ink) 30%, transparent);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.mini input:checked + span {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--bg);
+}
+
+.cat span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+}
+
+.cat span::before {
+  content: "";
+  width: 1.1rem;
+  height: 1.1rem;
+  border: 2px solid var(--ink);
+  border-radius: 4px;
+  background: var(--bg);
+}
+
+.cat input:checked + span::before {
+  background: var(--ink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8.5l3 3 7-7' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 80% no-repeat;
+}
+
+.mini input:focus-visible + span,
+.cat input:focus-visible + span::before {
+  outline: 3px solid var(--accent-2);
+  outline-offset: 2px;
 }
 
 .summary {
@@ -168,6 +320,8 @@
   display: inline;
 }
 
+.cfg:has([data-o="s90"]:checked) [data-s="s90"],
+.cfg:has([data-o="s120"]:checked) [data-s="s120"],
 .cfg:has([data-o="s140"]:checked) [data-s="s140"],
 .cfg:has([data-o="s160"]:checked) [data-s="s160"],
 .cfg:has([data-o="s180"]:checked) [data-s="s180"],
@@ -177,6 +331,14 @@
 }
 
 /* width follows the mattress, 160 is the drawn size */
+.cfg:has([data-o="s90"]:checked) .bed {
+  transform: scaleX(0.6);
+}
+
+.cfg:has([data-o="s120"]:checked) .bed {
+  transform: scaleX(0.78);
+}
+
 .cfg:has([data-o="s140"]:checked) .bed {
   transform: scaleX(0.875);
 }
@@ -189,16 +351,8 @@
   transform: scaleX(1.25);
 }
 
-.cfg:has([data-o="hlow"]:checked) .head {
-  transform: scaleY(0.72);
-}
-
-.cfg:has([data-o="hhigh"]:checked) .head {
-  transform: scaleY(1.32);
-}
-
-.cfg:has([data-o="nobox"]:checked) .box,
-.cfg:has([data-o="nobox"]:checked) .boxText {
+.cfg:not(:has([data-o="box"]:checked)) .box,
+.cfg:not(:has([data-o="box"]:checked)) .boxText {
   display: none;
 }
 
@@ -290,6 +444,108 @@
   outline-offset: 2px;
 }
 
+.range,
+.check {
+  display: grid;
+  gap: 0.45rem;
+  transition: opacity 0.3s var(--ease);
+}
+
+.rangeHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.rangeHead b,
+.check b {
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
+.rangeHead output {
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent-2);
+}
+
+.range input {
+  width: 100%;
+  margin: 0.2rem 0;
+  accent-color: var(--ink);
+}
+
+.range small,
+.check small {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.check {
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.check input {
+  width: 1.35rem;
+  height: 1.35rem;
+  margin: 0.1rem 0 0;
+  accent-color: var(--ink);
+}
+
+.check span {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.swatches label {
+  position: relative;
+  cursor: pointer;
+}
+
+.swatches input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.swatches span {
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  background: var(--c);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ink) 25%, transparent);
+  transition: transform 0.2s var(--ease);
+}
+
+.swatches .noColour {
+  background:
+    linear-gradient(135deg, transparent calc(50% - 1px), var(--ink) calc(50% - 1px), var(--ink) calc(50% + 1px), transparent calc(50% + 1px)),
+    var(--bg);
+}
+
+.swatches input:checked + span {
+  box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--ink);
+  transform: scale(1.06);
+}
+
+.swatches input:focus-visible + span {
+  outline: 3px solid var(--accent-2);
+  outline-offset: 4px;
+}
+
 .field {
   display: grid;
   gap: 0.35rem;
@@ -341,6 +597,7 @@
 }
 
 :global(html[data-design="c"]) .preview,
+:global(html[data-design="c"]) .mini span,
 :global(html[data-design="c"]) .choices span,
 :global(html[data-design="c"]) .field input,
 :global(html[data-design="c"]) .field select,
@@ -349,6 +606,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .flat,
+  .canvas,
+  .dims,
+  .swatches span,
   .bed,
   .head,
   .head [data-h],
